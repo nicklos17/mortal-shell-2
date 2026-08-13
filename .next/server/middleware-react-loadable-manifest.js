@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"app/map/MapCanvasWrapper.tsx -> ./MapCanvas\":{\"id\":\"app/map/MapCanvasWrapper.tsx -> ./MapCanvas\",\"files\":[\"static/chunks/_app-pages-browser_app_map_MapCanvas_tsx.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST='{"app/map/MapCanvasWrapper.tsx -> ./MapCanvas":{"id":4388,"files":["static/chunks/d0deef33.cac6acee3fffe7af.js","static/chunks/388.bb2e3fb823172d00.js"]}}';
