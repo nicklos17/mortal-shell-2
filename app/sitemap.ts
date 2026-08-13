@@ -1,9 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { pageURL } from '@/lib/site-config';
-import { updatePosts } from './updates/page';
+import { updatePosts } from '@/lib/updates-data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPaths: Array<{ path: string; priority: number }> = [
+  const staticPaths: Array<{ path: string; priority: number; }> = [
     { path: "", priority: 1.0 },
     { path: "/map", priority: 0.9 },
     { path: "/updates", priority: 0.9 },
