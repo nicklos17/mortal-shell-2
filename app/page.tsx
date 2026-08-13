@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import { pageURL } from "@/lib/site-config";
+import ReleaseCountdown from "./ReleaseCountdown";
 
 export const metadata: Metadata = {
-  title: "Mortal Shell 2 Guide – Shells, Map, Bosses & Builds",
+  title: "Mortal Shell 2 Guide",
   description:
     "Complete Mortal Shell 2 guide covering all Shell locations, interactive map, boss strategies, best builds, weapons database, and full walkthrough. Master Mortal Shell II.",
   alternates: {
     canonical: pageURL("/"),
   },
   openGraph: {
-    title: "Mortal Shell 2 Guide – Shells, Map, Bosses & Builds",
+    title: "Mortal Shell 2 Guide",
     description:
       "Complete Mortal Shell 2 guide covering all Shell locations, interactive map, boss strategies, best builds, weapons database, and full walkthrough.",
     url: pageURL("/"),
@@ -130,15 +131,30 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <main className="container">
-        <span className="eyebrow">Unofficial Fan Resource</span>
-        <h1>Mortal Shell 2 Guide</h1>
-        <span className="title-rule" />
+        <section className="hero">
+          <div className="hero-title">
+            <span className="eyebrow">Unofficial Fan Resource</span>
+            <h1>Mortal Shell 2 Guide</h1>
+            <span className="title-rule" />
 
-        <p className="lede">
-          Your complete resource for Mortal Shell II — every Shell location,
-          boss strategy, weapon stat, and hidden secret, updated as we play
-          through the game.
-        </p>
+            <p className="lede">
+              Your complete resource for Mortal Shell II — every Shell
+              location, boss strategy, weapon stat, and hidden secret, updated
+              as we play through the game.
+            </p>
+
+            <div className="hero-cta">
+              <a className="btn btn-outline" href="/map/">
+                Open Interactive Map
+              </a>
+              <a className="btn btn-primary" href="/updates/">
+                Latest Updates
+              </a>
+            </div>
+          </div>
+
+          <ReleaseCountdown />
+        </section>
 
         <div className="card-grid">
           {cards.map((card) => (

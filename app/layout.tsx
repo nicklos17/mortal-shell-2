@@ -10,9 +10,15 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [{ url: "/favicon.ico", type: "image/x-icon" }],
+    shortcut: [{ url: "/favicon.ico", type: "image/x-icon" }],
+  },
+  manifest: "/manifest.webmanifest",
   openGraph: {
     type: "website",
     images: ["/assets/og-image.webp"],
+    siteName: "Mortal Shell 2 Guide",
   },
   alternates: {
     types: {
@@ -67,6 +73,7 @@ gtag('config', '${GA_MEASUREMENT_ID}');
               <a href="/builds/">Builds</a>
               <a href="/weapons/">Weapons</a>
               <a href="/walkthrough/">Walkthrough</a>
+              <a href="/updates/">Updates</a>
             </nav>
           </div>
         </header>
