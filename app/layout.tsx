@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { SITE_BASE_URL } from "@/lib/site-config";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-SG8CQTGG8G";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_BASE_URL),
@@ -35,6 +38,18 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <header className="site-header">
           <div className="container">
             <a href="/" className="brand">
