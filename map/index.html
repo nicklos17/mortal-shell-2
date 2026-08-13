@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== TDH（一个页面吃 4 个词：interactive map / map / location map / route map） ===== -->
+    <title>Mortal Shell 2 Interactive Map – All Locations &amp; Routes</title>
+    <meta name="description"
+        content="Interactive Mortal Shell 2 map with every Shell, boss, Tarstone, Beacon, and collectible location. Plan routes, find hidden items, and track your progress with our clickable map.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+
+    <meta property="og:title" content="Mortal Shell 2 Interactive Map – All Locations &amp; Routes">
+    <meta property="og:description"
+        content="Interactive Mortal Shell 2 map with every Shell, boss, Tarstone, Beacon, and collectible location.">
+    <meta property="og:image" content="https://mortal-shell2.wiki/assets/map-og.webp">
+    <meta property="og:type" content="website">
+
+    <!-- 全站配置：自动生成 canonical 和 og:url -->
+    <script src="/assets/site-config.js"></script>
+    <link rel="stylesheet" href="/assets/style.css">
+    <!-- Leaflet（交互地图功能库，与字体无关；上线后可换自托管） -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+    <!-- JSON-LD：ItemList + Place（含 geo 坐标） -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Mortal Shell 2 Map Locations",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hardened Shell",
+          "url": "https://mortal-shell2.wiki/shells/#hardened",
+          "item": {
+            "@type": "Place",
+            "name": "Temple of the Iron Path",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.500,
+              "longitude": -0.090
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "First Boss Arena",
+          "url": "https://mortal-shell2.wiki/bosses/#first",
+          "item": {
+            "@type": "Place",
+            "name": "First Boss Arena",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.505,
+              "longitude": -0.080
+            }
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD：FAQPage（地图页常见问题） -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is there an interactive map for Mortal Shell 2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our interactive map shows all Shell locations, bosses, Tarstones, Beacons, and hidden collectibles in Mortal Shell 2."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many locations are in Mortal Shell 2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mortal Shell 2 features multiple areas including Shell locations, boss arenas, Tarstone shrines, Beacons, and hidden collectibles. Our map covers all of them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I plan a route through Mortal Shell 2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, use our interactive map to plan your route. Click markers for details and use the text list below to find specific locations."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="brand">Mortal Shell 2 Guide</a>
+            <nav>
+                <a href="/map/">Map</a>
+                <a href="/shells/">Shells</a>
+                <a href="/bosses/">Bosses</a>
+                <a href="/builds/">Builds</a>
+                <a href="/weapons/">Weapons</a>
+                <a href="/walkthrough/">Walkthrough</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <span class="eyebrow">Explore Every Corner</span>
+        <h1>Mortal Shell 2 Interactive Map</h1>
+        <span class="title-rule"></span>
+
+        <p class="lede">
+            Explore every Mortal Shell 2 location with our interactive map — all Shells, bosses, Tarstones, Beacons, and
+            hidden collectibles marked. Click any marker for details, or use the text list below to jump straight to
+            what you need.
+        </p>
+
+        <!-- ===== 交互地图（CSR，用户用） ===== -->
+        <div class="map-frame">
+            <div id="map"></div>
+            <noscript>
+                <img src="/assets/map-static.webp"
+                    alt="Mortal Shell 2 interactive map showing all Shell, boss, Tarstone, and Beacon locations" />
+            </noscript>
+        </div>
+
+        <!-- ===== 文字版点位清单（SSG，Google 用 + 用户跳转用） ===== -->
+        <section>
+            <h2>All Shell Locations</h2>
+            <ul class="loc-list">
+                <li><a href="/shells/#hardened">Hardened Shell</a> <span class="loc-note">— Found in the Temple of the
+                        Iron Path, after the second Tarstone shrine.</span></li>
+                <li><a href="/shells/#nimble">Nimble Shell</a> <span class="loc-note">— Location TBD (update coming on
+                        launch).</span></li>
+                <!-- 发售后逐条补全，每条一个长尾词 -->
+            </ul>
+        </section>
+
+        <section>
+            <h2>Boss Locations</h2>
+            <ul class="loc-list">
+                <li><a href="/bosses/#first">First Boss</a> <span class="loc-note">— Arena location, nearest Beacon,
+                        recommended Shell.</span></li>
+                <!-- 发售后逐条补全 -->
+            </ul>
+        </section>
+
+        <section>
+            <h2>Tarstones &amp; Beacons</h2>
+            <ul class="loc-list">
+                <li><span class="loc-note">Full Tarstone and Beacon list will be added on launch day — August 20,
+                        2026.</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Hidden Collectibles &amp; Shortcuts</h2>
+            <ul class="loc-list">
+                <li><span class="loc-note">Hidden items and shortcut routes will be mapped after release.</span></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Mortal Shell 2 Guide is a fan-made resource. Mortal Shell is a trademark of Cold Symmetry and Playstack
+                Ltd. All screenshots belong to their respective owners.</p>
+            <nav>
+                <a href="/about/">About</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/contact/">Contact</a>
+                <a href="/rss.xml">RSS</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS（defer 异步加载，SSG 页面不阻塞首屏） -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script defer>
+        // 等 Leaflet 加载完成后初始化地图
+        document.addEventListener('DOMContentLoaded', function () {
+            // 从 CSS 变量读取主题色，禁止硬编码色值
+            var root = getComputedStyle(document.documentElement);
+            var gold = root.getPropertyValue('--color-gold').trim() || '#b89332';
+            var goldBright = root.getPropertyValue('--color-gold-bright').trim() || '#d4af5e';
+            var blood = root.getPropertyValue('--color-blood').trim() || '#8f2a2a';
+
+            // 交互地图初始化：占位坐标，发售后替换为真实游戏地图拼图
+            var map = L.map('map').setView([51.505, -0.09], 3);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            // 点位数据（与 JSON-LD 及文字清单保持一致）
+            var locations = [
+                { lat: 51.500, lng: -0.090, name: 'Hardened Shell', desc: 'Temple of the Iron Path', type: 'shell' },
+                { lat: 51.505, lng: -0.080, name: 'First Boss', desc: 'Arena location', type: 'boss' }
+            ];
+
+            // 按类型选色（全部来自 CSS 变量）
+            var typeColors = {
+                shell: gold,
+                boss: blood,
+                tarstone: goldBright,
+                beacon: goldBright,
+                collectible: gold
+            };
+
+            locations.forEach(function (loc) {
+                var color = typeColors[loc.type] || gold;
+                L.circleMarker([loc.lat, loc.lng], {
+                    color: color,
+                    fillColor: color,
+                    fillOpacity: 0.6,
+                    radius: 6
+                }).addTo(map).bindPopup(
+                    '<strong>' + loc.name + '</strong><br>' + loc.desc
+                );
+            });
+        });
+    </script>
+</body>
+
+</html>
