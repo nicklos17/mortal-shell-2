@@ -1,53 +1,53 @@
 import type { Metadata } from "next";
 import { pageURL } from "@/lib/site-config";
 
-/** 已知路由的 SEO 信息映射 */
+/** 已知路由的 SEO 信息映射：title 同时用于 <title> 和 <h1> */
 const ROUTE_META: Record<string, { title: string; description: string }> = {
   shells: {
-    title: "All Shells & Locations – Mortal Shell 2 Guide",
+    title: "Mortal Shell 2 Shells Guide",
     description:
       "Every playable Shell in Mortal Shell 2 — stats, abilities, and exact locations. Full content coming soon.",
   },
   bosses: {
-    title: "Boss Guide – Mortal Shell 2 Guide",
+    title: "Mortal Shell 2 Bosses Guide",
     description:
       "Detailed boss strategies for every encounter in Mortal Shell 2. Full content coming soon.",
   },
   builds: {
-    title: "Best Builds – Mortal Shell 2 Guide",
+    title: "Mortal Shell 2 Builds Guide",
     description:
       "Top Mortal Shell 2 builds ranked by playstyle. Full content coming soon.",
   },
   weapons: {
-    title: "Weapons Database – Mortal Shell 2 Guide",
+    title: "Mortal Shell 2 Weapons Guide",
     description:
       "Complete Mortal Shell 2 weapons list with stats and locations. Full content coming soon.",
   },
   walkthrough: {
-    title: "Full Walkthrough – Mortal Shell 2 Guide",
+    title: "Mortal Shell 2 Walkthrough Guide",
     description:
       "Step-by-step Mortal Shell 2 walkthrough covering every area, boss, and ending. Full content coming soon.",
   },
   tips: {
-    title: "Beginner Tips – Mortal Shell 2 Guide",
+    title: "Mortal Shell 2 Tips Guide",
     description:
       "Essential Mortal Shell 2 tips for new players. Full content coming soon.",
   },
   updates: {
-    title: "Patch Notes & Updates – Mortal Shell 2 Guide",
+    title: "Mortal Shell 2 Updates Guide",
     description:
       "Latest Mortal Shell 2 updates, balance changes, and new content. Full content coming soon.",
   },
   about: {
-    title: "About – Mortal Shell 2 Guide",
+    title: "About Mortal Shell 2 Guide",
     description: "About Mortal Shell 2 Guide — a fan-made resource.",
   },
   privacy: {
-    title: "Privacy Policy – Mortal Shell 2 Guide",
+    title: "Mortal Shell 2 Privacy Policy",
     description: "Privacy policy for Mortal Shell 2 Guide.",
   },
   contact: {
-    title: "Contact – Mortal Shell 2 Guide",
+    title: "Contact Mortal Shell 2 Guide",
     description: "Contact the Mortal Shell 2 Guide team.",
   },
 };
@@ -90,7 +90,7 @@ export default async function CatchAllPage({ params }: Props) {
   const { slug } = await params;
   const key = slug[0];
   const meta = ROUTE_META[key];
-  const pageTitle = meta ? meta.title.split(" – ")[0] : "Coming Soon";
+  const pageTitle = meta ? meta.title : "Coming Soon";
 
   return (
     <main className="container">
