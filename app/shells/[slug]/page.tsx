@@ -126,6 +126,10 @@ export default async function ShellDetailPage({
 
           <h2>Where to Find {shell.name}</h2>
           <p>{shell.location}</p>
+
+          <p className="article-back">
+            <Link href="/shells">← Back to all Mortal Shell 2 Shells</Link>
+          </p>
         </section>
 
         <section className="article">
