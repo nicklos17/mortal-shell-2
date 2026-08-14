@@ -127,6 +127,13 @@ export default function MapPage() {
           straight to what you need.
         </p>
 
+        <div className="map-tips">
+          Marked locations are placeholders held against known beta and
+          trailer footage. Real coordinates and a full overworld tile layer
+          will be added once the game opens to the public on August 20,
+          2026.
+        </div>
+
         {/* 交互地图（CSR，用户用） */}
         <div className="map-frame">
           <MapCanvasWrapper />

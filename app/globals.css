@@ -329,7 +329,23 @@ table.data tr:hover td {
   border-radius: 2px;
   background: #0d1117;
   overflow: hidden;
-  margin: 1rem 0 2rem;
+  margin: 0.25rem 0 2rem;
+}
+
+.map-tips {
+  margin: 0.75rem 0 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--color-gold) 55%, transparent);
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--color-gold) 12%, transparent),
+    transparent 60%
+  );
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  font-style: italic;
 }
 
 #map {
