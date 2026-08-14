@@ -8,7 +8,7 @@ import { SHELLS } from "@/data/shells";
 const TITLE = "Mortal Shell 2 Builds";
 const PAGE_PATH = "/builds";
 const DESCRIPTION =
-  "Top Mortal Shell 2 builds ranked by playstyle. Tank, DPS, speed, mage, poison DOT, summoner, hybrid, and beginner setups with best shell and weapon combinations.";
+  "Mortal Shell 2 builds by playstyle. Tank, DPS, agile, mage, poison DOT, summoner, hybrid, and beginner setups with recommended Shell and weapon pairings.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -16,8 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: pageURL(PAGE_PATH) },
   openGraph: {
     title: TITLE,
-    description:
-      "Top Mortal Shell 2 builds ranked by playstyle. Tank, DPS, agile, mage, poison DOT, summoner, hybrid, and beginner setups.",
+    description: DESCRIPTION,
     url: pageURL(PAGE_PATH),
     type: "website",
     siteName: "Mortal Shell 2 Guide",
@@ -35,8 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@mortalshell",
     title: TITLE,
-    description:
-      "Top Mortal Shell 2 builds ranked by playstyle. Tank, DPS, agile, mage, poison DOT, summoner, hybrid, and beginner setups.",
+    description: DESCRIPTION,
     images: [
       {
         url: OG_IMAGE,
@@ -214,9 +212,12 @@ export default function BuildsPage() {
         <section className="article">
           <h2>All 8 Shells — The Foundation of Every Build</h2>
           <p className="mb-6 text-white/70">
-            Mortal Shell 2 doubles the original&apos;s roster to{" "}
-            <strong>eight playable Shells</strong>, each its own build direction.
-            Confirmed Shells are filled in below; the rest go live on launch day.
+            Browse the full{" "}
+            <Link href="/shells/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+              all playable Shells in Mortal Shell 2
+            </Link>{" "}
+            roster. Confirmed Shells are filled in below; the rest go live on launch day.
+            Each Shell has its own build direction.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {SHELLS.map((shell) => (
@@ -427,7 +428,12 @@ export default function BuildsPage() {
           </ul>
           <p>
             Still torn? Start with the comparison table above, then read the
-            Shell cards for the two or three that match your answers.
+            Shell cards for the two or three that match your answers. New
+            players can also read our{" "}
+            <Link href="/tips/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+              Mortal Shell 2 beginner tips
+            </Link>{" "}
+            to get the basics down before committing to a build.
           </p>
         </section>
 
@@ -501,8 +507,11 @@ export default function BuildsPage() {
               clears crowds from range but needs a melee swap when an enemy
               closes distance. Prepare at least two loadouts before heading
               into a new area, one for general progression and one tuned for
-              the boss at the end. Our boss strategies section lists
-              recommended builds per encounter.
+              the boss at the end. See the{" "}
+              <Link href="/bosses/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+                Mortal Shell 2 boss guide
+              </Link>{" "}
+              for each encounter's recommended build and strategy.
             </p>
           </div>
         </section>
