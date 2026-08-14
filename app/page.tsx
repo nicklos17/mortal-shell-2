@@ -3,14 +3,14 @@ import { pageURL } from "@/lib/site-config";
 import ReleaseCountdown from "./ReleaseCountdown";
 
 export const metadata: Metadata = {
-  title: "Mortal Shell 2 Guide – Walkthrough, Maps, Bosses, Builds & Weapons",
+  title: "Mortal Shell 2 Guide: Maps, Bosses, Builds & Weapons",
   description:
     "Complete Mortal Shell 2 guide covering all Shell locations, interactive map, boss strategies, best builds, weapons database, and full walkthrough. Master Mortal Shell II.",
   alternates: {
     canonical: pageURL("/"),
   },
   openGraph: {
-    title: "Mortal Shell 2 Guide – Walkthrough, Maps, Bosses, Builds & Weapons",
+    title: "Mortal Shell 2 Guide: Maps, Bosses, Builds & Weapons",
     description:
       "Complete Mortal Shell 2 guide covering all Shell locations, interactive map, boss strategies, best builds, weapons database, and full walkthrough.",
     url: pageURL("/"),

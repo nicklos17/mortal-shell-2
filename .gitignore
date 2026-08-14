@@ -6,3 +6,5 @@ dist
 build
 .skills/*
 .next/
+.workbuddy/
+./trae

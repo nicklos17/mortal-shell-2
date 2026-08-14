@@ -553,6 +553,437 @@ table.data tr:hover td {
   font-size: .85rem;
 }
 
+/* ---------- Shells 页面 ---------- */
+.shells-wheel-shells {
+  position: relative;
+  width: min(420px, 96%);
+  aspect-ratio: 1 / 1;
+  margin: 1rem auto 2rem;
+  overflow: visible;
+}
+
+.shells-wheel-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.shells-wheel-nodes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.wheel-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  z-index: 2;
+}
+
+.wheel-node-ring-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.wheel-node-ring {
+  position: relative;
+  width: clamp(54px, 14%, 68px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(180deg, #d4af5e, #8a6b22);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.55), 0 6px 18px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.wheel-node-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #0e121b;
+}
+
+.wheel-node-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  filter: saturate(0.95) contrast(1.02);
+}
+
+.wheel-node-num {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 9px;
+  background: #12161d;
+  border: 1px solid #d4af5e;
+  color: #d4af5e;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.wheel-node-name {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.wheel-node:hover .wheel-node-ring,
+.wheel-node-active .wheel-node-ring {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 2px rgba(212, 175, 94, 0.5), 0 10px 24px rgba(0, 0, 0, 0.55);
+}
+
+.wheel-node:hover .wheel-node-name,
+.wheel-node-active .wheel-node-name {
+  color: var(--color-gold);
+}
+
+.wheel-tooltip {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  padding: 0.75rem 0.9rem;
+  border-radius: 6px;
+  background: rgba(14, 18, 27, 0.96);
+  border: 1px solid rgba(212, 175, 94, 0.55);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+  z-index: 20;
+  pointer-events: none;
+  animation: wheelFade 0.18s ease-out;
+}
+
+.wheel-tooltip::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: rgba(14, 18, 27, 0.96);
+  border-left: 1px solid rgba(212, 175, 94, 0.55);
+  border-top: 1px solid rgba(212, 175, 94, 0.55);
+}
+
+.wheel-tooltip-role {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.35rem;
+}
+
+.wheel-tooltip-desc {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.wheel-tooltip-sig {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  border-top: 1px solid rgba(212, 175, 94, 0.2);
+  padding-top: 0.45rem;
+}
+
+@keyframes wheelFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .wheel-node-name {
+    font-size: 0.62rem;
+  }
+  .wheel-tooltip {
+    width: 180px;
+  }
+}
+
+.shell-emblem {
+  width: 52px;
+  height: 52px;
+  color: var(--color-gold);
+  flex: none;
+}
+
+.shell-head {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  margin-bottom: .5rem;
+}
+
+.shell-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--text-primary);
+}
+
+.shell-epithet {
+  display: block;
+  font-family: var(--font-quote);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.2;
+}
+
+.shell-role {
+  display: inline-block;
+  margin-bottom: .7rem;
+  font-size: .74rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--color-ice);
+}
+
+.shell-sig {
+  margin-top: .9rem;
+  padding-top: .8rem;
+  border-top: 1px solid rgba(255, 255, 255, .06);
+  font-size: .9rem;
+  color: var(--text-secondary);
+}
+
+.shell-sig strong {
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  font-size: .74rem;
+}
+
+.note {
+  border: 1px solid rgba(184, 147, 50, .4);
+  border-left: 3px solid var(--color-gold);
+  background: rgba(184, 147, 50, .05);
+  padding: 1rem 1.2rem;
+  border-radius: 2px;
+  margin: 1.5rem 0;
+  color: var(--text-secondary);
+  font-size: .95rem;
+}
+
+.note strong {
+  color: var(--color-gold);
+}
+
+.shell-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.5rem 0 3rem;
+}
+
+.shell-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.shell-figure {
+  margin: -1.5rem -1.5rem 0;
+  width: calc(100% + 3rem);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(184, 147, 50, 0.25);
+  background: linear-gradient(180deg, rgba(184, 147, 50, 0.06), transparent 70%);
+}
+
+.shell-image {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.shell-figcaption {
+  padding: .5rem 1rem;
+  font-size: .78rem;
+  color: var(--text-secondary);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+  font-family: var(--font-quote);
+  font-style: italic;
+  letter-spacing: .02em;
+  line-height: 1.5;
+}
+
+/* 列表卡片变为可点击链接（包在 <Link> 外） */
+.shell-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.shell-link:hover {
+  text-decoration: none;
+}
+
+/* SVG 徽记在容器中自适应铺满 */
+.shell-emblem svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ---------- Shell 详情页 ---------- */
+.shell-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.shell-hero .shell-emblem {
+  width: 72px;
+  height: 72px;
+  flex: none;
+}
+
+.shell-hero-meta {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+
+.shell-badge {
+  align-self: flex-start;
+  font-family: var(--font-heading);
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: .25em .8em;
+  border-radius: 2px;
+  border: 1px solid rgba(184, 147, 50, .5);
+  color: var(--color-gold);
+  background: rgba(184, 147, 50, .08);
+}
+
+.shell-badge.tba {
+  color: var(--color-ice);
+  border-color: rgba(125, 151, 168, .5);
+  background: rgba(125, 151, 168, .08);
+}
+
+.shell-portrait {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: var(--border-gold);
+  border-radius: 2px;
+  margin: 1rem 0 1.5rem;
+}
+
+.shell-callout {
+  border: 1px solid rgba(184, 147, 50, .4);
+  border-left: 3px solid var(--color-gold);
+  background: rgba(184, 147, 50, .06);
+  padding: 1rem 1.2rem;
+  border-radius: 2px;
+  margin: 1.25rem 0;
+}
+
+.shell-callout strong {
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  font-size: .74rem;
+}
+
+.shell-callout p {
+  margin: .35rem 0 0;
+  color: var(--text-secondary);
+}
+
+.shell-tips {
+  margin: .5rem 0 1rem;
+  padding-left: 1.3rem;
+}
+
+.shell-tips li {
+  margin-bottom: .5rem;
+  color: var(--text-primary);
+}
+
+.shell-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: 1.5rem;
+}
+
+.shell-nav a {
+  font-family: var(--font-heading);
+  font-size: .8rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .5em 1em;
+  border: 1px solid rgba(184, 147, 50, .4);
+  border-radius: 2px;
+  text-decoration: none;
+  color: var(--color-gold);
+}
+
+.shell-nav a:hover {
+  background: rgba(184, 147, 50, .12);
+  color: var(--color-gold-bright);
+}
+
+.shell-section-label {
+  font-family: var(--font-heading);
+  font-size: .74rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin: 1.6rem 0 .5rem;
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .shell-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .shell-figure {
+    margin: -1.5rem -1.5rem 0;
+    width: calc(100% + 3rem);
+  }
+}
+
 /* ---------- 响应式 ---------- */
 @media (max-width: 720px) {
   .card-grid {
