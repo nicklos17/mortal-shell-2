@@ -219,16 +219,19 @@ h3 {
   margin-bottom: .4rem;
 }
 
-.card h2 {
+.card h2,
+.card h3 {
   margin-bottom: .5rem;
 }
 
-.card h2 a {
+.card h2 a,
+.card h3 a {
   color: var(--color-gold);
   text-decoration: none;
 }
 
-.card h2 a:hover {
+.card h2 a:hover,
+.card h3 a:hover {
   color: var(--color-gold-bright);
 }
 

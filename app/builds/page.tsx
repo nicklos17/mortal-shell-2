@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import { BUILDS } from "@/lib/builds-data";
+import { SHELLS_FOR_BUILDS_COMPARISON } from "@/lib/shells-json";
+import { SHELLS } from "@/data/shells";
 
 const TITLE = "Mortal Shell 2 Builds";
 const PAGE_PATH = "/builds";
@@ -109,6 +111,50 @@ const faqJsonLd = {
 };
 
 /* ============================================================
+   子组件（Shell 卡片），服务端可渲染，无 client 依赖
+   ============================================================ */
+
+function ShellCard({ shell }: { shell: (typeof SHELLS)[number]; }) {
+  return (
+    <article className="rounded-lg border border-white/10 bg-white/[0.03] p-5">
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="text-lg font-semibold text-amber-300">{shell.name}</h3>
+        {shell.confirmed ? (
+          <span className="shrink-0 rounded bg-green-500/15 px-2 py-0.5 text-xs text-green-400">
+            Confirmed
+          </span>
+        ) : (
+          <span className="shrink-0 rounded bg-white/10 px-2 py-0.5 text-xs text-white/50">
+            TBA
+          </span>
+        )}
+      </div>
+
+      <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+        <div>
+          <dt className="text-white/40">Role</dt>
+          <dd>{shell.role}</dd>
+        </div>
+        <div>
+          <dt className="text-white/40">Difficulty</dt>
+          <dd>{shell.difficulty}</dd>
+        </div>
+        <div>
+          <dt className="text-white/40">Playstyle</dt>
+          <dd>{shell.playstyle}</dd>
+        </div>
+        <div>
+          <dt className="text-white/40">Build</dt>
+          <dd>{shell.buildDirection}</dd>
+        </div>
+      </dl>
+
+      <p className="mt-3 text-sm text-white/70">{shell.mechanic}</p>
+    </article>
+  );
+}
+
+/* ============================================================
    页面
    ============================================================ */
 export default function BuildsPage() {
@@ -139,146 +185,167 @@ export default function BuildsPage() {
           strengths with the recommended shell and talent order below.
         </p>
 
-        {/* 1. 配装机制说明 */}
-        <section className="article">
-          <h2>How a Build Comes Together</h2>
+        {/* 1. What Are Builds in Mortal Shell 2? */}
+        <section className="article mt-12">
+          <h2>What Are Builds in Mortal Shell 2?</h2>
           <p>
-            Every Mortal Shell 2 build is the product of four layers. Get them
-            working in the same direction and the whole setup exceeds the sum
-            of its parts. Miss one and you end up with a hybrid that does
-            nothing particularly well.
+            In Mortal Shell 2, a build is built around one thing: your Shell.
+            The game doubles the original&apos;s roster to eight playable
+            Shells, and each Shell charts its own build direction. Health,
+            agility, weapon affinity, and playstyle come locked to that
+            character, not a stat menu. The sequel also removes the stamina
+            bar, so the old soulslike loop of managing stamina to time your
+            attacks is gone. Instead Mortal Shell 2 builds run on a rhythm
+            of Shell-switching and weapon swaps. You don&apos;t respec a
+            single character so much as swap between Shells to change your
+            entire setup between fights.
           </p>
-          <ul>
-            <li>
-              <strong style={{ color: "var(--color-gold)" }}>Shell.</strong>{" "}
-              The foundation. Sets HP, stamina resource pool, and signature
-              ability. A given shell only really sings when the rest of the
-              build pushes its strength instead of trying to patch its
-              weakness. Full shell-by-shell details live on our{" "}
-              <a href="/shells/">Shells guide</a>.
-            </li>
-            <li>
-              <strong style={{ color: "var(--color-gold)" }}>Weapon.</strong>{" "}
-              Swing speed, reach, and damage profile must match the shell. A
-              tank wastes a fast dagger the same way a speed build wastes a
-              slow greatsword. See the{" "}
-              <a href="/weapons/">Weapons database</a> for stat breakdowns once
-              the list is finalized.
-            </li>
-            <li>
-              <strong style={{ color: "var(--color-gold)" }}>Tarstones.</strong>{" "}
-              Elemental infusions and stat sockets. Every open slot is a chance
-              to push your chosen multiplier higher. Crit builds stack crit
-              chance first, then crit damage. Mage builds stack spell power and
-              mana regen. Resistances fill in the last gaps once the primary
-              tree is capped.
-            </li>
-            <li>
-              <strong style={{ color: "var(--color-gold)" }}>Seals.</strong>{" "}
-              Equipable passive and active modifiers. A build either leans on a
-              single powerful seal or chains three smaller ones for utility.
-              Specific seals and their locations are being mapped on our{" "}
-              <a href="/map/">interactive map</a> as they are found.
-            </li>
-          </ul>
-          <div className="note">
-            <strong>A note before Aug 20 launch.</strong> The eight builds below
-            use confirmed shells and mechanics from the open beta plus
-            community-identified archetypes from pre-release coverage. Exact
-            weapon names and seal numbers will be updated once the full game is
-            out and we can verify every Tarstone socket and boss drop in a live
-            run.
+          <p>
+            That shift away from stamina management is the single biggest
+            force shaping every Mortal Shell 2 build. This guide breaks down
+            all eight Shells, compares their roles in a single table, and
+            points you to the best starting direction for your playstyle
+            among Mortal Shell 2 builds. Details are refreshed continuously
+            after the August 20 launch.
+          </p>
+        </section>
+
+        {/* 2. All 8 Shells — 每个 Build 的 Foundation */}
+        <section className="article">
+          <h2>All 8 Shells — The Foundation of Every Build</h2>
+          <p className="mb-6 text-white/70">
+            Mortal Shell 2 doubles the original&apos;s roster to{" "}
+            <strong>eight playable Shells</strong>, each its own build direction.
+            Confirmed Shells are filled in below; the rest go live on launch day.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {SHELLS.map((shell) => (
+              <ShellCard key={shell.id} shell={shell} />
+            ))}
           </div>
         </section>
 
-        {/* 2. 核心三要素 */}
-        <section className="article">
-          <h2>The Three Core Archetypes</h2>
-          <p>
-            Every specialized build clusters around one of three basic roles.
-            Each archetype pairs most naturally with a different subset of the{" "}
-            <a href="/shells/">all playable Shells in Mortal Shell 2</a>.
-            Hybrid builds borrow from two, at the cost of not topping either.
-            Before you scroll the setups below, decide which general direction
-            matches your preference. Most players settle on one main archetype
-            and keep a second loadout ready for matchups where the primary
-            falls apart.
+        {/* 3. 对比表格 + 说明（含发售后填充 tips） */}
+        {/* 发售后数据填充说明 */}
+        <div className="note">
+          <p style={{ margin: 0, fontWeight: 500, color: "var(--color-gold)", marginBottom: ".4rem" }}>
+            How we fill this in after August 20.
           </p>
-
-          <div className="card-grid">
-            <section className="card">
-              <span className="eyebrow">Survive</span>
-              <h2>Tank</h2>
-              <p>
-                Stand in the fire and laugh it off. Tanks trade damage output
-                for health, mitigation, and recovery. The right choice when a
-                boss hits hard enough to one-shot anything lighter, or when you
-                are still learning a pattern and want bigger margins for error.
-              </p>
-            </section>
-            <section className="card">
-              <span className="eyebrow">Finish fast</span>
-              <h2>DPS</h2>
-              <p>
-                Every stat point goes toward ending the fight sooner. Pure
-                damage, crit chains, armor break, and lifesteal to turn damage
-                dealt back into health. Dominant when you can stay behind a
-                target or when a timer forces a kill window.
-              </p>
-            </section>
-            <section className="card">
-              <span className="eyebrow">Magic &amp; Range</span>
-              <h2>Mage</h2>
-              <p>
-                Fight from behind a screen of elemental damage. Spellcasters
-                pick a primary element, stack penetration for resistant
-                targets, and use terrain to keep enemies at staff length.
-                Poison DOT and summon setups are extended branches of the same
-                core idea.
-              </p>
-            </section>
-          </div>
-        </section>
-
-        {/* 3. 概览卡片表 */}
-        <section className="article">
-          <h2>Builds Overview</h2>
-          <p style={{ color: "var(--text-secondary)", marginTop: "-.5rem" }}>
-            Eight full Mortal Shell 2 builds. Each one has a recommended shell,
-            gear set, talent priority, and playstyle notes. Jump to any entry
-            from the list below, or read straight through for the full
-            breakdown.
+          <p style={{ margin: "0 0 .4rem" }}>
+            Rows and cards stay empty until real data is in hand. Structure does not change. You only edit the SHELLS array.
           </p>
+          <ol style={{ margin: 0, paddingLeft: "1.15rem" }}>
+            <li>
+              When a Shell name goes official, paste it into the <code>name</code> field and set{" "}
+              <code>confirmed</code> to <code>true</code>.
+            </li>
+            <li>
+              Once role, difficulty, playstyle, and build direction are confirmed in a live run, write them into{" "}
+              <code>role</code>, <code>difficulty</code>, <code>playstyle</code>, and{" "}
+              <code>buildDirection</code>. Replace the generic text in <code>mechanic</code> with what the Shell does.
+            </li>
+            <li>
+              Cards and the comparison table read from the same SHELLS list. One edit updates both places.
+            </li>
+            <li>
+              To add a portrait, add an <code>image: string</code> field to each Shell object and wire an{" "}
+              <code>Image</code> tag into the card. Follow the naming rule already in use. For example:{" "}
+              <code>tiel-the-acolyte-mortal-shell-2.webp</code>.
+            </li>
+          </ol>
+        </div>
 
-          <table className="data">
-            <thead>
-              <tr>
-                <th>Build</th>
-                <th>Shell</th>
-                <th>Role</th>
-                <th>Tier</th>
-                <th>Difficulty</th>
-              </tr>
-            </thead>
-            <tbody>
-              {BUILDS.map((b) => (
-                <tr key={b.id}>
-                  <td>
-                    <a
-                      href={`#${b.id}`}
-                      style={{ color: "var(--text-primary)", textDecoration: "none" }}
-                    >
-                      <strong>{b.name}</strong>
-                    </a>
-                  </td>
-                  <td>{b.shellName}</td>
-                  <td>{b.role}</td>
-                  <td>{b.tier}</td>
-                  <td>{b.difficulty}</td>
+        <section className="article">
+          <h2>Mortal Shell 2 Builds Comparison Table</h2>
+          <div className="overflow-x-auto">
+            <table
+              className="data"
+              style={{ width: "100%", borderCollapse: "collapse", fontSize: ".875rem" }}
+            >
+              <thead>
+                <tr
+                  className="border-b border-white/10"
+                  style={{ textAlign: "left", color: "var(--text-secondary)" }}
+                >
+                  <th
+                    style={{
+                      padding: ".5rem 1rem .5rem 0",
+                      fontWeight: 400,
+                      letterSpacing: ".04em",
+                    }}
+                  >
+                    Shell
+                  </th>
+                  <th
+                    style={{
+                      padding: ".5rem 1rem .5rem 0",
+                      fontWeight: 400,
+                      letterSpacing: ".04em",
+                    }}
+                  >
+                    Role
+                  </th>
+                  <th
+                    style={{
+                      padding: ".5rem 1rem .5rem 0",
+                      fontWeight: 400,
+                      letterSpacing: ".04em",
+                    }}
+                  >
+                    Difficulty
+                  </th>
+                  <th
+                    style={{
+                      padding: ".5rem 1rem .5rem 0",
+                      fontWeight: 400,
+                      letterSpacing: ".04em",
+                    }}
+                  >
+                    Playstyle
+                  </th>
+                  <th
+                    style={{
+                      padding: ".5rem 0",
+                      fontWeight: 400,
+                      letterSpacing: ".04em",
+                    }}
+                  >
+                    Build Direction
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {SHELLS_FOR_BUILDS_COMPARISON.map((shell) => (
+                  <tr
+                    key={shell.id}
+                    className="border-b border-white/5"
+                  >
+                    <td
+                      style={{
+                        padding: ".5rem 1rem .5rem 0",
+                        fontWeight: 500,
+                        color: "var(--color-gold)",
+                      }}
+                    >
+                      {shell.name}
+                    </td>
+                    <td style={{ padding: ".5rem 1rem .5rem 0" }}>{shell.role}</td>
+                    <td style={{ padding: ".5rem 1rem .5rem 0" }}>
+                      {shell.difficulty}
+                    </td>
+                    <td style={{ padding: ".5rem 1rem .5rem 0" }}>
+                      {shell.playstyle}
+                    </td>
+                    <td style={{ padding: ".5rem 0" }}>{shell.buildDirection}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={{ marginTop: ".75rem", fontSize: ".875rem", color: "var(--text-secondary)" }}>
+            This Mortal Shell 2 builds comparison will be fully populated on
+            launch day, August 20, 2026.
+          </p>
         </section>
         <p className="lede" style={{ fontSize: ".95rem", margin: "-.25rem 0 1.5rem" }}>
           Gear, seal, and Tarstone shrine locations for these builds are being
@@ -288,156 +355,100 @@ export default function BuildsPage() {
           or weapon that lives in an earlier zone.
         </p>
 
-        {/* 4. 8 个 Build 详细卡片 */}
-        <section className="article">
-          <h2>Every Build, Breakdown</h2>
+        {/* 4. Best Builds by Playstyle（按打法选 build 的决策框架） */}
+        <section className="mt-12">
+          <h2>Best Builds by Playstyle</h2>
           <p>
-            Below are full notes on each Mortal Shell 2 build, core idea, gear,
-            talent order, and how to actually play the setup when the enemy is
-            in front of you.
+            Not every player wants the same Mortal Shell 2 best build. Match
+            the direction below to how you fight, then pick the Shell that
+            fits. Final loadouts go live on launch day. This is the decision
+            framework in the meantime.
           </p>
 
-          {BUILDS.map((b) => (
-            <article key={b.id} id={b.id} className="build-card">
-              <div className="build-head">
-                <div>
-                  <span className="eyebrow">
-                    {b.role} &middot; Tier {b.tier} &middot; {b.difficulty}
-                  </span>
-                  <h3 style={{ fontSize: "1.35rem", marginTop: ".25rem", marginBottom: ".15rem" }}>
-                    {b.name}
-                  </h3>
-                  <p
-                    style={{
-                      color: "var(--text-secondary)",
-                      fontSize: ".95rem",
-                      margin: 0,
-                    }}
-                  >
-                    {b.tagline}
-                  </p>
-                </div>
-                <div className="build-shell-chip">
-                  {b.shellId ? (
-                    <Link
-                      href={`/shells/${b.shellId}`}
-                      style={{ color: "var(--color-gold)" }}
-                    >
-                      {b.shellName}
-                    </Link>
-                  ) : (
-                    <span style={{ color: "var(--text-secondary)" }}>
-                      {b.shellName}
-                    </span>
-                  )}
-                </div>
-              </div>
-
-              <p className="build-core">{b.coreIdea}</p>
-
-              <div className="build-cols">
-                <div>
-                  <h4>Gear</h4>
-                  <ul>
-                    {b.gear.map((g, i) => (
-                      <li key={i}>{g}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4>Talent Priority</h4>
-                  <ul>
-                    {b.talents.map((t, i) => (
-                      <li key={i}>{t}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="build-play">
-                <h4>How to Play</h4>
-                <ul>
-                  {b.playstyle.map((p, i) => (
-                    <li key={i}>{p}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="build-footer">
-                <strong>Shines in:</strong>{" "}
-                <span style={{ color: "var(--text-secondary)" }}>
-                  {b.goodFor.join(" &middot; ")}
-                </span>
-              </div>
-            </article>
-          ))}
-        </section>
-
-        {/* 5. 如何选择 */}
-        <section className="article">
-          <h2>Pick the Build That Fits You</h2>
+          <h3>New to soulslike games</h3>
           <p>
-            The strongest build on paper is not always the one you should run.
-            A tier-S agile build in unsteady hands collapses faster than a
-            tier-B beginner setup played cleanly. If this is your first run
-            through the game, read the{" "}
-            <a href="/tips/">Mortal Shell 2 beginner tips</a> for the ground
-            rules before committing to a loadout. The following rules of thumb
-            narrow the eight setups down to a short list that matches what you
-            actually enjoy.
+            Pick a Shell with high survivability and forgiving timing. With no
+            stamina bar, your margin for error is wider than in most soulslike
+            titles, but a sturdy Shell still forgives mistakes while you learn
+            boss patterns.
           </p>
 
-          <div className="card-grid">
-            <section className="card">
-              <span className="eyebrow">If you are new</span>
-              <h2>Start with Beginner or Hybrid</h2>
-              <p>
-                Both are forgiving. Harros covers you while you learn parry
-                timing and stamina management. Respec for free at any Tarstone
-                shrine once a specific shell or weapon clicks.
-              </p>
-            </section>
-            <section className="card">
-              <span className="eyebrow">If you love trading hits</span>
-              <h2>Go Tank</h2>
-              <p>
-                Black Beard or Eredirm absorb punishment that would break any
-                other shell. Excellent against boss arenas that demand you
-                stand your ground instead of rolling forever.
-              </p>
-            </section>
-            <section className="card">
-              <span className="eyebrow">If you dodge everything</span>
-              <h2>Agile or Pure DPS</h2>
-              <p>
-                Tial turns clean evades into free damage. Pair him with the
-                agile build for safe pressure, or drop straight into pure DPS
-                if you can stay behind every target.
-              </p>
-            </section>
-            <section className="card">
-              <span className="eyebrow">If you prefer planning</span>
-              <h2>Mage or Poison DOT</h2>
-              <p>
-                Pre-fight setup matters more than raw reflex. Stack the
-                debuff, kite, manage mana or poison stacks, and let the
-                numbers solve the room.
-              </p>
-            </section>
-          </div>
-
+          <h3>Aggressive / in-your-face</h3>
           <p>
-            For matchups against named encounters, cross-reference these
-            setups with our <a href="/bosses/">boss strategies</a>, each
-            boss page lists the top two or three Mortal Shell 2 builds that
-            handle its specific mechanics. Route planning before heading into
-            a new zone, including the Tarstone shrines and checkpoint order,
-            is covered in the full{" "}
-            <a href="/walkthrough/">Mortal Shell 2 walkthrough</a>.
+            Look for heavy-hitting Shells that can trade blows and use the new
+            Hand Cannon to close distance. Shell-switching mid-fight lets you
+            keep pressure on instead of backing off to heal.
+          </p>
+
+          <h3>Fast &amp; evasive</h3>
+          <p>
+            A light, mobile Shell rewards dodging and hit-and-run attacks.
+            This style leans hardest on the Shell-switch rhythm, since you
+            rely on quick swaps to stay alive rather than tanking damage.
+          </p>
+
+          <h3>Ranged / hybrid</h3>
+          <p>
+            The Hand Cannon changes the toolkit for ranged play. Pair it with
+            a Shell that keeps you mobile, and you can soften bosses from
+            range before closing in for the kill.
+          </p>
+
+          <p className="mt-3 text-sm text-white/50">
+            Shell names and exact loadouts for each playstyle will be
+            confirmed after the game launches on August 20, 2026.
           </p>
         </section>
 
-        {/* 6. FAQ */}
+        {/* 5. How to Choose Your Build（三问决策法） */}
+        <section className="mt-12">
+          <h2>How to Choose Your Build</h2>
+          <p>
+            Answer these three questions and the right Mortal Shell 2 build
+            direction picks itself:
+          </p>
+          <ul className="list-disc pl-6">
+            <li>
+              <strong>Do you prefer melee or ranged?</strong> The Hand Cannon
+              opens up ranged play for the first time in the series. Prefer
+              up close? Focus on a Shell with strong weapon affinity.
+            </li>
+            <li>
+              <strong>Do you like switching or specializing?</strong> Mortal
+              Shell 2 builds reward Shell-swapping mid-fight. If you love
+              variety, build around two Shells that cover each other&apos;s
+              weaknesses instead of one.
+            </li>
+            <li>
+              <strong>How much do you fear death?</strong> The Shell system
+              is your safety net. Losing a Shell is not losing progress.
+              Beginners should treat their Shell as a second health bar.
+            </li>
+          </ul>
+          <p>
+            Still torn? Start with the comparison table above, then read the
+            Shell cards for the two or three that match your answers.
+          </p>
+        </section>
+
+        {/* 6. More Build Guides Coming After Launch（发售占位/活页声明） */}
+        <section className="mt-12 rounded-lg border border-white/10 bg-white/[0.03] p-6">
+          <h2>More Build Guides Coming After Launch</h2>
+          <p>
+            This page is a living guide. On launch day (August 20, 2026) we
+            will fill in every Shell&apos;s confirmed role, difficulty, and
+            best loadout. That includes weapons, items, and boss-fight
+            recommendations pulled from a full hands-on testing pass.
+            Bookmark this page and check back daily for the latest confirmed
+            Mortal Shell 2 builds. The first week gets rolling boss updates
+            and optimal Tarstone sockets. The first month adds speedrun and
+            challenge builds as meta routes solidify, so revisit often once
+            the post-launch patch notes land.
+          </p>
+          <p className="text-sm text-white/50">Last updated: August 14, 2026</p>
+        </section>
+
+        {/* 7. FAQ */}
         <section className="article">
           <h2>Frequently Asked Questions</h2>
 
@@ -493,31 +504,6 @@ export default function BuildsPage() {
               the boss at the end. Our boss strategies section lists
               recommended builds per encounter.
             </p>
-          </div>
-        </section>
-
-        {/* 7. 收尾 CTA */}
-        <section className="article">
-          <h2>More Resources for Your Loadout</h2>
-          <p>
-            A build is only half the run. Your shell needs to be found in the
-            open world first, use the{" "}
-            <a href="/map/">Mortal Shell 2 interactive map</a> to plan the
-            route and grab every shell, seal, and Tarstone shrine along the
-            way. Once the loadout is in place, each named encounter has its
-            own quirks that favor some setups over others. Read the dedicated{" "}
-            <a href="/bosses/">Mortal Shell 2 boss guide</a> for build
-            recommendations matched to each boss. Weapon-specific tuning is
-            coming once we finish the full-database entry for each drop
-            location.
-          </p>
-          <div className="hero-cta">
-            <a className="btn btn-outline" href="/shells/">
-              Pick Your Shell
-            </a>
-            <a className="btn btn-primary" href="/bosses/">
-              Boss Build Recommender
-            </a>
           </div>
         </section>
 
