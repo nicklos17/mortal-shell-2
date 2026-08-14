@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { pageURL } from "@/lib/site-config";
+import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
 const SLUG = "mortal-shell-2-release-date";
 const PAGE_PATH = `/updates/${SLUG}`;
@@ -23,11 +23,30 @@ export const metadata: Metadata = {
     modifiedTime: DATE_MODIFIED,
     authors: [AUTHOR],
     tags: ["Mortal Shell 2", "Release Date", "Announcement", "Cold Symmetry"],
+    siteName: "Mortal Shell 2 Guide",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: OG_IMAGE_W,
+        height: OG_IMAGE_H,
+        alt: "Mortal Shell 2 Guide",
+        type: "image/jpeg",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@mortalshell",
     title: TITLE,
     description: DESCRIPTION,
+    images: [
+      {
+        url: OG_IMAGE,
+        width: OG_IMAGE_W,
+        height: OG_IMAGE_H,
+        alt: "Mortal Shell 2 Guide",
+      },
+    ],
   },
 };
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { pageURL } from "@/lib/site-config";
+import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import { updatePosts } from "@/lib/updates-data";
 
 const PAGE_PATH = "/updates";
@@ -14,6 +14,32 @@ export const metadata: Metadata = {
     description:
       "Latest Mortal Shell 2 updates, patch notes, balance changes, and release news.",
     url: pageURL(PAGE_PATH),
+    type: "website",
+    siteName: "Mortal Shell 2 Guide",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: OG_IMAGE_W,
+        height: OG_IMAGE_H,
+        alt: "Mortal Shell 2 Guide",
+        type: "image/jpeg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@mortalshell",
+    title: "Mortal Shell 2 Updates",
+    description:
+      "Latest Mortal Shell 2 updates, patch notes, balance changes, and release news.",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: OG_IMAGE_W,
+        height: OG_IMAGE_H,
+        alt: "Mortal Shell 2 Guide",
+      },
+    ],
   },
 };
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_BASE_URL } from "@/lib/site-config";
+import { SITE_BASE_URL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import "./globals.css";
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
@@ -17,8 +17,28 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   openGraph: {
     type: "website",
-    images: ["/assets/og-image.webp"],
     siteName: "Mortal Shell 2 Guide",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: OG_IMAGE_W,
+        height: OG_IMAGE_H,
+        alt: "Mortal Shell 2 Guide",
+        type: "image/jpeg",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@mortalshell",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: OG_IMAGE_W,
+        height: OG_IMAGE_H,
+        alt: "Mortal Shell 2 Guide",
+      },
+    ],
   },
   alternates: {
     types: {

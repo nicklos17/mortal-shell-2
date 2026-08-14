@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { pageURL } from "@/lib/site-config";
+import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import ShellWheel from "./ShellWheel";
 import { SHELLS } from "@/lib/shells";
 import { ShellIcon } from "@/lib/shell-icon";
@@ -19,12 +19,32 @@ export const metadata: Metadata = {
     description:
       "Every playable Shell in Mortal Shell 2 — names, playstyles, locations, and signature abilities.",
     url: pageURL(PAGE_PATH),
+    type: "website",
+    siteName: "Mortal Shell 2 Guide",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: OG_IMAGE_W,
+        height: OG_IMAGE_H,
+        alt: "Mortal Shell 2 Guide",
+        type: "image/jpeg",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@mortalshell",
     title: TITLE,
     description:
       "Every playable Shell in Mortal Shell 2 — names, playstyles, locations, and signature abilities.",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: OG_IMAGE_W,
+        height: OG_IMAGE_H,
+        alt: "Mortal Shell 2 Guide",
+      },
+    ],
   },
 };
 

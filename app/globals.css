@@ -516,6 +516,22 @@ table.data tr:hover td {
   font-size: 1rem;
 }
 
+.countdown-card.countdown-live .countdown-eyebrow {
+  color: var(--color-gold-bright);
+}
+
+.countdown-live-text {
+  text-align: center;
+  padding: 1.1rem .5rem .2rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: .08em;
+  font-size: 1.7rem;
+  color: var(--color-blood-bright);
+  text-shadow: 0 0 18px rgba(163, 52, 52, .4);
+  line-height: 1.15;
+}
+
 /* ---------- 文章通用样式（updates/article 复用） ---------- */
 .article h2 {
   margin: 2rem 0 .75rem;
