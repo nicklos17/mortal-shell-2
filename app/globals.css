@@ -1005,6 +1005,135 @@ table.data tr:hover td {
   display: block;
 }
 
+/* ---------- Builds 页面 ---------- */
+.build-card {
+  background: var(--bg-card);
+  border: var(--border-gold);
+  border-radius: 2px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  transition: background .2s ease, box-shadow .2s ease;
+}
+
+.build-card:hover {
+  background: var(--bg-card-hover);
+  box-shadow: var(--glow-gold);
+}
+
+.build-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(184, 147, 50, 0.2);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.build-shell-chip {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .78rem;
+  padding: .3rem .8rem;
+  border: 1px solid rgba(184, 147, 50, .45);
+  border-radius: 2px;
+  background: rgba(184, 147, 50, .06);
+  white-space: nowrap;
+}
+
+.build-shell-chip a {
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.build-shell-chip a:hover {
+  color: var(--color-gold-bright);
+}
+
+.build-core {
+  font-family: var(--font-quote);
+  font-size: 1.02rem;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+  max-width: 62ch;
+}
+
+.build-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.build-cols h4 {
+  margin: 0 0 .5rem;
+  font-size: .92rem;
+  letter-spacing: .14em;
+  color: var(--color-gold);
+}
+
+.build-cols ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-secondary);
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.build-cols li {
+  margin: .2rem 0;
+}
+
+.build-play {
+  margin: 1rem 0;
+}
+
+.build-play h4 {
+  margin: 0 0 .5rem;
+  font-size: .92rem;
+  letter-spacing: .14em;
+  color: var(--color-gold);
+}
+
+.build-play ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-secondary);
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.build-play li {
+  margin: .25rem 0;
+}
+
+.build-footer {
+  margin-top: 1rem;
+  padding-top: .8rem;
+  border-top: 1px solid rgba(184, 147, 50, 0.15);
+  font-size: .88rem;
+  color: var(--text-primary);
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  margin-top: .5rem;
+}
+
+.faq h3 {
+  margin: 1.2rem 0 .35rem;
+  font-size: 1.05rem;
+}
+
+.faq p {
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0 0 .5rem;
+}
+
+/* ---------- Builds/FAQ 响应式 ---------- */
 @media (max-width: 720px) {
   .shell-detail {
     grid-template-columns: 1fr;
@@ -1013,6 +1142,16 @@ table.data tr:hover td {
   .shell-figure {
     margin: -1.5rem -1.5rem 0;
     width: calc(100% + 3rem);
+  }
+
+  .build-cols {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .build-head {
+    flex-direction: column;
+    gap: .5rem;
   }
 }
 

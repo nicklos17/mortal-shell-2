@@ -30,6 +30,7 @@ const CHANGED_TODAY: ReadonlySet<string> = new Set([
   "",         // 首页：新增 3 个 H2 内容区块 + 倒计时 SSG 重构
   "/map",     // /map：1000+ 词正文扩充 + 点位 schema 占位 + tips 提示
   "/shells",  // /shells：ShellWheel 外圈图片渲染 + 8 子页联动调整
+  "/builds",  // /builds：8 配装完整攻略上线
 ]);
 
 type StaticRoute = {

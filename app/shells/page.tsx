@@ -222,12 +222,14 @@ export default function ShellsPage() {
           <p>
             Shells are only half the build. In Mortal Shell II your combat
             identity is shaped by layering Shells with{" "}
-            <a href="/weapons/">weapons</a>,{" "}
-            <a href="/builds/">Tarstones</a> (elemental weapon infusions) and
-            Seals (equipable passive/active modifiers). Start by picking the
-            Shell whose tempo fits you, then lean into its strengths with the
-            right stone and seal combos. For matchups against specific
-            encounters, see our <a href="/bosses/">boss strategies</a>.
+            <a href="/weapons/">weapons</a>, Tarstones (elemental weapon
+            infusions) and Seals (equipable passive/active modifiers). Start
+            by picking the Shell whose tempo fits you, then lean into its
+            strengths with the right stone and seal combos. Our dedicated{" "}
+            <a href="/builds/">best Mortal Shell 2 builds</a> guide walks
+            through eight setups with talent priority and playstyle notes for
+            every major archetype. For matchups against specific encounters,
+            see our <a href="/bosses/">boss strategies</a>.
           </p>
           <div className="hero-cta">
             <a className="btn btn-outline" href="/map/">
