@@ -33,6 +33,8 @@ const CHANGED_TODAY: ReadonlySet<string> = new Set([
   "/builds",  // /builds：8 配装完整攻略上线
   "/about",   // /about：About Us 信任页上线
   "/privacy", // /privacy：Privacy Policy 合规页上线
+  "/terms",   // /terms：Terms of Service 合规页上线
+  "/disclaimer", // /disclaimer：Disclaimer 免责声明页上线
   "/contact", // /contact：Contact Us 联系页上线
 ]);
 
@@ -55,6 +57,8 @@ const STATIC_ROUTES: StaticRoute[] = [
   { path: "/tips", createdAt: "2026-08-14", priority: 0.7, changeFrequency: "yearly" },
   { path: "/about", createdAt: "2026-08-14", priority: 0.6, changeFrequency: "yearly" },
   { path: "/privacy", createdAt: "2026-08-14", priority: 0.5, changeFrequency: "yearly" },
+  { path: "/terms", createdAt: "2026-08-14", priority: 0.5, changeFrequency: "yearly" },
+  { path: "/disclaimer", createdAt: "2026-08-14", priority: 0.5, changeFrequency: "yearly" },
   { path: "/contact", createdAt: "2026-08-14", priority: 0.6, changeFrequency: "yearly" },
 ];
 

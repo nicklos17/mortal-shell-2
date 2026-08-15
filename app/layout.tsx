@@ -108,6 +108,8 @@ gtag('config', '${GA_MEASUREMENT_ID}');
             <nav>
               <a href="/about/">About</a>
               <a href="/privacy/">Privacy</a>
+              <a href="/terms/">Terms of Service</a>
+              <a href="/disclaimer/">Disclaimer</a>
               <a href="/contact/">Contact</a>
               <a href="/rss.xml">RSS</a>
             </nav>
