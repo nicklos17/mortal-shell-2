@@ -210,9 +210,9 @@ export default function MapPage() {
             <li>
               <strong>Widow&apos;s Overlook to Mushroom Village.</strong>
               Follow the path from Widow&apos;s Overlook down into Mushroom
-              Village. Tial, the second Shell available in the beta, is
+              Village. Tiel the Acolyte, the second Shell available in the beta, is
               located in the northeast of the village near the Ritual
-              Grounds dungeon. Grab Tial before attempting the Ritual
+              Grounds dungeon. Grab Tiel the Acolyte before attempting the Ritual
               Grounds, because his speed and dodge-focused kit will help
               you against the enemies inside.
             </li>
@@ -220,7 +220,7 @@ export default function MapPage() {
               <strong>Ritual Grounds dungeon.</strong> This is the first
               major dungeon after the prologue. The enemies here hit hard
               and fast. If you are still using Harros, consider switching to
-              Tial for his mobility, or come back later with Eredirm to
+              Tiel the Acolyte for his mobility, or come back later with Eredrim the Venerable to
               tank through the damage.
             </li>
             <li>
@@ -276,18 +276,18 @@ export default function MapPage() {
               </span>
             </li>
             <li>
-              <a href="/shells/tial">Tial, the Acolyte</a>{" "}
+              <a href="/shells/tial">Tiel the Acolyte</a>{" "}
               <span className="loc-note">
                 : found in Mushroom Village, northeast area, near the
                 Ritual Grounds dungeon. Zhirelle at Marrow Keep points you
                 toward Widow&apos;s Overlook, which leads down to the
-                village. Tial is the second Shell available in the beta and
+                village. Tiel the Acolyte is the second Shell available in the beta and
                 the best choice for players who prefer speed over
                 durability.
               </span>
             </li>
             <li>
-              <a href="/shells/eredirm">Eredirm, the Venerable</a>{" "}
+              <a href="/shells/eredirm">Eredirm the Venerable</a>{" "}
               <span className="loc-note">
                 : hidden somewhere in the open world. The exact area has not
                 been revealed yet. Like all Shells, you claim him by finding
@@ -367,8 +367,8 @@ export default function MapPage() {
               <span className="loc-note">
                 : found at the end of the Ritual Grounds dungeon, northeast
                 of Mushroom Village. The nearest Tarstone shrine is inside
-                the dungeon entrance. Recommended Shell: Tial for his dodge
-                mobility, or Eredirm if you prefer to absorb hits and trade.
+                the dungeon entrance. Recommended Shell: Tiel the Acolyte for his dodge
+                mobility, or Eredrim the Venerable if you prefer to absorb hits and trade.
               </span>
             </li>
             <li>
@@ -459,7 +459,7 @@ export default function MapPage() {
                 Mushroom Village hidden room: a small chamber behind the
                 waterfall in the village&apos;s lower section. Contains a
                 consumable item and a shortcut back to Widow&apos;s
-                Overlook. You need Tial&apos;s Shadow Strike to phase
+                Overlook. You need Tiel the Acolyte&apos;s Shadow Strike to phase
                 through the wall.
               </span>
             </li>

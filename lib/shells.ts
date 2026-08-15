@@ -52,7 +52,7 @@ export const SHELLS: Shell[] = [
   },
   {
     id: "eredirm",
-    name: "Eredirm",
+    name: "Eredrim the Venerable",
     epithet: "The Venerable",
     role: "Tank / Heavy",
     tagline: "The bulwark — a slow, heavy, high-survivability bruiser.",
@@ -61,7 +61,7 @@ export const SHELLS: Shell[] = [
     location: "Hidden in the open world; exact area TBD after launch.",
     status: "Confirmed",
     playstyle:
-      "Eredirm trades speed for durability and punishing melee. Soak the damage, then answer with massive, deliberate strikes. Rewards patience and spacing over aggression.",
+      "Eredrim the Venerable trades speed for durability and punishing melee. Soak the damage, then answer with massive, deliberate strikes. Rewards patience and spacing over aggression.",
     lore:
       "Known as 'The Venerable' in the first Mortal Shell — an ancient, battle-scarred warrior of immense stature. Returns as the roster's tank archetype.",
     abilities: [
@@ -74,8 +74,8 @@ export const SHELLS: Shell[] = [
       "Slower recovery means spacing and patience matter more than aggression.",
     ],
     image: "/assets/images/eredirm-mortal-shell-2.png",
-    imageAlt: "Eredirm, a playable Shell in Mortal Shell 2",
-    imageTitle: "Eredirm – Mortal Shell 2 Shell",
+    imageAlt: "Eredrim the Venerable, a playable Shell in Mortal Shell 2",
+    imageTitle: "Eredrim the Venerable – Mortal Shell 2 Shell",
   },
   {
     id: "dommymommy",
@@ -164,9 +164,9 @@ export const SHELLS: Shell[] = [
     imageTitle: "Skeleton Man – Mortal Shell 2 Shell",
   },
   {
-    id: "tial",
-    name: "Tial",
-    epithet: "The Acolyte",
+    id: "tiel",
+    name: "Tiel the Acolyte",
+    epithet: "Tiel the Acolyte",
     role: "Assassin / Speed",
     tagline: "The shadow assassin — fast, aggressive, reward-perfect-dodge hit-and-run.",
     desc: "A shadow assassin: fast, aggressive, built around precise dodging. Clean dodges open bonus offensive windows — ideal for hit-and-run play.",
@@ -186,9 +186,9 @@ export const SHELLS: Shell[] = [
       "Clean dodges are the key — whiff a dodge and you lose his biggest advantage.",
       "Pairs well with fast weapons and aggressive Tarstones.",
     ],
-    image: "/assets/images/tial-mortal-shell-2.png",
-    imageAlt: "Tial, a playable Shell in Mortal Shell 2",
-    imageTitle: "Tial – Mortal Shell 2 Shell",
+    image: "/assets/images/tiel-mortal-shell-2.png",
+    imageAlt: "Tiel the Acolyte, a playable Shell in Mortal Shell 2",
+    imageTitle: "Tiel the Acolyte – Mortal Shell 2 Shell",
   },
   {
     id: "blackmage",

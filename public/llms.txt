@@ -17,20 +17,20 @@
 ## Shells
 
 - [Black Beard](https://mortal-shell2.wiki/shells/blackbeard): Shell page — stats, abilities, and location.
-- [Eredirm](https://mortal-shell2.wiki/shells/eredirm): Shell page — stats, abilities, and location.
+- [Eredrim the Venerable](https://mortal-shell2.wiki/shells/eredirm): Shell page — stats, abilities, and location.
 - [Dommy Mommy](https://mortal-shell2.wiki/shells/dommymommy): Shell page — stats, abilities, and location.
 - [Sester Mask](https://mortal-shell2.wiki/shells/sester): Shell page — stats, abilities, and location.
 - [Harros](https://mortal-shell2.wiki/shells/harros): Shell page — stats, abilities, and location.
 - [Skeleton Man](https://mortal-shell2.wiki/shells/skeletonman): Shell page — stats, abilities, and location.
-- [Tial](https://mortal-shell2.wiki/shells/tial): Shell page — stats, abilities, and location.
+- [Tiel the Acolyte](https://mortal-shell2.wiki/shells/tiel): Shell page — stats, abilities, and location.
 - [Black Mage](https://mortal-shell2.wiki/shells/blackmage): Shell page — stats, abilities, and location.
 
 ## Builds
 
 - [Tank Build](https://mortal-shell2.wiki/builds#tank): Tier A — soak damage and hold the line. Recommended shell: Black Beard.
 - [Pure DPS Build](https://mortal-shell2.wiki/builds#dps): Tier A — raw burst to end fights in short lethal windows.
-- [Agile Build](https://mortal-shell2.wiki/builds#agile): Tier S — dodge-rolled aggression. Recommended shell: Tial the Acolyte.
-- [Spellcaster Build](https://mortal-shell2.wiki/builds#mage): Tier A — high-risk, high-reward ranged elemental damage. Recommended shell: Eredirm the Venerable.
+- [Agile Build](https://mortal-shell2.wiki/builds#agile): Tier S — dodge-rolled aggression. Recommended shell: Tiel the Acolyte.
+- [Spellcaster Build](https://mortal-shell2.wiki/builds#mage): Tier A — high-risk, high-reward ranged elemental damage. Recommended shell: Eredrim the Venerable.
 - [Poison DOT Build](https://mortal-shell2.wiki/builds#poison-dot): Tier A — stack poison and let the tick finish the job. Recommended shell: Dommy Mommy.
 - [Summoner Build](https://mortal-shell2.wiki/builds#summoner): Tier B — let your minions fight while you manage the room.
 - [Hybrid Build](https://mortal-shell2.wiki/builds#hybrid): Tier A — a jack of all trades setup that responds to anything. Recommended shell: Harros the Vassal.

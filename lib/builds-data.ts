@@ -98,13 +98,13 @@ export const BUILDS: Build[] = [
     id: "agile",
     name: "Agile Build",
     role: "Agile",
-    shellId: "tial",
-    shellName: "Tial the Acolyte",
+    shellId: "tiel",
+    shellName: "Tiel the Acolyte",
     tagline: "Hit, move, hit again. Dodge-rolled aggression for players who never stop moving.",
     coreIdea:
       "A mobility-first setup paired with the fastest shell on the roster. Clean dodges open offensive windows that other shells can never reach. Light armor and dual weapons keep recovery frames short enough to chain two combos where a tank would still be mid-animation.",
     gear: [
-      "Tial or equivalent speed-focused shell for dodge-tuned frames.",
+      "Tiel the Acolyte or equivalent speed-focused shell for dodge-tuned frames.",
       "Daggers or dual-wield weapons, short swing, long chain.",
       "Light armor set, optimized for dodge distance and stamina efficiency.",
       "Crit damage and dodge-refund Tarstones.",
@@ -131,7 +131,7 @@ export const BUILDS: Build[] = [
     name: "Spellcaster Build",
     role: "Mage",
     shellId: "eredirm",
-    shellName: "Eredirm the Venerable",
+    shellName: "Eredrim the Venerable",
     tagline: "Stand back, let the elements talk. High-risk, high-reward ranged elemental damage.",
     coreIdea:
       "Use the ranged shell to engage from safe distance. Elemental damage types let you exploit weaknesses, fire for flesh, ice for agile targets, lightning for armored crowds. Resource management matters more than any other build; one dry mana bar leaves you swinging a staff as a last resort.",

@@ -70,7 +70,7 @@ const faqJsonLd = {
       name: "What is the best Mortal Shell 2 build?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "There is no single best Mortal Shell 2 build. The strongest setup depends on the encounter and the player's preference. Tank builds like Black Beard excel at surviving punishing bosses. Agile builds like Tial dominate mobile targets and hit-and-run routing. Pure DPS collapses a fight fast but requires clean reads. Beginner players should start with Harros hybrid before branching into Mortal Shell 2 builds that fit their playstyle.",
+        text: "There is no single best Mortal Shell 2 build. The strongest setup depends on the encounter and the player's preference. Tank builds like Black Beard excel at surviving punishing bosses. Agile builds like Tiel the Acolyte dominate mobile targets and hit-and-run routing. Pure DPS collapses a fight fast but requires clean reads. Beginner players should start with Harros hybrid before branching into Mortal Shell 2 builds that fit their playstyle.",
       },
     },
     {
@@ -86,7 +86,7 @@ const faqJsonLd = {
       name: "Which Shell should I start with for builds?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Harros the Vassal is the safest starting point for new players. His balanced stat spread works with nearly every weapon and leaves room to test before committing to a specialized build. If you enjoy tank play, move to Black Beard or Eredirm. If you favor speed, respec toward Tial and the agile build. See the full Shell roster on our Shells page for each shell's recommended pairing.",
+        text: "Harros the Vassal is the safest starting point for new players. His balanced stat spread works with nearly every weapon and leaves room to test before committing to a specialized build. If you enjoy tank play, move to Black Beard or Eredrim the Venerable. If you favor speed, respec toward Tiel the Acolyte and the agile build. See the full Shell roster on our Shells page for each shell's recommended pairing.",
       },
     },
     {
@@ -464,7 +464,7 @@ export default function BuildsPage() {
               There is no single best Mortal Shell 2 build. The strongest
               setup depends on the encounter and the player's preference. Tank
               builds like Black Beard excel at surviving punishing bosses.
-              Agile builds like Tial dominate mobile targets and hit-and-run
+              Agile builds like Tiel the Acolyte dominate mobile targets and hit-and-run
               routing. Pure DPS collapses a fight fast but requires clean
               reads. Beginner players should start with Harros hybrid before
               branching into Mortal Shell 2 builds that fit their playstyle.
@@ -485,8 +485,8 @@ export default function BuildsPage() {
               Harros the Vassal is the safest starting point for new players.
               His balanced stat spread works with nearly every weapon and
               leaves room to test before committing to a specialized build.
-              If you enjoy tank play, move to Black Beard or Eredirm. If you
-              favor speed, respec toward Tial and the agile build. See the
+              If you enjoy tank play, move to Black Beard or Eredrim the Venerable. If you
+              favor speed, respec toward Tiel the Acolyte and the agile build. See the
               full Shell roster on our Shells page for each shell's
               recommended pairing.
             </p>

@@ -77,7 +77,7 @@ export default function ShellsPage() {
         <p className="lede">
           Shells are the heart of Mortal Shell II. You don&apos;t build one fixed
           character — you are <strong style={{ color: "var(--color-gold)" }}>the
-          Harbinger</strong>, a shapeless being who awakens and inhabits the
+            Harbinger</strong>, a shapeless being who awakens and inhabits the
           fallen bodies of forgotten warriors. Each Shell is a complete
           &ldquo;class&rdquo; with its own stats, combat identity, and signature
           abilities you can swap between at will.
@@ -90,7 +90,7 @@ export default function ShellsPage() {
           <p>
             Instead of a traditional level-up-and-pick-a-class loop, Mortal
             Shell II hands you a roster of <strong style={{ color: "var(--color-gold)" }}>eight
-            playable Shells</strong> scattered across the world. Find a Shell,
+              playable Shells</strong> scattered across the world. Find a Shell,
             awaken it, and you can slip into its body to fight as that warrior.
             Swap whenever the situation demands — a fast assassin for a
             hit-and-run, a heavy tank to weather a boss, a sustain Shell to
@@ -124,7 +124,7 @@ export default function ShellsPage() {
             <strong>How many Shells, and where are they?</strong> There are{" "}
             <strong>eight playable Shells</strong> in total (not counting the
             Harbinger). Two have confirmed in-game locations from the open beta
-            — <strong>Harros</strong> in the Prologue and <strong>Tial</strong>{" "}
+            — <strong>Harros</strong> in the Prologue and <strong>Tiel the Acolyte</strong>{" "}
             in the Mushroom Village. The rest are scattered across the open
             world; their exact areas haven&apos;t been revealed yet and will be
             added here after the full game launches on Aug 20, 2026.

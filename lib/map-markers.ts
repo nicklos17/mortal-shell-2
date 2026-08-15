@@ -28,7 +28,7 @@ export const mapMarkers: MapMarker[] = [
   },
   {
     id: "eredirm",
-    name: "Eredirm the Venerable",
+    name: "Eredrim the Venerable",
     type: "shell",
     x: 42,
     y: 22,
@@ -87,8 +87,8 @@ export const mapMarkers: MapMarker[] = [
     updatedAt: "2026-08-20",
   },
   {
-    id: "tial",
-    name: "Tial the Acolyte",
+    id: "tiel",
+    name: "Tiel the Acolyte",
     type: "shell",
     x: 14,
     y: 56,
