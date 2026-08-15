@@ -90,5 +90,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticEntries, ...shellEntries, ...articleEntries];
+  // RSS feed — 独立于页面路由，使用固定的 lastmod（由用户提供）
+  const rssEntry: MetadataRoute.Sitemap[number] = {
+    url: pageURL("/rss.xml"),
+    lastModified: new Date("2026-08-15T12:00:00.000Z"),
+    changeFrequency: "daily",
+    priority: 0.5,
+  };
+
+  return [...staticEntries, ...shellEntries, ...articleEntries, rssEntry];
 }
