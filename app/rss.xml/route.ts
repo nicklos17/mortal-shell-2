@@ -49,9 +49,11 @@ function pad(n: number): string {
 }
 
 // 用真实日期推导星期，避免手写 "Fri" 与实际日期不符（如 8/15/2026 实际是周六）
+// 时区以 EST（UTC-5）展示：先把 UTC 瞬时时间减去 5 小时，再取该 EST 本地时刻的各字段
 function toRFC822(iso: string): string {
     const d = new Date(iso);
-    return `${DAYS[d.getUTCDay()]}, ${pad(d.getUTCDate())} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())} +0000`;
+    const est = new Date(d.getTime() - 5 * 60 * 60 * 1000);
+    return `${DAYS[est.getUTCDay()]}, ${pad(est.getUTCDate())} ${MONTHS[est.getUTCMonth()]} ${est.getUTCFullYear()} ${pad(est.getUTCHours())}:${pad(est.getUTCMinutes())}:${pad(est.getUTCSeconds())} EST`;
 }
 
 function escapeXML(s: string): string {
