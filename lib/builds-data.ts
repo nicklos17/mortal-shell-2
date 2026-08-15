@@ -130,7 +130,7 @@ export const BUILDS: Build[] = [
     id: "mage",
     name: "Spellcaster Build",
     role: "Mage",
-    shellId: "eredirm",
+    shellId: "eredrim",
     shellName: "Eredrim the Venerable",
     tagline: "Stand back, let the elements talk. High-risk, high-reward ranged elemental damage.",
     coreIdea:

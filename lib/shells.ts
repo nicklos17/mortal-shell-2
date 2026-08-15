@@ -51,7 +51,7 @@ export const SHELLS: Shell[] = [
     imageTitle: "Black Beard – Mortal Shell 2 Shell",
   },
   {
-    id: "eredirm",
+    id: "eredrim",
     name: "Eredrim the Venerable",
     epithet: "The Venerable",
     role: "Tank / Heavy",
@@ -73,7 +73,7 @@ export const SHELLS: Shell[] = [
       "Great against bosses with telegraphed, heavy hits you can simply tank.",
       "Slower recovery means spacing and patience matter more than aggression.",
     ],
-    image: "/assets/images/eredirm-mortal-shell-2.png",
+    image: "/assets/images/eredrim-mortal-shell-2.png",
     imageAlt: "Eredrim the Venerable, a playable Shell in Mortal Shell 2",
     imageTitle: "Eredrim the Venerable – Mortal Shell 2 Shell",
   },

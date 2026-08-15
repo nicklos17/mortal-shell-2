@@ -2,7 +2,7 @@
    Shell 徽记 SVG（每个躯壳一个独特符号）
    与 lib/shells.ts 的 id 对应。
    ============================================================ */
-export function ShellIcon({ id, className }: { id: string; className?: string }) {
+export function ShellIcon({ id, className }: { id: string; className?: string; }) {
   const G = "currentColor";
   const BRIGHT = "#d4af5e";
   const BLOOD = "#a33434";
@@ -34,7 +34,7 @@ export function ShellIcon({ id, className }: { id: string; className?: string })
           <path d="M12,20 q7,3 0,7 M12,34 q7,3 0,7" stroke={BRIGHT} strokeWidth={1.6} />
         </svg>
       );
-    case "eredirm": // 重盾
+    case "eredrim": // 重盾
       return (
         <svg viewBox="0 0 64 64" fill="none" stroke={G} strokeWidth={2} strokeLinejoin="round" className={className}>
           <path d="M32,7 L51,14 L51,33 Q51,49 32,57 Q13,49 13,33 L13,14 Z" />

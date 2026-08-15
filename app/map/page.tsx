@@ -287,7 +287,7 @@ export default function MapPage() {
               </span>
             </li>
             <li>
-              <a href="/shells/eredirm">Eredirm the Venerable</a>{" "}
+              <a href="/shells/eredrim">Eredrim the Venerable</a>{" "}
               <span className="loc-note">
                 : hidden somewhere in the open world. The exact area has not
                 been revealed yet. Like all Shells, you claim him by finding

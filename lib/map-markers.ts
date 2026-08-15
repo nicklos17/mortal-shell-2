@@ -27,7 +27,7 @@ export const mapMarkers: MapMarker[] = [
     updatedAt: "2026-08-20",
   },
   {
-    id: "eredirm",
+    id: "eredrim",
     name: "Eredrim the Venerable",
     type: "shell",
     x: 42,

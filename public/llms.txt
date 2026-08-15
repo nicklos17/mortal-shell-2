@@ -17,7 +17,7 @@
 ## Shells
 
 - [Black Beard](https://mortal-shell2.wiki/shells/blackbeard): Shell page — stats, abilities, and location.
-- [Eredrim the Venerable](https://mortal-shell2.wiki/shells/eredirm): Shell page — stats, abilities, and location.
+- [Eredrim the Venerable](https://mortal-shell2.wiki/shells/eredrim): Shell page — stats, abilities, and location.
 - [Dommy Mommy](https://mortal-shell2.wiki/shells/dommymommy): Shell page — stats, abilities, and location.
 - [Sester Mask](https://mortal-shell2.wiki/shells/sester): Shell page — stats, abilities, and location.
 - [Harros](https://mortal-shell2.wiki/shells/harros): Shell page — stats, abilities, and location.
