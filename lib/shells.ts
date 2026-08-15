@@ -17,6 +17,8 @@ export type Shell = {
   /** 获取位置 + 时间点 */
   location: string;
   status: "Confirmed" | "Beta" | "TBA";
+  /** 是否为序章限定躯壳（仅在序章可用，后续需夺回/切换） */
+  prologueOnly?: boolean;
   /** 战斗风格（详情页段落） */
   playstyle: string;
   /** 背景故事（详情页段落） */
@@ -126,8 +128,9 @@ export const SHELLS: Shell[] = [
     tagline: "The dependable all-rounder — your first Shell and the safest way to learn the sequel.",
     desc: "Returning from the first game, Harros is the all-rounder — balanced offense and defense with no extreme specialization. The safe pick for learning the sequel's faster, stamina-free combat.",
     signature: "Stone Stun — petrify enemies, locking them in place for free hits.",
-    location: "Prologue — your first Shell. Found after meeting the UnderMether. (Lost after the Tar Golem boss in beta.)",
+    location: "Prologue only — your first Shell, found right after meeting the UnderMether. In the beta he is lost after the Prologue's Tar Golem boss, so you must reclaim his body or switch to another Shell for the rest of the run.",
     status: "Beta",
+    prologueOnly: true,
     playstyle:
       "Balanced kit covering offense and defense without specialization. Recommended starter for learning the game's faster, stamina-free combat.",
     lore:

@@ -933,6 +933,12 @@ table.data tr:hover td {
   background: rgba(125, 151, 168, .08);
 }
 
+.shell-badge.prologue {
+  color: var(--color-blood, #c0392b);
+  border-color: rgba(192, 57, 43, .5);
+  background: rgba(192, 57, 43, .1);
+}
+
 .shell-portrait {
   width: 100%;
   height: auto;
@@ -1176,4 +1182,34 @@ table.data tr:hover td {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+}
+
+/* ---------- Pre-release 声明横幅（/shells 及子页） ---------- */
+.prerelease-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+  background: rgba(184, 147, 50, 0.08);
+  border: 1px solid rgba(184, 147, 50, 0.4);
+  border-left: 4px solid #b89332;
+  border-radius: 8px;
+  padding: .9rem 1.1rem;
+  margin: 0 0 1.75rem;
+  color: var(--text-secondary);
+  font-size: .92rem;
+  line-height: 1.6;
+}
+
+.prerelease-banner .ico {
+  flex: 0 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.45;
+}
+
+.prerelease-banner p {
+  margin: 0;
+}
+
+.prerelease-banner strong {
+  color: var(--color-gold);
 }

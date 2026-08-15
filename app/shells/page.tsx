@@ -5,6 +5,7 @@ import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import ShellWheel from "./ShellWheel";
 import { SHELLS } from "@/lib/shells";
 import { ShellIcon } from "@/lib/shell-icon";
+import PreReleaseBanner from "./PreReleaseBanner";
 
 const TITLE = "Mortal Shell 2 Shells";
 const PAGE_PATH = "/shells";
@@ -70,6 +71,7 @@ export default function ShellsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
       <main className="container">
+        <PreReleaseBanner />
         <span className="eyebrow">Classes &amp; Playable Characters</span>
         <h1>{TITLE}</h1>
         <span className="title-rule" />
@@ -155,7 +157,12 @@ export default function ShellsPage() {
                   <td>{s.epithet}</td>
                   <td>{s.role}</td>
                   <td>{s.location}</td>
-                  <td>{s.status}</td>
+                  <td>
+                    {s.status}
+                    {s.prologueOnly && (
+                      <span className="shell-badge prologue">Prologue Only</span>
+                    )}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -196,6 +203,9 @@ export default function ShellsPage() {
                   </div>
                 </div>
                 <span className="shell-role">{s.role}</span>
+                {s.prologueOnly && (
+                  <span className="shell-badge prologue">Prologue Only</span>
+                )}
                 <p style={{ color: "var(--text-secondary)", fontSize: ".95rem" }}>
                   {s.desc}
                 </p>

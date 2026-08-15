@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { pageURL } from "@/lib/site-config";
 import { SHELLS, getShell, shellSlugs } from "@/lib/shells";
 import { ShellIcon } from "@/lib/shell-icon";
+import PreReleaseBanner from "../PreReleaseBanner";
 
 export function generateStaticParams() {
   return shellSlugs.map((slug) => ({ slug }));
@@ -13,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; }>;
 }): Promise<Metadata> {
   const { slug } = await params;
   const shell = getShell(slug);
@@ -34,7 +35,7 @@ export async function generateMetadata({
 export default async function ShellDetailPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; }>;
 }) {
   const { slug } = await params;
   const shell = getShell(slug);
@@ -57,6 +58,7 @@ export default async function ShellDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main className="container">
+        <PreReleaseBanner />
         <div className="article-back">
           <Link href="/shells">← All Shells</Link>
         </div>
@@ -75,6 +77,9 @@ export default async function ShellDetailPage({
             <span className={`shell-badge ${shell.status === "TBA" ? "tba" : ""}`}>
               {shell.status}
             </span>
+            {shell.prologueOnly && (
+              <span className="shell-badge prologue">Prologue Only</span>
+            )}
           </div>
         </div>
 
