@@ -31,6 +31,9 @@ const CHANGED_TODAY: ReadonlySet<string> = new Set([
   "/map",     // /map：1000+ 词正文扩充 + 点位 schema 占位 + tips 提示
   "/shells",  // /shells：ShellWheel 外圈图片渲染 + 8 子页联动调整
   "/builds",  // /builds：8 配装完整攻略上线
+  "/about",   // /about：About Us 信任页上线
+  "/privacy", // /privacy：Privacy Policy 合规页上线
+  "/contact", // /contact：Contact Us 联系页上线
 ]);
 
 type StaticRoute = {

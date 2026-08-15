@@ -39,3 +39,9 @@
 ## Updates
 
 - [Mortal Shell 2 Release Date](https://mortal-shell2.wiki/updates/mortal-shell-2-release-date): Confirmed release date, platforms, editions, and pre-order details.
+
+## Trust & Legal
+
+- [About Us](https://mortal-shell2.wiki/about): Who runs this wiki, how we verify every Shell and boss, and why you can trust our guide.
+- [Privacy Policy](https://mortal-shell2.wiki/privacy): How we handle your data — analytics, cookies, affiliate links, and your rights under GDPR and CCPA.
+- [Contact Us](https://mortal-shell2.wiki/contact): Report an error, contribute a map location, or reach the team behind the wiki.
