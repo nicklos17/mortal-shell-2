@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import { WEAPONS } from "@/lib/weapons-data";
@@ -6,7 +7,7 @@ import { WEAPONS } from "@/lib/weapons-data";
 const TITLE = "Mortal Shell 2 Weapons";
 const PAGE_PATH = "/weapons";
 const DESCRIPTION =
-  "Every Mortal Shell 2 weapon confirmed in the Open Beta — stats, damage scaling, special abilities, locations, and playstyle breakdowns. Updated for launch.";
+  "Complete Mortal Shell 2 weapons list — stats, scaling, special abilities, locations, sidearms, and playstyle breakdowns verified in the Open Beta. Updated for launch.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -107,6 +108,49 @@ const faqJsonLd = {
 };
 
 /* ============================================================
+   WeaponCard 中 Shell 名 → /shells/[slug] 锚链辅助
+   命中：Tiel the Acolyte / Black Beard / Eredrim the Venerable / Harros
+   ============================================================ */
+const SHELL_LINK: Record<string, string> = {
+  "Tiel the Acolyte": "/shells/tiel",
+  "Black Beard": "/shells/blackbeard",
+  "Eredrim the Venerable": "/shells/eredrim",
+  Harros: "/shells/harros",
+};
+
+function linkifyShells(text: string): ReactNode[] {
+  const patterns = Object.keys(SHELL_LINK).sort((a, b) => b.length - a.length);
+  const regex = new RegExp(
+    `(?<!\\w)(${patterns.map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})(?!\\w)`,
+    "g"
+  );
+  const result: ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      result.push(text.slice(lastIndex, match.index));
+    }
+    const name = match[1];
+    const href = SHELL_LINK[name];
+    result.push(
+      <a
+        key={`${match.index}-${name}`}
+        href={href}
+        className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
+      >
+        {name}
+      </a>
+    );
+    lastIndex = match.index + name.length;
+  }
+  if (lastIndex < text.length) {
+    result.push(text.slice(lastIndex));
+  }
+  return result.length ? result : [text];
+}
+
+/* ============================================================
    Weapon detail card，服务端直出
    ============================================================ */
 function WeaponCard({ weapon }: { weapon: (typeof WEAPONS)[number]; }) {
@@ -172,13 +216,13 @@ function WeaponCard({ weapon }: { weapon: (typeof WEAPONS)[number]; }) {
           <dt className="text-xs uppercase tracking-wider text-white/40">
             Playstyle Notes
           </dt>
-          <dd className="mt-1">{weapon.playstyle}</dd>
+          <dd className="mt-1">{linkifyShells(weapon.playstyle)}</dd>
         </div>
         <div className="sm:col-span-2">
           <dt className="text-xs uppercase tracking-wider text-white/40">
             Beta Notes
           </dt>
-          <dd className="mt-1 text-white/70">{weapon.betaNotes}</dd>
+          <dd className="mt-1 text-white/70">{linkifyShells(weapon.betaNotes)}</dd>
         </div>
       </dl>
 

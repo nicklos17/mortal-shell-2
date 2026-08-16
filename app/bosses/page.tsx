@@ -94,7 +94,7 @@ const faqJsonLd = {
       name: "What is the best Mortal Shell 2 boss order?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "From the Open Beta areas, fight Tainted Vestige and Circle of the Grasping Root early. Both sit at the low end and reward you with useful seals before the mid-tier trio of Gloombound Ritualist, Wandering Shepherd, and Gloombound Ritualist. Save Great Arbiter of Flesh for just before you reach Tiel the Acolyte's corpse, then close with Magdalena, Tar Golem, and Vrannic once your Shell trees are deeper. Mark each boss arena on the Mortal Shell 2 interactive map so you can backtrack without losing time.",
+        text: "From the Open Beta areas, fight Tainted Vestige and Circle of the Grasping Root early. Both sit at the low end and reward you with useful seals before the mid-tier trio of Gloombound Ritualist, and Wandering Shepherd. Save Great Arbiter of Flesh for just before you reach Tiel the Acolyte's corpse, then close with Magdalena, Tar Golem, and Vrannic once your Shell trees are deeper. Mark each boss arena on the Mortal Shell 2 interactive map so you can backtrack without losing time.",
       },
     },
   ],
