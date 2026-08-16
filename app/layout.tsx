@@ -93,6 +93,7 @@ gtag('config', '${GA_MEASUREMENT_ID}');
               <a href="/builds/">Builds</a>
               <a href="/weapons/">Weapons</a>
               <a href="/walkthrough/">Walkthrough</a>
+              <a href="/tips/">Tips</a>
               <a href="/updates/">Updates</a>
             </nav>
           </div>

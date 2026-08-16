@@ -165,22 +165,24 @@ h3 {
   color: var(--color-gold);
 }
 
-/* 标题下的金色装饰线 */
+/* 标题下的装饰线 */
 .title-rule {
   display: block;
-  width: 64px;
-  height: 2px;
-  margin: .75rem 0 1.25rem;
-  background: linear-gradient(90deg, var(--color-gold), transparent);
+  width: 60px;
+  height: 3px;
+  background: var(--color-gold);
+  margin: 0.5em 0 1.5em;
 }
 
 /* 小标签 eyebrow */
 .eyebrow {
   font-family: var(--font-heading);
-  font-size: .72rem;
+  font-size: 0.8rem;
   letter-spacing: .22em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 0.25em;
 }
 
 /* ---------- 引言（金句区） ---------- */
@@ -822,18 +824,36 @@ table.data tr:hover td {
 }
 
 .note {
-  border: 1px solid rgba(184, 147, 50, .4);
-  border-left: 3px solid var(--color-gold);
   background: rgba(184, 147, 50, .05);
-  padding: 1rem 1.2rem;
-  border-radius: 2px;
-  margin: 1.5rem 0;
+  border-left: 3px solid var(--color-gold);
+  padding: 12px 16px;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  font-size: .95rem;
+  margin-top: 2em;
 }
 
 .note strong {
   color: var(--color-gold);
+}
+
+/* tips 专用清单样式 */
+.tip-list {
+  padding-left: 1.2em;
+  list-style: none;
+}
+
+.tip-list li {
+  margin-bottom: 1.2em;
+}
+
+.tip-list li strong {
+  display: block;
+  margin-bottom: 0.2em;
+  color: var(--color-gold);
+}
+
+.tip-list li > span {
+  color: var(--text-primary);
 }
 
 .shell-detail {
