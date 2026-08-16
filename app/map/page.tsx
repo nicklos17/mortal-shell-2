@@ -3,14 +3,14 @@ import { pageURL } from "@/lib/site-config";
 import MapCanvasWrapper from "./MapCanvasWrapper";
 
 export const metadata: Metadata = {
-  title: "Mortal Shell 2 Interactive Map – All Locations & Routes",
+  title: "Mortal Shell 2 Map – Interactive Map & All Locations",
   description:
     "Interactive Mortal Shell 2 map with all Shell, boss, Tarstone, Beacon and collectible locations. Plan routes and find hidden items.",
   alternates: {
     canonical: pageURL("/map"),
   },
   openGraph: {
-    title: "Mortal Shell 2 Interactive Map – All Locations & Routes",
+    title: "Mortal Shell 2 Map – Interactive Map – All Locations",
     description:
       "Interactive Mortal Shell 2 map with every Shell, boss, Tarstone, Beacon, and collectible location.",
     url: pageURL("/map"),
@@ -117,7 +117,7 @@ export default function MapPage() {
 
       <main className="container">
         <span className="eyebrow">Explore Every Corner</span>
-        <h1>Mortal Shell 2 Interactive Map</h1>
+        <h1>Mortal Shell 2 Map</h1>
         <span className="title-rule" />
 
         <p className="lede">
