@@ -31,6 +31,7 @@ const CHANGED_TODAY: ReadonlySet<string> = new Set([
   "/map",     // /map：1000+ 词正文扩充 + 点位 schema 占位 + tips 提示
   "/shells",  // /shells：ShellWheel 外圈图片渲染 + 8 子页联动调整
   "/bosses",  // /bosses：8 Boss 完整攻略上线（Beta 实测数据 + FAQ + ItemList JSON-LD）
+  "/weapons", // /weapons：7 Beta 武器完整攻略 + scaling 机制说明 + FAQ
   "/builds",  // /builds：8 配装完整攻略上线
   "/about",   // /about：About Us 信任页上线
   "/privacy", // /privacy：Privacy Policy 合规页上线

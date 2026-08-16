@@ -194,7 +194,12 @@ export default function BuildsPage() {
             character, not a stat menu. The sequel also removes the stamina
             bar, so the old soulslike loop of managing stamina to time your
             attacks is gone. Instead Mortal Shell 2 builds run on a rhythm
-            of Shell-switching and weapon swaps. You don&apos;t respec a
+            of Shell-switching and weapon swaps. Pair each Shell with the
+            right blade from the{" "}
+            <a href="/weapons/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+              Mortal Shell 2 weapon list
+            </a>{" "}
+            to turn a direction into an actual build. You don&apos;t respec a
             single character so much as swap between Shells to change your
             entire setup between fights.
           </p>

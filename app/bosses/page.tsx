@@ -118,15 +118,14 @@ function BossCard({ boss }: { boss: (typeof BOSSES)[number]; }) {
             Beta Confirmed
           </span>
           <span
-            className={`shrink-0 rounded px-2 py-0.5 text-xs ${
-              boss.difficulty === "Easy"
-                ? "bg-emerald-500/15 text-emerald-400"
-                : boss.difficulty === "Medium"
+            className={`shrink-0 rounded px-2 py-0.5 text-xs ${boss.difficulty === "Easy"
+              ? "bg-emerald-500/15 text-emerald-400"
+              : boss.difficulty === "Medium"
                 ? "bg-amber-500/15 text-amber-400"
                 : boss.difficulty === "Hard"
-                ? "bg-orange-500/15 text-orange-400"
-                : "bg-red-500/15 text-red-400"
-            }`}
+                  ? "bg-orange-500/15 text-orange-400"
+                  : "bg-red-500/15 text-red-400"
+              }`}
           >
             {boss.difficulty}
           </span>
@@ -365,7 +364,11 @@ export default function BossesPage() {
             <Link href="/builds/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
               Mortal Shell 2 builds
             </Link>{" "}
-            guide, and read the{" "}
+            guide, pick a counter blade from the full{" "}
+            <a href="/weapons/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+              Mortal Shell 2 weapons
+            </a>{" "}
+            roster, and read the{" "}
             <Link href="/shells/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
               Shell roster
             </Link>{" "}
@@ -446,12 +449,7 @@ export default function BossesPage() {
               quarter-turn. Harden if you misjudge the timing. Stack poison
               DOT early in the fight and let the ticks run while you focus
               on dodging. The arena is wide enough to reset whenever needed,
-              so do not force a punish when you are out of position. Our
-              full{" "}
-              <Link href="/tips/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
-                Mortal Shell 2 beginner tips
-              </Link>{" "}
-              page covers DOT stacking and Shell swap timing in more detail.
+              so do not force a punish when you are out of position.
             </p>
 
             <h3>What boss should I fight first in Mortal Shell 2?</h3>
