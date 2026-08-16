@@ -1,20 +1,35 @@
 import type { Metadata } from "next";
-import { pageURL } from "@/lib/site-config";
+import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import MapCanvasWrapper from "./MapCanvasWrapper";
 
+const title = "Mortal Shell 2 Map – Interactive Map & All Locations";
+const description = "Mortal Shell 2 Map – interactive map with every Shell, boss, Tarstone, Beacon & collectible location. Plan routes and find hidden items.";
+
 export const metadata: Metadata = {
-  title: "Mortal Shell 2 Map – Interactive Map & All Locations",
-  description:
-    "Interactive Mortal Shell 2 map with all Shell, boss, Tarstone, Beacon and collectible locations. Plan routes and find hidden items.",
+  title,
+  description,
   alternates: {
     canonical: pageURL("/map"),
   },
   openGraph: {
-    title: "Mortal Shell 2 Map – Interactive Map – All Locations",
-    description:
-      "Interactive Mortal Shell 2 map with every Shell, boss, Tarstone, Beacon, and collectible location.",
+    title,
+    description,
     url: pageURL("/map"),
-    images: ["/assets/map-og.webp"],
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@mortalshell",
+    title,
+    description,
+    images: [
+      {
+        url: OG_IMAGE,
+        width: OG_IMAGE_W,
+        height: OG_IMAGE_H,
+        alt: "Mortal Shell 2 Map",
+      },
+    ],
   },
 };
 
