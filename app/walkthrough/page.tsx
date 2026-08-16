@@ -200,7 +200,7 @@ export default function WalkthroughPage() {
             </li>
             <li>
               <strong>Collect every early Tar Stone in the starting
-              zones.</strong>
+                zones.</strong>
               Grab every Tar Stone sitting on the ground, in the side
               chests, and on the shelf of the first weapon cottage before
               moving on. Each one funds an early Tarstone socket at the
@@ -224,7 +224,7 @@ export default function WalkthroughPage() {
             </li>
             <li>
               <strong>Bring the 135,000 Gloom per hour farming loop
-              online.</strong>
+                online.</strong>
               Once the first two quests are done, the video walkthrough
               sets up a repeatable enemy spawn just outside the first
               Beacon that reliably produces 135,000 Gloom per hour. Run
