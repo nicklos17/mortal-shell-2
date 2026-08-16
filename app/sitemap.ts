@@ -32,6 +32,7 @@ const CHANGED_TODAY: ReadonlySet<string> = new Set([
   "/shells",  // /shells：ShellWheel 外圈图片渲染 + 8 子页联动调整
   "/bosses",  // /bosses：8 Boss 完整攻略上线（Beta 实测数据 + FAQ + ItemList JSON-LD）
   "/weapons", // /weapons：7 Beta 武器完整攻略 + scaling 机制说明 + FAQ
+  "/walkthrough", // /walkthrough：开篇 OP 早期路线 + YouTube 视频 + FAQ + Article/VideoObject JSON-LD
   "/builds",  // /builds：8 配装完整攻略上线
   "/about",   // /about：About Us 信任页上线
   "/privacy", // /privacy：Privacy Policy 合规页上线

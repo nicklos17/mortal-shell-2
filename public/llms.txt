@@ -10,7 +10,7 @@
 - [Mortal Shell 2 Bosses](https://mortal-shell2.wiki/bosses): All 8 bosses from Open Beta. Attack patterns, weak points, confirmed regions, and strategy cards for each encounter.
 - [Best Builds](https://mortal-shell2.wiki/builds): Eight Mortal Shell 2 builds ranked by playstyle — tank, pure DPS, agile, spellcaster, poison DOT, summoner, hybrid, and beginner setups with recommended shells and talent order.
 - [Mortal Shell 2 Weapons](https://mortal-shell2.wiki/weapons): All 7 weapons confirmed in Open Beta. Stats, damage scaling letters, special abilities, exact locations, and Shell pairings.
-- [Full Walkthrough](https://mortal-shell2.wiki/walkthrough): Step-by-step walkthrough covering every area, every boss, and every ending.
+- [Mortal Shell 2 Walkthrough](https://mortal-shell2.wiki/walkthrough): Start and get OP early. First two quests, first Shell, Axe and Daggers, early Tar Stones, Nail Shot +3, and the 135k Gloom per hour farming loop.
 - [Beginner Tips](https://mortal-shell2.wiki/tips): Essential tips for new players — mechanics explained, early-game priorities, mistakes to avoid.
 - [Patch Notes & Updates](https://mortal-shell2.wiki/updates): Latest updates, balance changes, bug fixes, and new content.
 
