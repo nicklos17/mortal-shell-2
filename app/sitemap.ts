@@ -34,7 +34,8 @@ const CHANGED_TODAY: ReadonlySet<string> = new Set([
   "/weapons", // /weapons：7 Beta 武器完整攻略 + scaling 机制说明 + FAQ
   "/walkthrough", // /walkthrough：开篇 OP 早期路线 + YouTube 视频 + FAQ + Article/VideoObject JSON-LD
   "/tips",    // /tips：6 分类 18 条新手技巧 + FAQ + Article/FAQPage JSON-LD
-  "/builds",  // /builds：8 配装完整攻略上线
+  "/builds",  // /builds：改版为 Proxima 单卡片导流页 + FAQ 更新
+  "/builds/proxima", // /builds/proxima：Proxima Starter Build 完整攻略上线
   "/about",   // /about：About Us 信任页上线
   "/privacy", // /privacy：Privacy Policy 合规页上线
   "/terms",   // /terms：Terms of Service 合规页上线
@@ -56,6 +57,7 @@ const STATIC_ROUTES: StaticRoute[] = [
   { path: "/shells", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "weekly" },
   { path: "/bosses", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/builds", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/builds/proxima", createdAt: "2026-08-18", priority: 0.8, changeFrequency: "monthly" },
   { path: "/weapons", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/walkthrough", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/tips", createdAt: "2026-08-14", priority: 0.7, changeFrequency: "yearly" },
