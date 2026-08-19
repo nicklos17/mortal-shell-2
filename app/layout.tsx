@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Cinzel, Cormorant_Garamond } from "next/font/google";
 import { SITE_BASE_URL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
+// Leaflet 的基础 CSS 必须在 SSR 首屏静态 CSS bundle 中（而不是懒加载 MapCanvas
+// chunk 里），否则 L.map() 构造时（MapCanvas hydration + useEffect 执行瞬间）
+// .leaflet-container 等关键样式还没注入 → Leaflet 读取到 0 尺寸/缺样式，造成
+// 经典的“漆黑/空地图”故障。之前从 unpkg 外链 → 再改到 MapCanvas 内 import 都
+// 有“懒加载 CSS 与 L.map() 之间的时序竞争”，这里在服务器组件里 import 可以保证
+// 到达浏览器 HTML 第一字节时，Leaflet CSS 已经和 globals.css 合并好。
+import "leaflet/dist/leaflet.css";
 import "./globals.css";
 
 // Cinzel 700/800/900 自托管（加粗字重覆盖所有“粗体-标题”使用场景）

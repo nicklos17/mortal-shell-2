@@ -2,12 +2,6 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import L from "leaflet";
-// Leaflet CSS served from the local npm package (leaflet@1.9.4), bundled by
-// Next.js directly into the SSR CSS — eliminates the old render-blocking
-// <link rel=stylesheet href=https://unpkg.com/leaflet@1.9.4...> external
-// request (DNS + TLS + first-byte on unpkg CDN used to cost anywhere from
-// ~120ms (fast) to 2+ seconds (cold/vpn) on the FCP critical path).
-import "leaflet/dist/leaflet.css";
 import { mapMarkers, MapMarker, MarkerType } from "@/lib/map-markers";
 
 const BASE_URL = "/assets/images/map/base.webp";
@@ -279,20 +273,6 @@ export default function MapCanvas() {
       const northEast = map.unproject([MAP_W, 0], 0);
       const bounds = L.latLngBounds(southWest, northEast);
 
-      // Eagerly pre-trigger browser fetch of base.webp (before addTo even),
-      // so Leaflet's internal <img> hits the in-flight network request that
-      // we preloaded via <link rel="preload"> in metadata rather than
-      // queueing a fresh one at effect time.
-      const baseLayer = L.imageOverlay(BASE_URL, bounds, {
-        interactive: false,
-        className: "ms2-base",
-        errorOverlayUrl: "",
-        crossOrigin: false,
-        opacity: 1,
-        zIndex: 1,
-      });
-      baseLayer.addTo(map);
-
       // Last-resort fallback: even if fitBounds below throws for some reason,
       // force the image to cover the map's full viewport at zoom = -1.
       const forceVisible = () => {
@@ -331,6 +311,56 @@ export default function MapCanvas() {
         try { forceVisible(); } catch (_) { }
       };
 
+      // Eagerly pre-trigger browser fetch of base.webp (before addTo even),
+      // so Leaflet's internal <img> hits the in-flight network request that
+      // we preloaded via <link rel="preload"> in metadata rather than
+      // queueing a fresh one at effect time.
+      const baseLayer = L.imageOverlay(BASE_URL, bounds, {
+        interactive: false,
+        className: "ms2-base",
+        errorOverlayUrl: "",
+        crossOrigin: false,
+        opacity: 1,
+        zIndex: 1,
+      });
+      baseLayer.addTo(map);
+
+      // Critical: even though we call fitBounds immediately below, the real
+      // <img> element created by imageOverlay is NOT yet decoded. So the
+      // first fitBounds operates against a 0×0 placeholder, which can end up
+      // at zoom = undefined (or NaN) and leave the user looking at a blank
+      // black pane. Re-running fitBounds + invalidateSize inside the image
+      // "load" event guarantees we fit around a fully-decoded 3891×3891
+      // base map — eliminating the #1 "still black" race after JS runs but
+      // image is still in the browser decode queue.
+      const img = baseLayer.getElement?.() as HTMLImageElement | undefined;
+      if (img) {
+        const onImgReady = () => {
+          if (!alive()) return;
+          try { map.invalidateSize({ animate: false }); } catch (_) { }
+          try { forceVisible(); } catch (_) { }
+        };
+        if (img.complete && img.naturalWidth > 0) {
+          onImgReady();
+        } else {
+          img.addEventListener("load", onImgReady, { once: true });
+          img.addEventListener(
+            "error",
+            () => {
+              if (!alive()) return;
+              failMap(
+                `Failed to load base map image: ${BASE_URL}\n\n` +
+                "Check public/assets/images/map/base.webp exists on disk, " +
+                "is a valid WebP file, and the dev server / production build " +
+                "has copied it into .next/static/media (or the public dir " +
+                "is reachable at runtime).",
+              );
+            },
+            { once: true },
+          );
+        }
+      }
+
       // Optim: since CSS is statically in SSR'd HTML, the grid containers
       // *already* have correct dimensions when L.map fires. So we can do a
       // single synchronous invalidateSize + fitBounds, then ONE lightweight
@@ -357,6 +387,46 @@ export default function MapCanvas() {
         });
         ro.observe(mapEl.parentElement);
         ro.observe(mapEl);
+      }
+
+      // Ultra-light safety refresh: ONE frame (≈16ms) after paint. Not a
+      // heavy 40ms delay, not a 6-second timeout. This just ensures the
+      // browser's layout engine has settled *after* React commits the DOM
+      // and all SSR'd CSS classes have been applied. Covers: parent flex/grid
+      // containers that resolve their final size only after paint, or the
+      // leaflet CSS being bundled with globals.css but applied an instant
+      // after L.map() cached dimensions. Zero cost to perceived speed since
+      // it happens after the first rAF refresh anyway; but guarantees
+      // users on slower machines / dev HMR won't see the map "one layout
+      // pass behind" (empty / zoomed to corner).
+      const tSafety = window.setTimeout(() => {
+        if (!alive()) return;
+        try { map.invalidateSize({ animate: false, debounceMoveend: true }); } catch (_) { }
+        try { forceVisible(); } catch (_) { }
+      }, 16);
+
+      // IntersectionObserver: refresh once the map container actually
+      // intersects the viewport. Covers the common case where the user
+      // opens /map but scrolls down to text first → below-fold map never
+      // triggers viewport-driven relayout and stays black until the user
+      // resizes the window. Also catches tab switching (background tab →
+      // foreground).
+      let io: IntersectionObserver | null = null;
+      if (typeof IntersectionObserver !== "undefined") {
+        io = new IntersectionObserver(
+          (entries) => {
+            if (!alive()) return;
+            for (const e of entries) {
+              if (e.isIntersecting) {
+                try { map.invalidateSize({ animate: false, debounceMoveend: true }); } catch (_) { }
+                try { forceVisible(); } catch (_) { }
+                break;
+              }
+            }
+          },
+          { root: null, threshold: 0.05 },
+        );
+        io.observe(mapEl);
       }
 
       // ===== Marker creation — per-marker try/catch + L.layerGroup batch.
@@ -447,6 +517,8 @@ export default function MapCanvas() {
       }
 
       return () => {
+        window.clearTimeout(tSafety);
+        io?.disconnect();
         ro?.disconnect();
         try { map.remove(); } catch (_) { }
         mapInstance.current = null;
