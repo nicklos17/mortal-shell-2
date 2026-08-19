@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/favicon.ico", type: "image/x-icon" }],
   },
   manifest: "/manifest.webmanifest",
+  other: {
+    "google-adsense-account": "ca-pub-1682851839434735",
+  },
   openGraph: {
     type: "website",
     siteName: "Mortal Shell 2 Guide",
