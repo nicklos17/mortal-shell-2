@@ -348,21 +348,21 @@ export default function TipsPage() {
           <p>
             The{" "}
             <Link
-              href="/shells/"
+              href="/shells"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               Shells hub
             </Link>{" "}
             lists every playable Shell and its role. The full{" "}
             <Link
-              href="/weapons/"
+              href="/weapons"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               Mortal Shell 2 weapons
             </Link>{" "}
             page breaks down stats and scaling grades. The{" "}
             <Link
-              href="/builds/"
+              href="/builds"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               Builds page
@@ -370,21 +370,21 @@ export default function TipsPage() {
             pairs each Shell with a working weapon setup. Step-by-step
             routing lives in the{" "}
             <Link
-              href="/walkthrough/"
+              href="/walkthrough"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               Mortal Shell 2 walkthrough
             </Link>
             . Each fight counter strategy is written up on the{" "}
             <Link
-              href="/bosses/"
+              href="/bosses"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               Mortal Shell 2 boss
             </Link>{" "}
             cards. Every chest, Beacon, and hidden room is marked on the{" "}
             <a
-              href="/map/"
+              href="/map"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               Mortal Shell 2 interactive map
@@ -418,7 +418,7 @@ export default function TipsPage() {
               Early Tar Stone sockets cover the first round of shrine
               upgrades on their own. Follow the opening route on the{" "}
               <Link
-                href="/walkthrough/"
+                href="/walkthrough"
                 className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
               >
                 Mortal Shell 2 walkthrough
@@ -438,14 +438,14 @@ export default function TipsPage() {
               the next purchase. Cross-check each Shell's recommended role
               and build direction on the full{" "}
               <Link
-                href="/shells/"
+                href="/shells"
                 className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
               >
                 Shells
               </Link>{" "}
               roster and the{" "}
               <Link
-                href="/builds/"
+                href="/builds"
                 className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
               >
                 Mortal Shell 2 builds
@@ -465,7 +465,7 @@ export default function TipsPage() {
               drops pay more per run. The exact reset is laid out step by
               step in the opening{" "}
               <Link
-                href="/walkthrough/"
+                href="/walkthrough"
                 className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
               >
                 walkthrough guide
@@ -484,7 +484,7 @@ export default function TipsPage() {
               upgrades. Once you unlock the Hallowed Sword and The Iconoclast
               later in the run, compare every confirmed option on the full{" "}
               <Link
-                href="/weapons/"
+                href="/weapons"
                 className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
               >
                 Mortal Shell 2 weapons
@@ -504,7 +504,7 @@ export default function TipsPage() {
               you can afford one extra shrine upgrade before entering the
               arena. Pick the matching counter strategy from the full{" "}
               <Link
-                href="/bosses/"
+                href="/bosses"
                 className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
               >
                 Mortal Shell 2 boss
@@ -520,7 +520,7 @@ export default function TipsPage() {
           For zone-by-zone routing and precise
           chest markers, open the{" "}
           <a
-            href="/map/"
+            href="/map"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
           >
             Mortal Shell 2 interactive map

@@ -392,7 +392,7 @@ export default function MapPage() {
             as respec stations — at any shrine you can reallocate stat
             points to rebuild a setup from scratch, which is why Tarstone
             positions matter when planning your{" "}
-            <a href="/builds/">Mortal Shell 2 builds</a> route. Beacons are
+            <a href="/builds">Mortal Shell 2 builds</a> route. Beacons are
             fast-travel points that let you move between discovered areas
             without walking back. Both are marked on the interactive map
             above.

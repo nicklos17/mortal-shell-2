@@ -192,10 +192,10 @@ export default function HomePage() {
             </p>
 
             <div className="hero-cta">
-              <a className="btn btn-outline" href="/map/">
+              <a className="btn btn-outline" href="/map">
                 Open Interactive Map
               </a>
-              <a className="btn btn-primary" href="/updates/">
+              <a className="btn btn-primary" href="/updates">
                 Latest Updates
               </a>
             </div>
@@ -250,11 +250,11 @@ export default function HomePage() {
           <h2>Browse the Complete Guide</h2>
           <p>
             This guide covers every major system and location in Mortal Shell
-            2. Use the <a href="/map/">interactive map</a> to plan your route
+            2. Use the <a href="/map">interactive map</a> to plan your route
             and find every Shell, boss, Tarstone, and hidden collectible. Read
             up on each Shell's stats and location in the{' '}
-            <a href="/shells/">Shells guide</a>. Study{' '}
-            <a href="/bosses/">boss strategies</a> before heading into a
+            <a href="/shells">Shells guide</a>. Study{' '}
+            <a href="/bosses">boss strategies</a> before heading into a
             fight. Browse weapon stats to find the right tool for your build.
             The eight sections below cover the full scope of what we track and
             update as we play through the game.

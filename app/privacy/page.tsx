@@ -122,7 +122,7 @@ export default function PrivacyPage() {
           Because we do not collect personal data, there is little to access or
           delete. If you have any request regarding your data or this policy,
           contact us through the{" "}
-          <Link href="/contact/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+          <Link href="/contact" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
             Contact page
           </Link>
           . We respond to all requests.

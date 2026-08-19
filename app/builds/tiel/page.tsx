@@ -374,7 +374,7 @@ export default function TielBuildPage() {
       />
       <main className="container">
         <nav className="breadcrumb" aria-label="Breadcrumb">
-          <Link href="/">Home</Link> ›<Link href="/builds/">Builds</Link> ›
+          <Link href="/">Home</Link> ›<Link href="/builds">Builds</Link> ›
           <span>Tiel Build</span>
         </nav>
 
@@ -616,7 +616,7 @@ export default function TielBuildPage() {
             follow natural early-game progression. All of them are marked on
             our{" "}
             <Link
-              href="/map/"
+              href="/map"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               interactive map
@@ -662,14 +662,14 @@ export default function TielBuildPage() {
         <p className="mt-10">
           Looking for a slower, tankier alternative? See our{" "}
           <Link
-            href="/builds/proxima/"
+            href="/builds/proxima"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
           >
             Proxima Build
           </Link>
           . For the full breakdown of every shell, check the{" "}
           <Link
-            href="/shells/"
+            href="/shells"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
           >
             Shells guide
@@ -679,21 +679,21 @@ export default function TielBuildPage() {
 
         <p>
           <Link
-            href="/builds/"
+            href="/builds"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
           >
             All Mortal Shell 2 Builds
           </Link>{" "}
           ·{" "}
           <Link
-            href="/map/"
+            href="/map"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
           >
             Interactive Map
           </Link>{" "}
           ·{" "}
           <Link
-            href="/shells/"
+            href="/shells"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
           >
             Shells Guide

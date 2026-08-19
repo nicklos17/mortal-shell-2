@@ -150,7 +150,7 @@ export default function BuildsPage() {
             locations, and how the Resolve loop works.
           </p>
           <Link
-            href="/builds/proxima/"
+            href="/builds/proxima"
             className="cta"
           >
             Read the full Proxima Build Guide →
@@ -171,7 +171,7 @@ export default function BuildsPage() {
             with stealth chains.
           </p>
           <Link
-            href="/builds/tiel/"
+            href="/builds/tiel"
             className="cta"
           >
             Read the full Tiel Build Guide →
@@ -190,14 +190,14 @@ export default function BuildsPage() {
           <p>
             For Shell mechanics and Bonding trees, see our{" "}
             <Link
-              href="/shells/"
+              href="/shells"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               Shells guide
             </Link>
             . Item and weapon locations are marked on the{" "}
             <Link
-              href="/map/"
+              href="/map"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               interactive map

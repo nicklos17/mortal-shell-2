@@ -169,7 +169,7 @@ export default function WalkthroughPage() {
             Work through the steps in order and you exit the tutorial
             already past the intended difficulty curve. Mark every chest
             and Beacon on the{" "}
-            <a href="/map/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+            <a href="/map" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
               Mortal Shell 2 interactive map
             </a>{" "}
             so you do not need to retrace steps.
@@ -193,7 +193,7 @@ export default function WalkthroughPage() {
               gives you an interrupt with generous parry frames and the
               axe handles every opening boss cleanly. Match the Shell
               with the tank, hybrid, or agile setup from the{" "}
-              <Link href="/builds/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+              <Link href="/builds" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
                 Mortal Shell 2 builds
               </Link>{" "}
               page before you move out of the starting area.
@@ -217,7 +217,7 @@ export default function WalkthroughPage() {
               fight windows. Reserve the upgrade shrines for Nail Shot
               before you spend any points on other side skills. Compare
               the openers against other starting options on the{" "}
-              <Link href="/weapons/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+              <Link href="/weapons" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
                 Mortal Shell 2 weapons
               </Link>{" "}
               list if you want to swap the secondary weapon later.
@@ -235,7 +235,7 @@ export default function WalkthroughPage() {
               Pull the loop down once you can one-shot the regular
               enemies outside Sunken Village — from there the world
               opens into the{" "}
-              <Link href="/bosses/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+              <Link href="/bosses" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
                 Mortal Shell 2 boss
               </Link>{" "}
               roster in earnest.
@@ -340,7 +340,7 @@ export default function WalkthroughPage() {
             Mushroom Village, Disciple's Grotto, Hall of Illusions, Sunken
             Village, and the endgame. Follow the{" "}
             <Link
-              href="/updates/"
+              href="/updates"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               Mortal Shell 2 updates
@@ -349,7 +349,7 @@ export default function WalkthroughPage() {
             chapter the moment it goes live. For a refresher on basic
             mechanics, read the{" "}
             <Link
-              href="/tips/"
+              href="/tips"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               Mortal Shell 2 beginner tips
@@ -456,7 +456,7 @@ export default function WalkthroughPage() {
             Chapter routing and every Beacon, chest, and boss location
             are already mapped on the{" "}
             <a
-              href="/map/"
+              href="/map"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               Mortal Shell 2 map

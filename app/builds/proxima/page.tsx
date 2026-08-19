@@ -207,7 +207,7 @@ export default function ProximaBuildPage() {
       />
       <main className="container">
         <nav className="breadcrumb" aria-label="Breadcrumb">
-          <Link href="/">Home</Link> ›<Link href="/builds/">Builds</Link> ›
+          <Link href="/">Home</Link> ›<Link href="/builds">Builds</Link> ›
           <span>Proxima Build</span>
         </nav>
 
@@ -294,7 +294,7 @@ export default function ProximaBuildPage() {
             pushes you straight through the early game. All four item
             locations are marked on our{" "}
             <Link
-              href="/map/"
+              href="/map"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               interactive map
@@ -400,14 +400,14 @@ export default function ProximaBuildPage() {
           <p>
             All locations are marked on our{" "}
             <Link
-              href="/map/"
+              href="/map"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               interactive map
             </Link>
             . For the full Shell Bonding breakdown, see our{" "}
             <Link
-              href="/shells/"
+              href="/shells"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
             >
               Shells guide
@@ -457,21 +457,21 @@ export default function ProximaBuildPage() {
 
         <p className="mt-10">
           <Link
-            href="/builds/"
+            href="/builds"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
           >
             All Mortal Shell 2 Builds
           </Link>{" "}
           ·{" "}
           <Link
-            href="/map/"
+            href="/map"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
           >
             Interactive Map
           </Link>{" "}
           ·{" "}
           <Link
-            href="/shells/"
+            href="/shells"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
           >
             Shells Guide

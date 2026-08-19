@@ -92,7 +92,7 @@ export default function DisclaimerPage() {
           If you believe any content on this site infringes your rights, please
           contact us through the{" "}
           <Link
-            href="/contact/"
+            href="/contact"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
           >
             Contact page

@@ -275,7 +275,7 @@ export default function WeaponsPage() {
           <p style={{ color: "var(--text-secondary)", marginTop: "-.5rem" }}>
             Click any weapon name to jump to its detail card. Each chest and
             drop location is also marked on the{" "}
-            <a href="/map/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+            <a href="/map" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
               Mortal Shell 2 interactive map
             </a>
             .
@@ -391,11 +391,11 @@ export default function WeaponsPage() {
             Every weapon confirmed in the Beta gets its own card with stats,
             special mechanics, and a pick order. Match each weapon to its
             ideal Shell on the{" "}
-            <Link href="/shells/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+            <Link href="/shells" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
               Shell roster
             </Link>{" "}
             or plug it into the{" "}
-            <Link href="/builds/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+            <Link href="/builds" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
               Mortal Shell 2 builds
             </Link>{" "}
             guide for a full playstyle setup.
@@ -469,7 +469,7 @@ export default function WeaponsPage() {
               the weapon in exactly the right spot for that matchup. Full
               step-by-step routing and every adjacent chest location is
               covered in the{" "}
-              <a href="/walkthrough/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+              <a href="/walkthrough" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
                 Mortal Shell 2 walkthrough
               </a>
               .
@@ -491,7 +491,7 @@ export default function WeaponsPage() {
               grade one step higher, up to the S cap. Match the grade to
               the Shell and the damage numbers jump dramatically. Full
               grade tables are in the{" "}
-              <Link href="/tips/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+              <Link href="/tips" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
                 Mortal Shell 2 beginner tips
               </Link>{" "}
               once you need to plan out your shrine infusions.
@@ -550,7 +550,7 @@ export default function WeaponsPage() {
             Infusion tables, precise grade percentiles, and every hidden
             weapon drop go live within the first week of release. Weapon
             chest locations and nearby beacons are already mapped on the{" "}
-            <a href="/map/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+            <a href="/map" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
               Mortal Shell 2 map
             </a>{" "}
             so you can plan a clean pickup order.

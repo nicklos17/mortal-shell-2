@@ -112,14 +112,14 @@ gtag('config', '${GA_MEASUREMENT_ID}');
               Mortal Shell 2 Guide
             </a>
             <nav>
-              <a href="/map/">Map</a>
-              <a href="/shells/">Shells</a>
-              <a href="/bosses/">Bosses</a>
-              <a href="/builds/">Builds</a>
-              <a href="/weapons/">Weapons</a>
-              <a href="/walkthrough/">Walkthrough</a>
-              <a href="/tips/">Tips</a>
-              <a href="/updates/">Updates</a>
+              <a href="/map">Map</a>
+              <a href="/shells">Shells</a>
+              <a href="/bosses">Bosses</a>
+              <a href="/builds">Builds</a>
+              <a href="/weapons">Weapons</a>
+              <a href="/walkthrough">Walkthrough</a>
+              <a href="/tips">Tips</a>
+              <a href="/updates">Updates</a>
             </nav>
           </div>
         </header>
@@ -132,11 +132,11 @@ gtag('config', '${GA_MEASUREMENT_ID}');
               belong to their respective owners.
             </p>
             <nav>
-              <a href="/about/">About</a>
-              <a href="/privacy/">Privacy</a>
-              <a href="/terms/">Terms of Service</a>
-              <a href="/disclaimer/">Disclaimer</a>
-              <a href="/contact/">Contact</a>
+              <a href="/about">About</a>
+              <a href="/privacy">Privacy</a>
+              <a href="/terms">Terms of Service</a>
+              <a href="/disclaimer">Disclaimer</a>
+              <a href="/contact">Contact</a>
               <a href="/rss.xml">RSS</a>
             </nav>
           </div>

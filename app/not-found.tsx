@@ -26,7 +26,7 @@ export default function NotFound() {
           <li>
             <strong>
               <Link
-                href="/map/"
+                href="/map"
                 className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
               >
                 Interactive Map
@@ -37,7 +37,7 @@ export default function NotFound() {
           <li>
             <strong>
               <Link
-                href="/bosses/"
+                href="/bosses"
                 className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
               >
                 Bosses
@@ -48,7 +48,7 @@ export default function NotFound() {
           <li>
             <strong>
               <Link
-                href="/walkthrough/"
+                href="/walkthrough"
                 className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
               >
                 Walkthrough
@@ -59,7 +59,7 @@ export default function NotFound() {
           <li>
             <strong>
               <Link
-                href="/tips/"
+                href="/tips"
                 className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
               >
                 Tips

@@ -246,7 +246,7 @@ export default function ReleaseDateArticlePage() {
           </p>
           <p>
             Our full story breakdown will go live on launch day, and we will be
-            updating our <a href="/walkthrough/">walkthrough</a> hour-by-hour
+            updating our <a href="/walkthrough">walkthrough</a> hour-by-hour
             as we progress.
           </p>
 
@@ -264,13 +264,13 @@ export default function ReleaseDateArticlePage() {
           </ol>
 
           <p>
-            Bookmarks this page and our <a href="/updates/">Updates</a>{" "}
+            Bookmarks this page and our <a href="/updates">Updates</a>{" "}
             feed — we will publish every patch note, balance pass, and DLC
             announcement the instant they go live.
           </p>
 
           <p className="article-back">
-            <a href="/updates/">← Back to all Mortal Shell 2 updates</a>
+            <a href="/updates">← Back to all Mortal Shell 2 updates</a>
           </p>
         </article>
       </main>

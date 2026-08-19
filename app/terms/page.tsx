@@ -148,7 +148,7 @@ export default function TermsPage() {
         <p>
           For questions about these Terms, contact us at{" "}
           <Link
-            href="/contact/"
+            href="/contact"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
           >
             our contact page

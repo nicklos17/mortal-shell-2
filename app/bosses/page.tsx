@@ -272,7 +272,7 @@ export default function BossesPage() {
           <h2>All Mortal Shell 2 Bosses</h2>
           <p style={{ color: "var(--text-secondary)", marginTop: "-.5rem" }}>
             Jump to any boss strategy card below the table, or use the{" "}
-            <a href="/map/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+            <a href="/map" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
               Mortal Shell 2 interactive map
             </a>{" "}
             to locate each arena in the world.
@@ -361,15 +361,15 @@ export default function BossesPage() {
             Every boss confirmed in the Beta has its own card with attacks,
             weak points, and a tested strategy. Tune your loadout ahead of
             the fight with the{" "}
-            <Link href="/builds/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+            <Link href="/builds" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
               Mortal Shell 2 builds
             </Link>{" "}
             guide, pick a counter blade from the full{" "}
-            <a href="/weapons/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+            <a href="/weapons" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
               Mortal Shell 2 weapons
             </a>{" "}
             roster, and read the{" "}
-            <Link href="/shells/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+            <Link href="/shells" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
               Shell roster
             </Link>{" "}
             to know which vessel matches each matchup.
@@ -399,7 +399,7 @@ export default function BossesPage() {
             drop tables, parry timings, and video references for each
             encounter. Boss arenas and adjacent Beacons are already marked
             on the{" "}
-            <a href="/map/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+            <a href="/map" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
               Mortal Shell 2 map
             </a>{" "}
             so you can plan a route.
@@ -421,7 +421,7 @@ export default function BossesPage() {
               may add optional or endgame bosses, and this page updates the
               same day they are documented. Pin your progression order to
               the{" "}
-              <a href="/walkthrough/" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+              <a href="/walkthrough" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
                 Mortal Shell 2 walkthrough
               </a>{" "}
               and check the map so you do not miss a single arena.
