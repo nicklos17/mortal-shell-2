@@ -82,7 +82,7 @@ const faqJsonLd = {
       name: "How many Shells are in Mortal Shell 2?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Mortal Shell 2 features several new Shells. See our All Shells page for complete locations and abilities.",
+        text: "Mortal Shell 2 features eight Shells confirmed so far. See our All Shells page for complete locations and abilities.",
       },
     },
     {
