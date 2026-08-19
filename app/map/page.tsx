@@ -106,6 +106,18 @@ const faqJsonLd = {
 export default function MapPage() {
   return (
     <>
+      {/* High-priority preload for the 600KB base map image. Without this,
+          base.webp only starts downloading AFTER Leaflet + MapCanvas +
+          map-markers are downloaded, parsed, hydrated, and useEffect ran —
+          typically ~1-4 seconds after HTML reaches the browser. This link
+          fires during HTML head parsing, shaving ~1-3s off time-to-paint. */}
+      <link
+        rel="preload"
+        as="image"
+        href="/assets/images/map/base.webp"
+        type="image/webp"
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
@@ -127,21 +139,15 @@ export default function MapPage() {
           straight to what you need.
         </p>
 
-        <div className="map-tips">
-          Marked locations are placeholders held against known beta and
-          trailer footage. Real coordinates and a full overworld tile layer
-          will be added as the open world is mapped.
-        </div>
-
         {/* 交互地图（CSR，用户用） */}
         <div className="map-frame">
           <MapCanvasWrapper />
           <noscript>
             <img
-              src="/assets/map-static.webp"
+              src="/assets/images/map/base.webp"
               alt="Mortal Shell 2 interactive map showing all Shell, boss, Tarstone, and Beacon locations"
-              width="800"
-              height="450"
+              width="1200"
+              height="1200"
             />
           </noscript>
         </div>
