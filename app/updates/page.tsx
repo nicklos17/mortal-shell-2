@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import { updatePosts } from "@/lib/updates-data";
