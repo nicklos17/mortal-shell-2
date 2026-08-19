@@ -189,7 +189,7 @@ export default function MapCanvas() {
     // so all 9 POI rows + every control fit inside the 820px sidebar without
     // the user needing to scroll at all. The user can expand Collectibles
     // any time by clicking its group-head (1-click to see Tarstone/Key Item).
-    collectibles: true,
+    collectibles: false,
   });
   const [enabled, setEnabled] = useState<Record<FilterKey, boolean>>(() => {
     const obj = {} as Record<FilterKey, boolean>;
@@ -533,7 +533,7 @@ export default function MapCanvas() {
           ? err.message + "\\nStack:\\n" + (err.stack || "(no stack)")
           : String(err);
       failMap(msg);
-      return () => {};
+      return () => { };
     }
   }, []);
 
