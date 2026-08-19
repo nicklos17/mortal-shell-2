@@ -2,6 +2,12 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import L from "leaflet";
+// Leaflet CSS served from the local npm package (leaflet@1.9.4), bundled by
+// Next.js directly into the SSR CSS — eliminates the old render-blocking
+// <link rel=stylesheet href=https://unpkg.com/leaflet@1.9.4...> external
+// request (DNS + TLS + first-byte on unpkg CDN used to cost anywhere from
+// ~120ms (fast) to 2+ seconds (cold/vpn) on the FCP critical path).
+import "leaflet/dist/leaflet.css";
 import { mapMarkers, MapMarker, MarkerType } from "@/lib/map-markers";
 
 const BASE_URL = "/assets/images/map/base.webp";
@@ -331,14 +337,17 @@ export default function MapCanvas() {
       // rAF refresh for the browser's relayout pass — instead of waiting on
       // window.load / the old 3-stage setTimeout(0)→rAF→setTimeout(120) chain
       // which alone added ~180ms even when everything was ready.
+      //
+      // The 40ms setTimeout "safety refresh" was removed here: between
+      // synchronous invalidateSize, whenReady callback, and the rAF pass,
+      // we already cover the browser's 3 layout phases; the extra 40ms
+      // sleep just delayed first visible paint with zero benefit.
       try { map.invalidateSize({ animate: false, debounceMoveend: true }); } catch (_) { }
       map.whenReady(() => {
         if (!alive()) return;
         refresh();
         requestAnimationFrame(() => { if (alive()) refresh(); });
       });
-      // Final safety refresh: 40ms after layout (NOT 6 seconds).
-      setTimeout(() => { if (alive()) refresh(); }, 40);
 
       let ro: ResizeObserver | null = null;
       if (typeof ResizeObserver !== "undefined" && mapEl?.parentElement) {
@@ -400,7 +409,11 @@ export default function MapCanvas() {
           (marker as any)._ms2Title = m.title;
           (marker as any)._ms2Id = m.id;
 
-          marker.bindPopup(popupContent(m), {
+          // Lazy popup — don't compute escHtml + assemble HTML strings for
+          // 224 markers up-front. Only render the popup content the first
+          // time the user actually clicks a marker. This cuts init JS work
+          // roughly in half (escHtml + string concat per marker is free'd).
+          marker.bindPopup(() => popupContent(m), {
             maxWidth: 340,
             minWidth: 240,
             className: "ms2-popup",

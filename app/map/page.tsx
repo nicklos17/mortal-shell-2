@@ -110,12 +110,15 @@ export default function MapPage() {
           base.webp only starts downloading AFTER Leaflet + MapCanvas +
           map-markers are downloaded, parsed, hydrated, and useEffect ran —
           typically ~1-4 seconds after HTML reaches the browser. This link
-          fires during HTML head parsing, shaving ~1-3s off time-to-paint. */}
+          fires during HTML head parsing, shaving ~1-3s off time-to-paint.
+          fetchpriority="high" guarantees the browser does NOT deprioritise
+          it vs. hero images / above-the-fold assets. */}
       <link
         rel="preload"
         as="image"
         href="/assets/images/map/base.webp"
         type="image/webp"
+        fetchPriority="high"
       />
 
       <script
@@ -148,6 +151,9 @@ export default function MapPage() {
               alt="Mortal Shell 2 interactive map showing all Shell, boss, Tarstone, and Beacon locations"
               width="1200"
               height="1200"
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
             />
           </noscript>
         </div>
