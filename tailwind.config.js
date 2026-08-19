@@ -27,7 +27,13 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ["Cinzel", "Georgia", "serif"],
+        // 优先使用 next/font/google 注入的 CSS 变量（保证自托管，零 404）
+        heading: [
+          "var(--font-cinzel)",
+          "Cinzel",
+          "Georgia",
+          "serif",
+        ],
         body: [
           "-apple-system",
           "Segoe UI",
@@ -36,7 +42,12 @@ module.exports = {
           "Arial",
           "sans-serif",
         ],
-        quote: ["Cormorant Garamond", "Georgia", "serif"],
+        quote: [
+          "var(--font-cormorant-garamond)",
+          "Cormorant Garamond",
+          "Georgia",
+          "serif",
+        ],
       },
       maxWidth: {
         container: "1120px",

@@ -37,9 +37,9 @@ const MapCanvas = dynamic(() => import("./MapCanvas"), {
         <div
           id="map"
           style={{
-            height: "600px",
+            height: "820px",
             width: "100%",
-            minHeight: "600px",
+            minHeight: "820px",
             background: "var(--bg-base)",
             backgroundImage:
               "radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--color-gold) 8%, transparent) 0%, transparent 55%)",

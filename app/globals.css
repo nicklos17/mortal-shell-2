@@ -8,22 +8,8 @@
    + Cinzel/Cormorant Garamond 字体 + 金色描边 glow）
    ============================================================ */
 
-/* ---------- 字体（自托管 woff2） ---------- */
-@font-face {
-  font-family: 'Cinzel';
-  font-style: normal;
-  font-weight: 700 900;
-  font-display: swap;
-  src: url('/assets/fonts/cinzel-700.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/assets/fonts/cormorant-garamond-600.woff2') format('woff2');
-}
+/* ---------- 字体：通过 next/font/google 自托管（见 app/layout.tsx）
+   不再引用 /assets/fonts/*.woff2（之前因文件缺失导致频繁 404）---------- */
 
 /* ---------- 设计变量（JS 也通过 getComputedStyle 读取） ---------- */
 :root {
@@ -44,9 +30,10 @@
   --border-gold: 1px solid rgba(184, 147, 50, 0.4);
   --glow-gold: 0 0 12px rgba(184, 147, 50, 0.15);
 
-  --font-heading: 'Cinzel', Georgia, serif;
+  /* 优先使用 next/font 注入的 CSS 变量，避免 404 */
+  --font-heading: var(--font-cinzel), 'Cinzel', Georgia, serif;
   --font-body: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-quote: 'Cormorant Garamond', Georgia, serif;
+  --font-quote: var(--font-cormorant-garamond), 'Cormorant Garamond', Georgia, serif;
 }
 
 /* ---------- Reset ---------- */
@@ -568,9 +555,9 @@ table.data tr:hover td {
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 0;
-  height: 600px;
-  max-height: 600px;
-  min-height: 600px;
+  height: 820px;
+  max-height: 820px;
+  min-height: 820px;
   width: 100%;
   background: var(--bg-base);
   border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
@@ -580,9 +567,9 @@ table.data tr:hover td {
   position: relative;
 }
 .ms2-side {
-  height: 600px;
-  max-height: 600px;
-  min-height: 600px;
+  height: 820px;
+  max-height: 820px;
+  min-height: 820px;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 14px 12px 12px;
@@ -881,17 +868,17 @@ table.data tr:hover td {
 .mm-icon { position: relative; }
 
 .ms2-map-host {
-  height: 600px;
-  max-height: 600px;
-  min-height: 600px;
+  height: 820px;
+  max-height: 820px;
+  min-height: 820px;
   overflow: hidden;
   background: var(--bg-base);
   position: relative;
 }
 .ms2-map-host #map {
-  height: 600px;
+  height: 820px;
   width: 100%;
-  min-height: 600px;
+  min-height: 820px;
 }
 
 /* 响应式：≤ 860px 单列布局（!important 覆盖 JSX inline style 兜底） */

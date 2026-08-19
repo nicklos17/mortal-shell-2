@@ -184,7 +184,13 @@ export default function MapCanvas() {
   const [search, setSearch] = useState("");
   const [hideChecked, setHideChecked] = useState(false);
   const [displayTitle, setDisplayTitle] = useState(false);
-  const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
+  const [collapsed, setCollapsed] = useState<Record<string, boolean>>({
+    // Default: keep Collectibles (only 2 rows: Tarstone + Key Item) collapsed
+    // so all 9 POI rows + every control fit inside the 820px sidebar without
+    // the user needing to scroll at all. The user can expand Collectibles
+    // any time by clicking its group-head (1-click to see Tarstone/Key Item).
+    collectibles: true,
+  });
   const [enabled, setEnabled] = useState<Record<FilterKey, boolean>>(() => {
     const obj = {} as Record<FilterKey, boolean>;
     (Object.keys(TYPE_COLORS) as FilterKey[]).forEach((k) => (obj[k] = true));
@@ -597,11 +603,11 @@ export default function MapCanvas() {
         </button>
       </aside>
 
-      <div className="ms2-map-host" style={{ height: "600px" }}>
+      <div className="ms2-map-host" style={{ height: "820px" }}>
         <div
           id="map"
           ref={mapRef}
-          style={{ height: "600px", width: "100%", minHeight: "600px" }}
+          style={{ height: "820px", width: "100%", minHeight: "820px" }}
         />
       </div>
     </div>

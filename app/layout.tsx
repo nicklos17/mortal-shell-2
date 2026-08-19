@@ -1,6 +1,26 @@
 import type { Metadata } from "next";
+import { Cinzel, Cormorant_Garamond } from "next/font/google";
 import { SITE_BASE_URL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import "./globals.css";
+
+// Cinzel 700/800/900 自托管（加粗字重覆盖所有“粗体-标题”使用场景）
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["700", "800", "900"],
+  display: "swap",
+  preload: true,
+  variable: "--font-cinzel",
+});
+
+// Cormorant Garamond 600 自托管（用于引用/引言样式）
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: "600",
+  style: "normal",
+  display: "swap",
+  preload: true,
+  variable: "--font-cormorant-garamond",
+});
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
@@ -53,7 +73,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${cinzel.variable} ${cormorantGaramond.variable}`}
+    >
       <head>
         {GA_MEASUREMENT_ID ? (
           <>
