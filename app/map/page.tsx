@@ -37,23 +37,7 @@ const itemListJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Mortal Shell 2 Map Locations",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "First Boss Arena",
-      url: pageURL("/bosses/#first"),
-      item: {
-        "@type": "Place",
-        name: "First Boss Arena",
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 51.5,
-          longitude: -0.09,
-        },
-      },
-    },
-  ],
+  itemListElement: [],
 };
 
 const faqJsonLd = {
