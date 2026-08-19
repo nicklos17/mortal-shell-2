@@ -106,9 +106,9 @@ export default function AboutPage() {
       <section className="article">
         <h2>Our commitment</h2>
         <p>
-          Mortal Shell 2 launches on August 20, 2026. From launch day, this
-          guide updates daily with confirmed locations, boss strategies, and
-          builds. The date on every page shows when it was last updated.
+          From launch day, this guide updates daily with confirmed
+          locations, boss strategies, and builds. The date on every page
+          shows when it was last updated.
         </p>
       </section>
 

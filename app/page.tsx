@@ -74,7 +74,7 @@ const faqJsonLd = {
       name: "When does Mortal Shell 2 release?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Mortal Shell 2 releases on August 20, 2026 for PC (Steam), PS5, and Xbox.",
+        text: "Mortal Shell 2 releases for PC (Steam), PS5, and Xbox.",
       },
     },
     {
@@ -211,8 +211,7 @@ export default function HomePage() {
             Mortal Shell. It continues the harsh combat and dark fantasy
             setting of the original while expanding the world, adding new
             Shells to inhabit, and refining the core systems. The game
-            releases for PC via Steam, PlayStation 5, and Xbox Series X/S on
-            August 20, 2026.
+            releases for PC via Steam, PlayStation 5, and Xbox Series X/S.
           </p>
           <p>
             You do not play as a fixed character. You control a vessel who can

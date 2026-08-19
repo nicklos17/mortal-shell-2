@@ -69,7 +69,7 @@ const faqJsonLd = {
       name: "How many weapons are in Mortal Shell 2?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Seven weapons are confirmed in the Mortal Shell 2 Open Beta roster: Axatana, Axe and Dagger, Hallowed Sword, Hammer and Chisel, The Iconoclast, Martyr's Blade, and Smoldering Mace. The full release is expected to add more one-handed options, heavier two-handers, ranged Hand Cannon variants, and secret late-game drops. The complete list will be populated during the first week after the August 20, 2026 launch.",
+        text: "Seven weapons are confirmed in the Mortal Shell 2 Open Beta roster: Axatana, Axe and Dagger, Hallowed Sword, Hammer and Chisel, The Iconoclast, Martyr's Blade, and Smoldering Mace. The full release is expected to add more one-handed options, heavier two-handers, ranged Hand Cannon variants, and secret late-game drops. The complete list will be populated during the first week after launch.",
       },
     },
     {
@@ -85,7 +85,7 @@ const faqJsonLd = {
       name: "Mortal Shell 2 weapons tier list?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A full Mortal Shell 2 weapons tier list goes live after the August 20, 2026 release once every hidden weapon, infusion, and boss drop is in hand. For the current Beta the rough ranking is S: Hallowed Sword. A: The Iconoclast, Smoldering Mace, Martyr's Blade. B: Axatana, Axe and Dagger. C: Hammer and Chisel (strong poise damage but tight parry timing limits it). We will publish complete S/A/B/C tier tables with recommended Shell pairings within the first week of launch, so bookmark this page and check back on the day of release.",
+        text: "A full Mortal Shell 2 weapons tier list goes live after release once every hidden weapon, infusion, and boss drop is in hand. For the current Beta the rough ranking is S: Hallowed Sword. A: The Iconoclast, Smoldering Mace, Martyr's Blade. B: Axatana, Axe and Dagger. C: Hammer and Chisel (strong poise damage but tight parry timing limits it). We will publish complete S/A/B/C tier tables with recommended Shell pairings within the first week of launch, so bookmark this page and check back on the day of release.",
       },
     },
     {
@@ -109,15 +109,12 @@ const faqJsonLd = {
 
 /* ============================================================
    WeaponCard 中 Shell 名 → /shells/[slug] 锚链辅助
-   命中：Tiel the Acolyte / Black Beard / Eredrim the Venerable / Harros
    ============================================================ */
 const SHELL_LINK: Record<string, string> = {
-  "Tiel": "/shells/tiel",
-  "Tiel the Acolyte": "/shells/tiel",
-  "Eredrim": "/shells/eredrim",
-  "Eredrim the Venerable": "/shells/eredrim",
   "Proxima": "/shells/proxima",
+  "Tiel": "/shells/tiel",
   "Gragu": "/shells/gragu",
+  "Eredrim": "/shells/eredrim",
   "Smert": "/shells/smert",
   "Sariel": "/shells/sariel",
   "Lazlo": "/shells/lazlo",
@@ -269,7 +266,7 @@ export default function WeaponsPage() {
           sit in the current roster. Each weapon card below covers how to
           find it, the special ability attached to it, and which Shells get
           the most out of the swing patterns. Full content will be verified
-          and expanded after the August 20, 2026 launch.
+          and expanded after launch.
         </p>
 
         {/* 1. 武器总览表格 */}
@@ -447,7 +444,7 @@ export default function WeaponsPage() {
             <h3>Mortal Shell 2 weapons tier list</h3>
             <p>
               A complete Mortal Shell 2 weapons tier list will be published
-              shortly after the August 20, 2026 launch. For the Open Beta
+              shortly after launch. For the Open Beta
               slice, the rough ranking is as follows. S tier: Hallowed
               Sword. A tier: The Iconoclast, Smoldering Mace, Martyr's
               Blade. B tier: Axatana for its two-form stance play and Axe
@@ -525,8 +522,8 @@ export default function WeaponsPage() {
             had loose stat ties that rarely changed how you built out a
             Shell. Mortal Shell 2 weapon scaling letters bind directly to
             the Shell you are wearing, so a Strength S weapon like The
-            Iconoclast feels like a different blade on Tiel the Acolyte
-            compared to Eredrim the Venerable. The Hand Cannon, which is
+            Iconoclast feels like a different blade on Tiel
+            compared to Eredrim. The Hand Cannon, which is
             the first real ranged slot in the series, further opens up
             mixed builds that are not possible in the first game. Tarstone
             infusions also let you bump a scaling letter one grade higher
@@ -547,7 +544,7 @@ export default function WeaponsPage() {
             }}
           >
             Weapon stats and locations verified in Open Beta. Full details
-            will be updated after the August 20, 2026 launch.
+            will be updated after launch.
           </p>
           <p style={{ margin: ".6rem 0 0", fontSize: ".9rem", color: "var(--text-secondary)" }}>
             Infusion tables, precise grade percentiles, and every hidden

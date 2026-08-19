@@ -41,21 +41,6 @@ const itemListJsonLd = {
     {
       "@type": "ListItem",
       position: 1,
-      name: "Hardened Shell",
-      url: pageURL("/shells/#hardened"),
-      item: {
-        "@type": "Place",
-        name: "Temple of the Iron Path",
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 51.5,
-          longitude: -0.09,
-        },
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
       name: "First Boss Arena",
       url: pageURL("/bosses/#first"),
       item: {
@@ -63,8 +48,8 @@ const itemListJsonLd = {
         name: "First Boss Arena",
         geo: {
           "@type": "GeoCoordinates",
-          latitude: 51.505,
-          longitude: -0.08,
+          latitude: 51.5,
+          longitude: -0.09,
         },
       },
     },
@@ -112,7 +97,7 @@ const faqJsonLd = {
       name: "When will the map be fully updated?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The map will be updated on launch day, August 20, 2026. Beta locations are already marked, and the full open world will be mapped within the first week of release.",
+        text: "The map is being updated continuously. Beta locations are already marked, and the full open world will be mapped within the first week of release.",
       },
     },
   ],
@@ -145,8 +130,7 @@ export default function MapPage() {
         <div className="map-tips">
           Marked locations are placeholders held against known beta and
           trailer footage. Real coordinates and a full overworld tile layer
-          will be added once the game opens to the public on August 20,
-          2026.
+          will be added as the open world is mapped.
         </div>
 
         {/* 交互地图（CSR，用户用） */}
@@ -188,8 +172,7 @@ export default function MapPage() {
           <p>
             We update the Mortal Shell 2 interactive map as new information
             becomes available. Beta locations are already marked. The full
-            open world will be mapped within the first week of launch on
-            August 20, 2026.
+            open world will be mapped within the first week of launch.
           </p>
         </section>
 
@@ -209,11 +192,10 @@ export default function MapPage() {
           </p>
           <ol className="loc-list">
             <li>
-              <strong>Prologue area.</strong> You start as Harros, the
-              balanced Shell. The prologue is linear and cannot be skipped.
-              You will lose Harros after the Tar Golem boss fight, so use this
-              time to learn the combat system: parrying, dodging, and the
-              stamina-free attack chains that are new to the sequel.
+              <strong>Prologue area.</strong> The prologue is linear and
+              cannot be skipped. Use this section to learn the combat
+              system: parrying, dodging, and the stamina-free attack chains
+              that are new to the sequel.
             </li>
             <li>
               <strong>Marrow Keep.</strong> After the prologue, you arrive at
@@ -225,24 +207,23 @@ export default function MapPage() {
             <li>
               <strong>Widow&apos;s Overlook to Mushroom Village.</strong>
               Follow the path from Widow&apos;s Overlook down into Mushroom
-              Village. Tiel the Acolyte, the second Shell available in the beta, is
+              Village. Tiel, the second Shell available in the beta, is
               located in the northeast of the village near the Ritual
-              Grounds dungeon. Grab Tiel the Acolyte before attempting the Ritual
+              Grounds dungeon. Grab Tiel before attempting the Ritual
               Grounds, because his speed and dodge-focused kit will help
               you against the enemies inside.
             </li>
             <li>
               <strong>Ritual Grounds dungeon.</strong> This is the first
               major dungeon after the prologue. The enemies here hit hard
-              and fast. If you are still using Harros, consider switching to
-              Tiel the Acolyte for his mobility, or come back later with Eredrim the Venerable to
-              tank through the damage.
+              and fast. Switch to Tiel for his mobility, or come back
+              later with Eredrim to tank through the damage.
             </li>
             <li>
               <strong>Open world exploration.</strong> After clearing the
-              Ritual Grounds, the world opens up. We recommend heading to
-              the Temple of the Iron Path next to claim the Hardened Shell,
-              then circling back to any boss arenas you skipped.
+              Ritual Grounds, the world opens up. Head to the next area
+              marked on the interactive map to claim your next Shell, then
+              circle back to any boss arenas you skipped.
             </li>
           </ol>
           <p>
@@ -265,9 +246,9 @@ export default function MapPage() {
           </p>
           <p>
             Currently confirmed locations come from the closed beta and
-            official trailers. After launch on August 20, 2026, we will
-            expand this Mortal Shell 2 location map to cover the full open
-            world, including every dungeon, hidden room, and optional boss.
+            official trailers. We will expand this Mortal Shell 2 location
+            map to cover the full open world, including every dungeon,
+            hidden room, and optional boss.
           </p>
         </section>
 
@@ -359,9 +340,9 @@ export default function MapPage() {
               <span className="loc-note">
                 : prologue boss. This fight is unavoidable and serves as the
                 game&apos;s first real combat test. The Tar Golem uses slow,
-                heavy attacks that teach you the dodge and parry timing. You
-                fight it as Harros, so focus on learning the patterns rather
-                than memorizing a specific strategy.
+                heavy attacks that teach you the dodge and parry timing.
+                Focus on learning the patterns rather than memorizing a
+                specific strategy.
               </span>
             </li>
             <li>
@@ -369,8 +350,8 @@ export default function MapPage() {
               <span className="loc-note">
                 : found at the end of the Ritual Grounds dungeon, northeast
                 of Mushroom Village. The nearest Tarstone shrine is inside
-                the dungeon entrance. Recommended Shell: Tiel the Acolyte for his dodge
-                mobility, or Eredrim the Venerable if you prefer to absorb hits and trade.
+                the dungeon entrance. Recommended Shell: Tiel for his dodge
+                mobility, or Eredrim if you prefer to absorb hits and trade.
               </span>
             </li>
             <li>
@@ -425,18 +406,17 @@ export default function MapPage() {
             </li>
             <li>
               <span className="loc-note">
-                Temple of the Iron Path Tarstone: found after the second
-                shrine in the temple area. This one is easy to miss if you
-                rush through the temple corridor without checking the side
-                rooms.
+                Nearby shrine Tarstone: found after the second shrine in the
+                temple area. This one is easy to miss if you rush through
+                the corridor without checking the side rooms.
               </span>
             </li>
             <li>
               <span className="loc-note">
                 Beacons: at least three Beacon locations are confirmed in
                 the beta. They are marked in blue on the interactive map.
-                The full Beacon network will be mapped on launch day,
-                August 20, 2026.
+                The full Beacon network will be mapped as the open world is
+                documented.
               </span>
             </li>
           </ul>
@@ -461,7 +441,7 @@ export default function MapPage() {
                 Mushroom Village hidden room: a small chamber behind the
                 waterfall in the village&apos;s lower section. Contains a
                 consumable item and a shortcut back to Widow&apos;s
-                Overlook. You need Tiel the Acolyte&apos;s Shadow Strike to phase
+                Overlook. You need Tiel&apos;s Shadow Strike to phase
                 through the wall.
               </span>
             </li>
@@ -524,9 +504,9 @@ export default function MapPage() {
           </p>
           <h3>When will the map be fully updated?</h3>
           <p>
-            The map will be updated on launch day, August 20, 2026. Beta
-            locations are already marked. The full open world will be
-            mapped within the first week of release.
+            The map is being updated continuously. Beta locations are
+            already marked. The full open world will be mapped within the
+            first week of release.
           </p>
 
           <p className="article-back">

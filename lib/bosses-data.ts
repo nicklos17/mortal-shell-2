@@ -65,7 +65,7 @@ export const BOSSES: Boss[] = [
     weakness: "Backstep punishes, ranged chip during slow windups",
     source: "Open Beta gameplay",
     description:
-      "A tall boss that towers over the Harbinger, wielding a two-handed greatsword. This is the gatekeeper fight right before the player reaches Tiel the Acolyte's corpse.",
+      "A tall boss that towers over the Harbinger, wielding a two-handed greatsword. This is the gatekeeper fight right before the player reaches Tiel's corpse.",
     attacks: [
       "Slow vertical greatsword slash with a long windup and massive damage on hit.",
       "Horizontal sweep covering a full 180 degrees in front, designed to catch side-dodges.",
@@ -74,7 +74,7 @@ export const BOSSES: Boss[] = [
     strategy: [
       "Let the boss swing first. The vertical slash has so much windup that you can walk in a full circle around the boss and still reach the back before the animation ends.",
       "Harden through the horizontal sweep if you are out of position, then hit once or twice before pulling back.",
-      "Shells with high health or a parry tool shine here. Black Beard and Eredrim trade blows cleanly; Tiel users should dodge and chip from behind.",
+      "Shells with high health or a parry tool shine here. Lazlo and Eredrim trade blows cleanly; Tiel users should dodge and chip from behind.",
     ],
     reward: "Flesh Greatsword, Arbiter Shell Stone",
     difficulty: "Hard",

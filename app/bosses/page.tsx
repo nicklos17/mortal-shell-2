@@ -94,7 +94,7 @@ const faqJsonLd = {
       name: "What is the best Mortal Shell 2 boss order?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "From the Open Beta areas, fight Tainted Vestige and Circle of the Grasping Root early. Both sit at the low end and reward you with useful seals before the mid-tier trio of Gloombound Ritualist, and Wandering Shepherd. Save Great Arbiter of Flesh for just before you reach Tiel the Acolyte's corpse, then close with Magdalena, Tar Golem, and Vrannic once your Shell trees are deeper. Mark each boss arena on the Mortal Shell 2 interactive map so you can backtrack without losing time.",
+        text: "From the Open Beta areas, fight Tainted Vestige and Circle of the Grasping Root early. Both sit at the low end and reward you with useful seals before the mid-tier trio of Gloombound Ritualist, and Wandering Shepherd. Save Great Arbiter of Flesh for just before you reach Tiel's corpse, then close with Magdalena, Tar Golem, and Vrannic once your Shell trees are deeper. Mark each boss arena on the Mortal Shell 2 interactive map so you can backtrack without losing time.",
       },
     },
   ],
@@ -208,7 +208,7 @@ export default function BossesPage() {
           Each entry below lists confirmed location, weak point, attack
           patterns, and the play-tested strategy from the Beta run. Full
           phase breakdowns, drop tables, and recommended Shell pairings go
-          live on launch day, August 20, 2026.
+          live on launch day.
         </p>
 
         {/* 首屏 YouTube 通关视频 + 跳转徽章 */}
@@ -392,7 +392,7 @@ export default function BossesPage() {
             }}
           >
             Boss list verified in Open Beta — full strategies
-            updated after August 20 launch.
+            updated after launch.
           </p>
           <p style={{ margin: ".6rem 0 0", fontSize: ".9rem", color: "var(--text-secondary)" }}>
             On launch day we will add phase-by-phase damage windows, exact

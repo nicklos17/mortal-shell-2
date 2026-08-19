@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 import { pageURL } from "@/lib/site-config";
 import { SHELLS, getShell, shellSlugs } from "@/lib/shells";
 import { ShellIcon } from "@/lib/shell-icon";
-import PreReleaseBanner from "../PreReleaseBanner";
 
 export function generateStaticParams() {
   return shellSlugs.map((slug) => ({ slug }));
@@ -58,7 +57,6 @@ export default async function ShellDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main className="container">
-        <PreReleaseBanner />
         <div className="article-back">
           <Link href="/shells">← All Shells</Link>
         </div>

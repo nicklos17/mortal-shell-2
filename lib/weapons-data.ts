@@ -54,7 +54,7 @@ export const WEAPONS: Weapon[] = [
     obtain:
       "Chest in the Seeping Mire Beacon cave, beyond the Mushroom Village clearing. Guarded by two frog grunts. You can grab it before the Circle of the Grasping Root fight.",
     playstyle:
-      "Pairs best with Tiel the Acolyte and any agile Mortal Shell 2 builds that want a fast, punish-heavy melee option. Strong against low-poise enemies and against bosses with long recovery windows. Avoid trading into tanky golems or flesh brutes.",
+      "Pairs best with Tiel and any agile Mortal Shell 2 builds that want a fast, punish-heavy melee option. Strong against low-poise enemies and against bosses with long recovery windows. Avoid trading into tanky golems or flesh brutes.",
     betaNotes:
       "Extended stance does not always stagger certain shield enemies, even on the first hit. Bleed stacks from the R2 chain break once you swap stances. Expect this to be patched at or after launch.",
   },
@@ -76,7 +76,7 @@ export const WEAPONS: Weapon[] = [
     obtain:
       "On the wall weapon rack in the first cottage east of Village Outskirts beacon. You cannot miss it; the room also has a Tarstone fragment chest. Available the moment you reach the first village zone.",
     playstyle:
-      "Built for Black Beard or any Shell that likes pressure and off-hand tricks. Pair with poison DOT builds to multiply the dagger's bonus tick. Keep your Shell swap in reserve for the Gloombound Ritualist fight, since its skeletons are vulnerable to the quick backstab chain.",
+      "Built for Lazlo or any Shell that likes pressure and off-hand tricks. Pair with poison DOT builds to multiply the dagger's bonus tick. Keep your Shell swap in reserve for the Gloombound Ritualist fight, since its skeletons are vulnerable to the quick backstab chain.",
     betaNotes:
       "Poison tick from the backstab window does not always scale with Tarstone infusions. For now you still want to socket poison independently and treat the dagger tick as bonus rather than the whole build.",
   },
@@ -98,7 +98,7 @@ export const WEAPONS: Weapon[] = [
     obtain:
       "Pick it up from the altar in front of the Great Arbiter of Flesh arena. You walk right past the altar on the way in, so grab the sword first, activate the Widow's Overlook beacon, then fight the Arbiter. The holy shockwave chews through the Arbiter's first phase.",
     playstyle:
-      "Natural pick for Eredrim the Venerable and other tanky Shells who want big damage swings without giving up crowd control. The shockwave also works well against Vrannic illusions in the later Hall of Illusions encounter. Match it with the tank build or holy-focused variant.",
+      "Natural pick for Eredrim and other tanky Shells who want big damage swings without giving up crowd control. The shockwave also works well against Vrannic illusions in the later Hall of Illusions encounter. Match it with the tank build or holy-focused variant.",
     betaNotes:
       "Shockwave has no friendly fire damage in the Beta. There is also a reported animation cancel where a Shell swap during the charge window lets you fire the shockwave instantly, which will almost certainly be tuned down at launch.",
   },
@@ -120,7 +120,7 @@ export const WEAPONS: Weapon[] = [
     obtain:
       "In the side room of the first chamber in Disciple's Grotto. The chest is behind a breakable wooden wall. You can grab it before the Tar Golem fight, which is exactly the kind of matchup this weapon was designed for.",
     playstyle:
-      "Strong with Harros hybrid builds and any Shell that still wants pressure without committing to a pure fast weapon. Relentless attack loops melt poise and hand you criticals against Disciple's Grotto enemies. Pair with a health Seal to sustain the aggressive posture.",
+      "Strong with hybrid builds and any Shell that still wants pressure without committing to a pure fast weapon. Relentless attack loops melt poise and hand you criticals against Disciple's Grotto enemies. Pair with a health Seal to sustain the aggressive posture.",
     betaNotes:
       "Chisel critical during stagger sometimes hits twice instead of once against flesh-type enemies. This may be unintended but it makes the weapon extremely strong in the current Beta, so expect the damage number to change on launch day.",
   },
@@ -142,7 +142,7 @@ export const WEAPONS: Weapon[] = [
     obtain:
       "Behind the barn in Sunken Village farm section. You have to beat The Wandering Shepherd first, and then the wooden bar across the barn back door snaps automatically. The chest with The Iconoclast sits next to a sheep hex cure station.",
     playstyle:
-      "Made for pure Strength builds on Black Beard or Eredrim. The reach lets you punish Magdalena during her flame spin outer edge and hit Vrannic clones without walking into his orb spread. Slot into the DPS Mortal Shell 2 builds if you favor slow, perfect swings over fast combo chains.",
+      "Made for pure Strength builds on Lazlo or Eredrim. The reach lets you punish Magdalena during her flame spin outer edge and hit Vrannic clones without walking into his orb spread. Slot into the DPS Mortal Shell 2 builds if you favor slow, perfect swings over fast combo chains.",
     betaNotes:
       "Weight enchantment currently also reduces the stamina cost of rolling while the weapon is two-handed, which was not the behavior in pre-release preview footage. Either this is a real change or a bug that will be patched out, so do not build around the reduced roll cost just yet.",
   },
@@ -164,7 +164,7 @@ export const WEAPONS: Weapon[] = [
     obtain:
       "Chest in the room after the Magdalena fight, at the end of the Sunken Village Beta campaign. You cannot miss it; the door locks behind you once the boss ends and the chest is the only thing in the room.",
     playstyle:
-      "Perfect for players who want a balanced weapon that also rewards clutch aggression. Slot it into the Harros hybrid build or pair with an assassin-style agile setup for the low-health burst. Also a strong pick if you want one weapon to carry you from the middle bosses all the way to the Vrannic fight.",
+      "Perfect for players who want a balanced weapon that also rewards clutch aggression. Slot it into a hybrid build or pair with an assassin-style agile setup for the low-health burst. Also a strong pick if you want one weapon to carry you from the middle bosses all the way to the Vrannic fight.",
     betaNotes:
       "Glow timer for the low-health bonus currently persists for 10 seconds even after you recover Shell health through a shrine. This extra carryover lets you chain the bonus from one fight into another if you grab a shrine on the way. Assume this carryover gets patched out before release.",
   },
@@ -186,7 +186,7 @@ export const WEAPONS: Weapon[] = [
     obtain:
       "Down the left corridor of the second illusion room in Hall of Illusions. The corridor is behind a false mirror. You can access this before Vrannic the Grand Illusionist. Just hug the left wall once the second illusion trio spawns and a mirror will open.",
     playstyle:
-      "Strong in both pure tank builds and crowd-control focused hybrid setups. The AOE patch also works well for clearing Vrannic illusions while you track down the real boss. Pair with Black Beard or Eredrim when you need to control a room instead of bursting a single target.",
+      "Strong in both pure tank builds and crowd-control focused hybrid setups. The AOE patch also works well for clearing Vrannic illusions while you track down the real boss. Pair with Lazlo or Eredrim when you need to control a room instead of bursting a single target.",
     betaNotes:
       "Fire AOE patch currently burns illusion clones for full damage, which is why the weapon dominates that encounter. If Cold Symmetry patches illusions to ignore ground effects, the Smoldering Mace drops a tier in that fight. The long reach and burn stacks will still be good everywhere else.",
   },

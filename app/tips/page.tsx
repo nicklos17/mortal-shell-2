@@ -14,7 +14,7 @@ const PUBLISHER = {
   url: "https://mortal-shell2.wiki/",
 };
 const DESCRIPTION =
-  "Mortal Shell 2 beginner tips for combat, Shells, weapons, exploration, bosses, and farming. Verified in the Open Beta and revised for the August 20 launch.";
+  "Mortal Shell 2 beginner tips for combat, Shells, weapons, exploration, bosses, and farming. Verified in the Open Beta and revised for launch.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -60,12 +60,10 @@ export const metadata: Metadata = {
    Shell 名 → /shells/[slug] 锚链辅助（复用 weapons 页同款逻辑）
    ============================================================ */
 const SHELL_LINK: Record<string, string> = {
-  "Tiel": "/shells/tiel",
-  "Tiel the Acolyte": "/shells/tiel",
-  "Eredrim": "/shells/eredrim",
-  "Eredrim the Venerable": "/shells/eredrim",
   "Proxima": "/shells/proxima",
+  "Tiel": "/shells/tiel",
   "Gragu": "/shells/gragu",
+  "Eredrim": "/shells/eredrim",
   "Smert": "/shells/smert",
   "Sariel": "/shells/sariel",
   "Lazlo": "/shells/lazlo",
@@ -133,7 +131,7 @@ const graphJsonLd = {
           name: "What are the best Mortal Shell 2 tips for beginners?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Pair the tank build with Black Beard to absorb two or three mistakes before spending a Shell swap. Activate every Beacon on sight in a new region, pick up the Axe and Daggers from the first cottage for the forgiving off-hand parry window, and push Nail Shot to plus three before leaving the starting zones. Save rare upgrade drops for the mid-game. Early Tar Stone sockets cover the first round of shrine upgrades on their own. Follow the opening route on the Mortal Shell 2 walkthrough to cut down wasted travel before any boss attempt.",
+            text: "Pair the tank build with Eredrim to absorb two or three mistakes before spending a Shell swap. Activate every Beacon on sight in a new region, pick up the Axe and Daggers from the first cottage for the forgiving off-hand parry window, and push Nail Shot to plus three before leaving the starting zones. Save rare upgrade drops for the mid-game. Early Tar Stone sockets cover the first round of shrine upgrades on their own. Follow the opening route on the Mortal Shell 2 walkthrough to cut down wasted travel before any boss attempt.",
           },
         },
         {
@@ -205,12 +203,12 @@ const SECTIONS: { heading: string; tips: Tip[]; }[] = [
       {
         title: "Match Shell to role and sink upgrades that direction",
         body:
-          "Each Shell pulls a different role and a different damage scaling mix. Black Beard wants pure Strength tank setups. Tiel the Acolyte runs the agile Dexterity path. Eredrim the Venerable leans Strength plus holy side grades. Harros slots into the middle hybrid option. Pick one Shell and spend five shrine upgrades strictly in that Shell's tree before opening a second one. Spreading upgrades evenly across the whole roster leaves every Shell weak when you need them in a tight boss window.",
+          "Each Shell pulls a different role and a different damage scaling mix. Lazlo wants pure Strength tank setups. Tiel runs the agile Dexterity path. Eredrim leans Strength plus holy side grades. Proxima slots into the middle hybrid option. Pick one Shell and spend five shrine upgrades strictly in that Shell's tree before opening a second one. Spreading upgrades evenly across the whole roster leaves every Shell weak when you need them in a tight boss window.",
       },
       {
         title: "Start with the beginner build if this is your first run",
         body:
-          "The beginner Mortal Shell 2 build is built around forgiveness, not raw damage. Pair Black Beard with the tank build direction, grab the Axe and Daggers, socket poison into the dagger, and let the Shell swap invulnerability frames carry you through every arena. Switch to the agile build on your second run once you know the attack patterns. Build rankings and every Shell pairing live on the Mortal Shell 2 builds page.",
+          "The beginner Mortal Shell 2 build is built around forgiveness, not raw damage. Pair Lazlo or Eredrim with the tank build direction, grab the Axe and Daggers, socket poison into the dagger, and let the Shell swap invulnerability frames carry you through every arena. Switch to the agile build on your second run once you know the attack patterns. Build rankings and every Shell pairing live on the Mortal Shell 2 builds page.",
       },
       {
         title: "Save rare Shell drops for the final act",
@@ -290,7 +288,7 @@ const SECTIONS: { heading: string; tips: Tip[]; }[] = [
       {
         title: "Buy role-defining shrine nodes before anything else",
         body:
-          "Spend your first shrine budget on the nodes that define your Shell's role. If you run the tank build on Black Beard, buy the extra Shell health block first, then the damage reduction, then the extra Shell swap. If you run Dexterity on Tiel the Acolyte, buy the dodge frame extension first and the heavy attack damage second. Do not buy tiny one-percent resistances when the core role nodes are still open.",
+          "Spend your first shrine budget on the nodes that define your Shell's role. If you run the tank build on Lazlo, buy the extra Shell health block first, then the damage reduction, then the extra Shell swap. If you run Dexterity on Tiel, buy the dodge frame extension first and the heavy attack damage second. Do not buy tiny one-percent resistances when the core role nodes are still open.",
       },
       {
         title: "Farm illusion clones after Vrannic for Tar Stones",
@@ -326,8 +324,8 @@ export default function TipsPage() {
           to chase first, how to explore and avoid backtracking, how to
           survive your first pass through each boss arena, and how to farm
           without grinding forever. Everything below was tested in the Open
-          Beta. A note at the bottom marks where the August 20, 2026
-          launch build is likely to adjust balance numbers.
+          Beta. A note at the bottom marks where the launch build is likely
+          to adjust balance numbers.
         </p>
 
         {SECTIONS.map((section) => (
@@ -403,14 +401,14 @@ export default function TipsPage() {
             <p>
               Pair the tank build with{" "}
               <a
-                href="/shells/blackbeard"
+                href="/shells/eredrim"
                 style={{
                   color: "var(--color-gold)",
                   textDecoration: "underline",
                   textUnderlineOffset: "2px",
                 }}
               >
-                Black Beard
+                Eredrim
               </a>{" "}
               to absorb two or three mistakes before spending a Shell swap.
               Activate every Beacon on sight in a new region, pick up the Axe
@@ -518,8 +516,8 @@ export default function TipsPage() {
 
         <p className="note">
           These tips were tested in the Mortal Shell 2 Open Beta. Full
-          mechanic deep dives and additional tips will land after the
-          August 20, 2026 launch. For zone-by-zone routing and precise
+          mechanic deep dives and additional tips will land after launch.
+          For zone-by-zone routing and precise
           chest markers, open the{" "}
           <a
             href="/map/"

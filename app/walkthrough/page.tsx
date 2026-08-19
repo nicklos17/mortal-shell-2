@@ -327,8 +327,7 @@ export default function WalkthroughPage() {
             }}
           >
             This opening guide is based on the Mortal Shell 2 Open Beta.
-            Full chapter-by-chapter walkthroughs go live after the
-            August 20, 2026 launch.
+            Full chapter-by-chapter walkthroughs go live after launch.
           </p>
           <p
             style={{
@@ -445,8 +444,7 @@ export default function WalkthroughPage() {
             }}
           >
             Opening walkthrough verified in Mortal Shell 2 Open Beta.
-            Full chapter guides will be updated after the
-            August 20, 2026 launch.
+            Full chapter guides will be updated after launch.
           </p>
           <p
             style={{

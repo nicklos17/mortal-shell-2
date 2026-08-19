@@ -4,8 +4,9 @@ import { useEffect, useRef } from "react";
 import L from "leaflet";
 import { mapMarkers, MapMarker } from "@/lib/map-markers";
 
-const MAP_W = 1000;
-const MAP_H = 563;
+const BASE_URL = "/assets/images/map/base.webp";
+const MAP_W = 3891;
+const MAP_H = 3891;
 
 function popupContent(m: MapMarker): string {
   const typeLabel =
@@ -74,78 +75,25 @@ export default function MapCanvas() {
     const map = L.map(mapRef.current, {
       crs: L.CRS.Simple,
       minZoom: -2,
-      maxZoom: 4,
+      maxZoom: 5,
       zoomSnap: 0.25,
       zoomDelta: 0.5,
       attributionControl: false,
       zoomControl: true,
+      preferCanvas: false,
     });
     mapInstance.current = map;
-
-    const canvas = document.createElement("canvas");
-    canvas.width = MAP_W;
-    canvas.height = MAP_H;
-    const ctx = canvas.getContext("2d");
-    if (ctx) {
-      const grd = ctx.createRadialGradient(
-        MAP_W / 2,
-        MAP_H / 2,
-        40,
-        MAP_W / 2,
-        MAP_H / 2,
-        MAP_W * 0.7
-      );
-      grd.addColorStop(0, "#1f1d28");
-      grd.addColorStop(0.6, "#14131a");
-      grd.addColorStop(1, "#0a090e");
-      ctx.fillStyle = grd;
-      ctx.fillRect(0, 0, MAP_W, MAP_H);
-
-      ctx.strokeStyle = (gold || "#b89332") + "22";
-      ctx.lineWidth = 1;
-      const step = 50;
-      for (let x = 0; x <= MAP_W; x += step) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, MAP_H);
-        ctx.stroke();
-      }
-      for (let y = 0; y <= MAP_H; y += step) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(MAP_W, y);
-        ctx.stroke();
-      }
-
-      ctx.strokeStyle = (gold || "#b89332") + "66";
-      ctx.lineWidth = 2;
-      ctx.strokeRect(10, 10, MAP_W - 20, MAP_H - 20);
-
-      ctx.fillStyle = (gold || "#b89332") + "44";
-      ctx.font = "bold 42px Cinzel, serif";
-      ctx.textAlign = "center";
-      ctx.fillText("MORTAL SHELL 2", MAP_W / 2, MAP_H / 2 - 8);
-      ctx.font = "18px Cinzel, serif";
-      ctx.fillStyle = (gold || "#b89332") + "99";
-      ctx.fillText(
-        "Interactive Map \u2014 Launch coordinates updating August 20",
-        MAP_W / 2,
-        MAP_H / 2 + 26
-      );
-      ctx.textAlign = "left";
-    }
-    const dataUrl = canvas.toDataURL("image/png");
 
     const southWest = map.unproject([0, MAP_H], 0);
     const northEast = map.unproject([MAP_W, 0], 0);
     const bounds = L.latLngBounds(southWest, northEast);
 
-    L.imageOverlay(dataUrl, bounds, {
-      alt: "Mortal Shell 2 interactive map placeholder",
+    L.imageOverlay(BASE_URL, bounds, {
+      alt: "Mortal Shell 2 interactive map",
       interactive: false,
     }).addTo(map);
 
-    map.setMaxBounds(bounds.pad(0.1));
+    map.setMaxBounds(bounds.pad(0.05));
     map.fitBounds(bounds);
 
     const style = document.createElement("style");
@@ -177,14 +125,14 @@ export default function MapCanvas() {
       const latLng = map.unproject([px, py], 0);
 
       const iconEl = L.DomUtil.create("div", "mm-icon");
-      const dotSize = 14;
+      const dotSize = 16;
       iconEl.style.width = dotSize + "px";
       iconEl.style.height = dotSize + "px";
       iconEl.style.borderRadius = "50%";
       iconEl.style.background = color;
       iconEl.style.border = "2px solid " + card;
       iconEl.style.boxShadow =
-        "0 0 0 1px " + color + "aa, 0 0 12px " + color + "aa";
+        "0 0 0 1px " + color + "aa, 0 0 16px " + color + "aa";
 
       const icon = L.divIcon({
         className: "map-marker",

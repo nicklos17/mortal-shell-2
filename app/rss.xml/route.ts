@@ -28,7 +28,7 @@ const items: {
         title: "All 8 Shells Explained: Playstyles, Abilities & Locations",
         link: `${SITE}/shells`,
         pubDateISO: "2026-08-13T15:00:00Z",
-        desc: `<p>The complete Shell roster: Eredrim the Venerable, Harros the Vassal, Tiel the Acolyte, and more — playstyle, signature ability, and beta-confirmed locations. Unconfirmed Shells are clearly marked.</p>`,
+        desc: `<p>The complete Shell roster: Proxima, Tiel, Gragu, Eredrim, Smert, Sariel, Lazlo, Genessa — playstyle, signature ability, and beta-confirmed locations.</p>`,
     },
     {
         title: "Builds Guide: 8 Shells, Comparison Table & Playstyle Picks",

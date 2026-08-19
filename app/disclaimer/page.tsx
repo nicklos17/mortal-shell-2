@@ -79,7 +79,7 @@ export default function DisclaimerPage() {
         <p>
           The information on this website is provided in good faith and based on
           publicly available sources, including the Mortal Shell 2 Open Beta.
-          Game content may change upon full release (August 20, 2026) or through
+          Game content may change upon full release or through
           subsequent patches. We make no guarantees about the completeness,
           accuracy, or reliability of any guide, map location, build
           recommendation, or strategy published here.
