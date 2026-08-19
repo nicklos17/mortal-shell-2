@@ -59,7 +59,7 @@ const itemListJsonLd = {
   itemListElement: SHELLS.map((s, i) => ({
     "@type": "ListItem",
     position: i + 1,
-    name: `${s.name} (${s.epithet})`,
+    name: s.name,
   })),
 };
 
@@ -125,11 +125,16 @@ export default function ShellsPage() {
           <div className="note">
             <strong>How many Shells, and where are they?</strong> There are{" "}
             <strong>eight playable Shells</strong> in total (not counting the
-            Harbinger). Two have confirmed in-game locations from the open beta
-            — <strong>Harros</strong> in the Prologue and <strong>Tiel the Acolyte</strong>{" "}
-            in the Mushroom Village. The rest are scattered across the open
-            world; their exact areas haven&apos;t been revealed yet and will be
-            added here after the full game launches on Aug 20, 2026.
+            Harbinger). Most have confirmed in-game locations:{" "}
+            <strong>Proxima</strong> northeast of Blackridge Pass Beacon,{" "}
+            <strong>Tiel</strong> southeast of the Widow&apos;s Overlook
+            Beacon, <strong>Gragu</strong> in the tavern (needs the Heart of
+            Vatra), <strong>Eredrim</strong> at the Citadel of Penance,{" "}
+            <strong>Smert</strong> near the Outskirts of Nochte Beacon,{" "}
+            <strong>Sariel</strong> through a dungeon encounter,{" "}
+            <strong>Lazlo</strong> in the Royal Crypt of Mammon, and{" "}
+            <strong>Genessa</strong> in Marrow Keep (needs the Sester&apos;s
+            Censer).
           </div>
         </section>
 
@@ -140,7 +145,6 @@ export default function ShellsPage() {
             <thead>
               <tr>
                 <th>Shell</th>
-                <th>Epithet</th>
                 <th>Playstyle</th>
                 <th>Location</th>
                 <th>Status</th>
@@ -154,7 +158,6 @@ export default function ShellsPage() {
                       <strong>{s.name}</strong>
                     </Link>
                   </td>
-                  <td>{s.epithet}</td>
                   <td>{s.role}</td>
                   <td>{s.location}</td>
                   <td>
@@ -199,7 +202,6 @@ export default function ShellsPage() {
                   </span>
                   <div>
                     <span className="shell-name">{s.name}</span>
-                    <span className="shell-epithet">{s.epithet}</span>
                   </div>
                 </div>
                 <span className="shell-role">{s.role}</span>

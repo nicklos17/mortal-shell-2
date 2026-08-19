@@ -34,13 +34,27 @@ const CHANGED_TODAY: ReadonlySet<string> = new Set([
   "/weapons", // /weapons：7 Beta 武器完整攻略 + scaling 机制说明 + FAQ
   "/walkthrough", // /walkthrough：开篇 OP 早期路线 + YouTube 视频 + FAQ + Article/VideoObject JSON-LD
   "/tips",    // /tips：6 分类 18 条新手技巧 + FAQ + Article/FAQPage JSON-LD
-  "/builds",  // /builds：改版为 Proxima 单卡片导流页 + FAQ 更新
+  "/builds",  // /builds：Proxima + Tiel 双卡片导流页 + FAQ
   "/builds/proxima", // /builds/proxima：Proxima Starter Build 完整攻略上线
+  "/builds/tiel", // /builds/tiel：Tiel Starter Build 完整攻略上线（14/23/40 点三阶段）
   "/about",   // /about：About Us 信任页上线
   "/privacy", // /privacy：Privacy Policy 合规页上线
   "/terms",   // /terms：Terms of Service 合规页上线
   "/disclaimer", // /disclaimer：Disclaimer 免责声明页上线
   "/contact", // /contact：Contact Us 联系页上线
+]);
+
+// Shell 详情页：今天改了内容的 slug 专属 changed set。
+// 2026-08-19：按 Open Beta 实测补全 8 个 Shell 的 playstyle。
+const CHANGED_TODAY_SHELLS: ReadonlySet<string> = new Set([
+  "proxima",
+  "tiel",
+  "gragu",
+  "eredrim",
+  "smert",
+  "sariel",
+  "lazlo",
+  "genessa",
 ]);
 
 type StaticRoute = {
@@ -58,6 +72,7 @@ const STATIC_ROUTES: StaticRoute[] = [
   { path: "/bosses", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/builds", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/builds/proxima", createdAt: "2026-08-18", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/builds/tiel", createdAt: "2026-08-19", priority: 0.8, changeFrequency: "monthly" },
   { path: "/weapons", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/walkthrough", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/tips", createdAt: "2026-08-14", priority: 0.7, changeFrequency: "yearly" },
@@ -85,9 +100,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const shellEntries = SHELLS.map((s) => ({
     url: pageURL(`/shells/${s.id}`),
-    // Shell 详情页：统一按首次创建日期。
-    // 如果某天单独改了某个 Shell 子页的内容，可按 slug 加入一个专属 changed set。
-    lastModified: SHELLS_CREATED_AT,
+    // Shell 详情页：默认按首次创建日期；单独改了某个 Shell 子页时，
+    // 把它的 slug 加入上方 CHANGED_TODAY_SHELLS 即可。
+    lastModified: CHANGED_TODAY_SHELLS.has(s.id) ? TODAY : SHELLS_CREATED_AT,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));

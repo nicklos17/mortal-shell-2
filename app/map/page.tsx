@@ -281,71 +281,58 @@ export default function MapPage() {
           </p>
           <ul className="loc-list">
             <li>
-              <a href="/shells/harros">Harros, the Vassal</a>{" "}
+              <a href="/shells/proxima">Proxima</a>{" "}
               <span className="loc-note">
-                : found in the prologue, right after your first meeting with
-                the UnderMether. Interact with the body in the center of the
-                chamber. He is lost after the Tar Golem boss fight in the
-                beta build, so make sure to learn the combat basics while
-                you have him.
+                : slightly northeast from the Blackridge Pass Beacon.
               </span>
             </li>
             <li>
-              <a href="/shells/tial">Tiel the Acolyte</a>{" "}
+              <a href="/shells/tiel">Tiel</a>{" "}
               <span className="loc-note">
-                : found in Mushroom Village, northeast area, near the
-                Ritual Grounds dungeon. Zhirelle at Marrow Keep points you
-                toward Widow&apos;s Overlook, which leads down to the
-                village. Tiel the Acolyte is the second Shell available in the beta and
-                the best choice for players who prefer speed over
-                durability.
+                : from the Widow&apos;s Overlook Beacon, head southeast to
+                reach the Graveyard.
               </span>
             </li>
             <li>
-              <a href="/shells/eredrim">Eredrim the Venerable</a>{" "}
+              <a href="/shells/gragu">Gragu</a>{" "}
               <span className="loc-note">
-                : hidden somewhere in the open world. The exact area has not
-                been revealed yet. Like all Shells, you claim him by finding
-                and inhabiting the body. Check back after launch for the
-                precise location.
+                : pick up the Heart of Vatra from the temple at the far east
+                side of the map, then give the Heart to Gragu in the tavern.
               </span>
             </li>
             <li>
-              <a href="/shells/sester">Sester Mask</a>{" "}
+              <a href="/shells/eredrim">Eredrim</a>{" "}
               <span className="loc-note">
-                : confirmed via official footage but the in-game location is
-                not yet known. The pale smiling mask and branch-crown make
-                this Shell easy to identify once you spot it. Location will
-                be mapped after release.
+                : defeat the boss at the center of the Citadel of Penance.
               </span>
             </li>
             <li>
-              <a href="/shells/blackbeard">Black Beard</a>{" "}
+              <a href="/shells/smert">Smert</a>{" "}
               <span className="loc-note">
-                : community-identified by his distinctive black beard and
-                warrior silhouette. Official location pending. We will add
-                the marker to the map as soon as the game ships.
+                : fill up the 3 small pools of blood near the Outskirts of
+                Nochte Beacon by defeating enemies in the pools or by
+                offering your own blood.
               </span>
             </li>
             <li>
-              <a href="/shells/dommymommy">Dommy Mommy</a>{" "}
+              <a href="/shells/sariel">Sariel</a>{" "}
               <span className="loc-note">
-                : community-identified Shell. Location pending. Check the
-                interactive map after launch day for the exact spot.
+                : defeat Sariel at the shown location, then follow him into
+                the dungeon. At the final encounter arena, destroy the 4
+                stone tablets or he will keep respawning.
               </span>
             </li>
             <li>
-              <a href="/shells/skeletonman">Skeleton Man</a>{" "}
+              <a href="/shells/lazlo">Lazlo</a>{" "}
               <span className="loc-note">
-                : community-identified by his skeletal warrior silhouette.
-                Location pending. Will be added to the map on launch day.
+                : behind the miniboss in the Royal Crypt of Mammon.
               </span>
             </li>
             <li>
-              <a href="/shells/blackmage">Black Mage</a>{" "}
+              <a href="/shells/genessa">Genessa</a>{" "}
               <span className="loc-note">
-                : community-identified as a sorcery or elemental archetype.
-                Location pending. Will be mapped after release.
+                : first get the Sester&apos;s Censer from the dungeon near
+                the Athen, then take it to Genessa in Marrow Keep.
               </span>
             </li>
           </ul>

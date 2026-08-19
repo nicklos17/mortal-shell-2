@@ -112,10 +112,16 @@ const faqJsonLd = {
    命中：Tiel the Acolyte / Black Beard / Eredrim the Venerable / Harros
    ============================================================ */
 const SHELL_LINK: Record<string, string> = {
+  "Tiel": "/shells/tiel",
   "Tiel the Acolyte": "/shells/tiel",
-  "Black Beard": "/shells/blackbeard",
+  "Eredrim": "/shells/eredrim",
   "Eredrim the Venerable": "/shells/eredrim",
-  Harros: "/shells/harros",
+  "Proxima": "/shells/proxima",
+  "Gragu": "/shells/gragu",
+  "Smert": "/shells/smert",
+  "Sariel": "/shells/sariel",
+  "Lazlo": "/shells/lazlo",
+  "Genessa": "/shells/genessa",
 };
 
 function linkifyShells(text: string): ReactNode[] {

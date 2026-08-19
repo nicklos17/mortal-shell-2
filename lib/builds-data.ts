@@ -1,32 +1,22 @@
 /* ============================================================
    Mortal Shell 2, Build（配装）共享数据
    所有 Build 列表页从这里读取。
+   最后更新：2026-08-19，按新 shell 列表调整 shellId。
    ============================================================ */
 
 export type Build = {
   id: string;
   name: string;
-  /** 定位标签：Tank / DPS / Agile / Mage / DOT / Summoner / Hybrid / Beginner */
   role: string;
-  /** 推荐使用的 Shell，对应 lib/shells.ts 的 id，可为空表示待定 */
   shellId: string | null;
-  /** 展示用 Shell 名字 */
   shellName: string;
-  /** 一句话核心定位 */
   tagline: string;
-  /** 核心思路：长段描述 */
   coreIdea: string;
-  /** 装备清单（简单 3~4 条描述，不涉及未公开具体武器名） */
   gear: string[];
-  /** 天赋 / 升级优先级 */
   talents: string[];
-  /** 实战玩法 / 操作建议 */
   playstyle: string[];
-  /** 难度标签：Easy / Medium / Hard */
   difficulty: "Easy" | "Medium" | "Hard";
-  /** 适配场景 */
   goodFor: string[];
-  /** 评级：S / A / B */
   tier: "S" | "A" | "B";
 };
 
@@ -35,13 +25,13 @@ export const BUILDS: Build[] = [
     id: "tank",
     name: "Tank Build",
     role: "Tank",
-    shellId: "blackbeard",
-    shellName: "Black Beard",
+    shellId: "eredrim",
+    shellName: "Eredrim",
     tagline: "Soak the damage, hold the line. The unmovable wall for every arena.",
     coreIdea:
       "A frontline setup built around raw health pool and passive mitigation. Trade mobility for the ability to absorb boss combos without breaking. Useful when learning punishing patterns that would one-shot lighter shells.",
     gear: [
-      "Black Beard shell for maximum HP and armor.",
+      "Eredrim shell for maximum HP and armor.",
       "Slow heavy-hitting melee weapon: greatsword or hammer class.",
       "Weight-appropriate armor to preserve poise and damage resistance.",
       "Defensive Tarstones prioritized over offensive sockets.",
@@ -99,12 +89,12 @@ export const BUILDS: Build[] = [
     name: "Agile Build",
     role: "Agile",
     shellId: "tiel",
-    shellName: "Tiel the Acolyte",
+    shellName: "Tiel",
     tagline: "Hit, move, hit again. Dodge-rolled aggression for players who never stop moving.",
     coreIdea:
       "A mobility-first setup paired with the fastest shell on the roster. Clean dodges open offensive windows that other shells can never reach. Light armor and dual weapons keep recovery frames short enough to chain two combos where a tank would still be mid-animation.",
     gear: [
-      "Tiel the Acolyte or equivalent speed-focused shell for dodge-tuned frames.",
+      "Tiel shell for dodge-tuned frames and Shadow Strike procs.",
       "Daggers or dual-wield weapons, short swing, long chain.",
       "Light armor set, optimized for dodge distance and stamina efficiency.",
       "Crit damage and dodge-refund Tarstones.",
@@ -130,13 +120,13 @@ export const BUILDS: Build[] = [
     id: "mage",
     name: "Spellcaster Build",
     role: "Mage",
-    shellId: "eredrim",
-    shellName: "Eredrim the Venerable",
+    shellId: "sariel",
+    shellName: "Sariel",
     tagline: "Stand back, let the elements talk. High-risk, high-reward ranged elemental damage.",
     coreIdea:
       "Use the ranged shell to engage from safe distance. Elemental damage types let you exploit weaknesses, fire for flesh, ice for agile targets, lightning for armored crowds. Resource management matters more than any other build; one dry mana bar leaves you swinging a staff as a last resort.",
     gear: [
-      "Magic-oriented shell with a deep mana pool and spell scaling.",
+      "Sariel shell with spell scaling and mana pool.",
       "Staff or catalyst weapon tuned for elemental damage output.",
       "Robe or light cloth armor that raises spell potency instead of raw HP.",
       "Mana regen and spell amplification Tarstones.",
@@ -162,13 +152,13 @@ export const BUILDS: Build[] = [
     id: "poison-dot",
     name: "Poison DOT Build",
     role: "DOT",
-    shellId: "dommymommy",
-    shellName: "Dommy Mommy",
+    shellId: "lazlo",
+    shellName: "Lazlo",
     tagline: "Stack the poison, walk away, let the tick finish the job.",
     coreIdea:
       "Damage over time that rewards setup over raw exchanges. Apply multiple stacks in an opening, disengage, and let poison do the work while you dodge. Excellent against tanky enemies with no cleanse, and a natural pair with poison-infused gear and debuff talents.",
     gear: [
-      "Poison-aligned shell for debuff stacking and duration bonuses.",
+      "Lazlo shell for debuff stacking and duration bonuses.",
       "Fast or multi-hit weapon to apply stacks quickly.",
       "Light to medium armor that preserves mobility during kiting.",
       "Poison amplification and duration extension Tarstones.",
@@ -226,13 +216,13 @@ export const BUILDS: Build[] = [
     id: "hybrid",
     name: "Hybrid Build",
     role: "Hybrid",
-    shellId: "harros",
-    shellName: "Harros the Vassal",
+    shellId: "gragu",
+    shellName: "Gragu",
     tagline: "A jack of all trades setup that responds to anything the arena throws at you.",
     coreIdea:
       "Skip specialization in favor of flexibility. A hybrid build keeps half your options open, melee when the window is right, ranged when the arena demands it, swap weapons without rebuilding. The highest overall ceiling for adapting mid-fight, at the cost of not topping any single category.",
     gear: [
-      "Balanced shell like Harros with no severe weakness.",
+      "Gragu or balanced shell with no severe weakness.",
       "Versatile weapon: longsword, polearm, or any tool that works in and out of range.",
       "Medium armor that gives up nothing extreme in either direction.",
       "Dual-purpose Tarstones that raise offense and defense evenly.",
@@ -258,13 +248,13 @@ export const BUILDS: Build[] = [
     id: "beginner",
     name: "Beginner Build",
     role: "Beginner",
-    shellId: "harros",
-    shellName: "Harros the Vassal",
+    shellId: "proxima",
+    shellName: "Proxima",
     tagline: "Low bar, high forgiveness. The safest way to learn Mortal Shell II before branching out.",
     coreIdea:
       "Skip optimizing until you understand the mechanics. A beginner build stacks HP, defense, and forgiving swing timings so that one misread does not end the run. Use it to learn parry windows, stamina, and boss patterns, then respec into the specialist build that matches what you enjoy.",
     gear: [
-      "Harros or Black Beard, whichever feels more natural in the first hour.",
+      "Proxima or Eredrim, whichever feels more natural in the first hour.",
       "Slow, readable weapon with obvious swing timing and clear recovery.",
       "Balanced armor, tilted slightly toward defense if the choice is there.",
       "Defense and health Tarstones over pure offensive socketing.",

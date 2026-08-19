@@ -50,13 +50,19 @@ const itemListJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Mortal Shell 2 Builds",
-  numberOfItems: 1,
+  numberOfItems: 2,
   itemListElement: [
     {
       "@type": "ListItem",
       position: 1,
       name: "Proxima Starter Build",
       url: pageURL("/builds/proxima"),
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Tiel Starter Build",
+      url: pageURL("/builds/tiel"),
     },
   ],
 };
@@ -119,12 +125,11 @@ export default function BuildsPage() {
         <span className="title-rule" />
 
         <p className="lede">
-          A build in Mortal Shell 2 is the combination of five elements: your{" "}
+          A build in Mortal Shell 2 combines five elements: your{" "}
           <strong>Shell</strong>, your <strong>primary weapon</strong>, your{" "}
           <strong>sidearm</strong>, your <strong>Tarstones</strong>, and your{" "}
-          <strong>Shell Bonding</strong> tree. A good build isn&apos;t about
-          stacking numbers — it&apos;s about finding the synergy loop where
-          every piece feeds the next.
+          <strong>Shell Bonding</strong> tree. The goal is finding a synergy
+          loop where each piece feeds the next.
         </p>
 
         {/* 1. Proxima Build 卡片（唯一真内容） */}
@@ -140,9 +145,9 @@ export default function BuildsPage() {
             and scales into a 21-point late-game version.
           </p>
           <p>
-            This is the strongest build we&apos;ve tested in the Open Beta —
-            read our full breakdown for the skill tree allocation, essential
-            item locations, and how the Resolve loop works.
+            This is the strongest build we&apos;ve tested in the Open Beta.
+            Read our full breakdown for the skill tree allocation, item
+            locations, and how the Resolve loop works.
           </p>
           <Link
             href="/builds/proxima/"
@@ -152,17 +157,38 @@ export default function BuildsPage() {
           </Link>
         </section>
 
-        {/* 2. 更多 builds：纯文字说明，不放空链接 */}
+        {/* 2. Tiel Build 卡片 */}
+        <section id="tiel" className="article">
+          <h2>Tiel Starter Build</h2>
+          <p>
+            Tiel&apos;s loop runs on <strong>Shadow Strike</strong>:
+            <strong> Escalation</strong> stacks 10 Poison on every strike,{" "}
+            <strong>Death Mark</strong> adds crit chance, crit damage, and
+            Fragile, and <strong>Poison Burst</strong> detonates the poison for
+            burst damage. It comes online at{" "}
+            <strong>14 Shell Bonding points</strong> and scales through
+            23-point and maxed 40-point versions, one-shotting endgame mobs
+            with stealth chains.
+          </p>
+          <Link
+            href="/builds/tiel/"
+            className="cta"
+          >
+            Read the full Tiel Build Guide →
+          </Link>
+        </section>
+
+        {/* 3. 更多 builds：纯文字说明，不放空链接 */}
         <section className="article">
           <h2>More Builds Coming After Launch</h2>
           <p>
             We&apos;re testing additional Shell and weapon combinations from
             the full release. Once we&apos;ve validated each build against
-            end-game content, we&apos;ll publish individual build guides here
-            — one page per build.
+            end-game content, we&apos;ll publish individual build guides here,
+            one page per build.
           </p>
           <p>
-            For Shell mechanics and Bonding trees in the meantime, see our{" "}
+            For Shell mechanics and Bonding trees, see our{" "}
             <Link
               href="/shells/"
               className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
@@ -180,7 +206,7 @@ export default function BuildsPage() {
           </p>
         </section>
 
-        {/* 3. FAQ（与 FAQPage 结构化数据一一对应） */}
+        {/* 4. FAQ（与 FAQPage 结构化数据一一对应） */}
         <section className="article">
           <h2>Frequently Asked Questions</h2>
           <div className="faq">

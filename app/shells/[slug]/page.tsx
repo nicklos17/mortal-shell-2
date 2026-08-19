@@ -19,7 +19,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const shell = getShell(slug);
   if (!shell) return { title: "Shell not found — Mortal Shell 2" };
-  const desc = `${shell.name} (${shell.epithet}) — ${shell.tagline} ${shell.signature}`;
+  const desc = `${shell.name} — ${shell.tagline} ${shell.signature}`;
   return {
     title: `${shell.name} — Mortal Shell 2 Shell Guide`,
     description: desc,
@@ -72,7 +72,6 @@ export default async function ShellDetailPage({
             <ShellIcon id={shell.id} />
           </span>
           <div className="shell-hero-meta">
-            <span className="shell-epithet">{shell.epithet}</span>
             <span className="shell-role">{shell.role}</span>
             <span className={`shell-badge ${shell.status === "TBA" ? "tba" : ""}`}>
               {shell.status}

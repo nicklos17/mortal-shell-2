@@ -6,7 +6,6 @@ import { useState } from "react";
 type Shell = {
   id: string;
   name: string;
-  epithet: string;
   role: string;
   desc: string;
   signature: string;
