@@ -1,29 +1,8 @@
 export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
-import ReleaseCountdown, { InitialParts } from "./ReleaseCountdown";
 
 const RELEASE_TARGET = Date.UTC(2026, 7, 20, 0, 0, 0);
-
-function computeInitial(): InitialParts {
-  const now = Date.now();
-  const ms = RELEASE_TARGET - now;
-  if (ms <= 0) {
-    return { days: "0", hours: "00", minutes: "00", seconds: "00", expired: true };
-  }
-  const pad = (n: number) => (n < 10 ? `0${n}` : `${n}`);
-  const days = Math.floor(ms / 86_400_000);
-  const hours = Math.floor((ms % 86_400_000) / 3_600_000);
-  const minutes = Math.floor((ms % 3_600_000) / 60_000);
-  const seconds = Math.floor((ms % 60_000) / 1000);
-  return {
-    days: String(days),
-    hours: pad(hours),
-    minutes: pad(minutes),
-    seconds: pad(seconds),
-    expired: false,
-  };
-}
 
 export const metadata: Metadata = {
   title: "Mortal Shell 2 Guide: Maps, Bosses, Builds & Weapons",
@@ -202,7 +181,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          <ReleaseCountdown initial={computeInitial()} />
         </section>
 
         <section className="article">
