@@ -1,10 +1,11 @@
 export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import AdBanner from "@/components/AdBanner";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
-const TITLE = "Mortal Shell 2 Tips: 18 Beginner Tips for Combat &amp; Bosses";
+const TITLE = "Mortal Shell 2 Tips – 18 Beginner Combat Tips";
 const PAGE_PATH = "/tips";
 const DATE_PUBLISHED = "2026-08-16";
 const DATE_MODIFIED = "2026-08-16";
@@ -391,6 +392,8 @@ export default function TipsPage() {
             .
           </p>
         </section>
+
+        <AdBanner />
 
         {/* FAQ，与 FAQPage JSON-LD 严格同步 */}
         <section className="article">
