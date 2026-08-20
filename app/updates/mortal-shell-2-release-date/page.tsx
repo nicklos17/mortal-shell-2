@@ -7,7 +7,7 @@ const PAGE_PATH = `/updates/${SLUG}`;
 const TITLE = "Mortal Shell 2 Release Date";
 const DATE_PUBLISHED = "2026-08-14T09:00:00Z";
 const DATE_MODIFIED = "2026-08-14T09:00:00Z";
-const AUTHOR = "Mortal Shell 2 Guide Staff";
+const AUTHOR = "Mortal Shell 2 Wiki Staff";
 const DESCRIPTION =
   "Mortal Shell 2 releases on August 20, 2026. Confirmed platforms, pre-order details, gameplay changes, and everything we know about the upcoming Cold Symmetry soulslike sequel.";
 
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     modifiedTime: DATE_MODIFIED,
     authors: [AUTHOR],
     tags: ["Mortal Shell 2", "Release Date", "Announcement", "Cold Symmetry"],
-    siteName: "Mortal Shell 2 Guide",
+    siteName: "Mortal Shell 2 Wiki",
     images: [
       {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
         type: "image/jpeg",
       },
     ],
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
       },
     ],
   },
@@ -65,7 +65,7 @@ const articleJsonLd = {
   },
   publisher: {
     "@type": "Organization",
-    name: "Mortal Shell 2 Guide",
+    name: "Mortal Shell 2 Wiki",
     url: pageURL("/"),
     logo: {
       "@type": "ImageObject",

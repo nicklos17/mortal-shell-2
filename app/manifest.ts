@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 
 export default function manifest(): MetadataRoute.Manifest {
     return {
-        name: 'Mortal Shell 2 Guide',
+        name: 'Mortal Shell 2 Wiki',
         short_name: 'MS2 Guide',
         description:
             'Mortal Shell 2 walkthrough, boss strategies, shells, weapons, and builds.',

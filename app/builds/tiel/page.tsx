@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: pageURL(PAGE_PATH),
     type: "article",
-    siteName: "Mortal Shell 2 Guide",
+    siteName: "Mortal Shell 2 Wiki",
     images: [
       {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
         type: "image/jpeg",
       },
     ],
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
       },
     ],
   },
@@ -61,7 +61,7 @@ const articleJsonLd = {
   },
   publisher: {
     "@type": "Organization",
-    name: "Mortal Shell 2 Guide",
+    name: "Mortal Shell 2 Wiki",
   },
   datePublished: "2026-08-19",
   dateModified: "2026-08-19",
@@ -214,7 +214,7 @@ const BONDING_40: TielNode[] = [
     effect: (
       <>
         After a Shadow Strike, the <strong>next melee strike is guaranteed to
-        crit</strong>
+          crit</strong>
       </>
     ),
   },
@@ -231,7 +231,7 @@ const BONDING_40: TielNode[] = [
   },
 ];
 
-function NodeTable({ nodes }: { nodes: TielNode[] }) {
+function NodeTable({ nodes }: { nodes: TielNode[]; }) {
   return (
     <div className="overflow-x-auto">
       <table className="data" style={{ width: "100%" }}>
@@ -336,7 +336,7 @@ const ITEM_LOCATIONS: ItemLocation[] = [
   },
 ];
 
-function LocationTable({ items }: { items: ItemLocation[] }) {
+function LocationTable({ items }: { items: ItemLocation[]; }) {
   return (
     <div className="overflow-x-auto">
       <table className="data" style={{ width: "100%" }}>

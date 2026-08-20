@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
         type: "image/jpeg",
       },
     ],
@@ -162,7 +162,7 @@ export default function HomePage() {
         <section className="hero">
           <div className="hero-title">
             <span className="eyebrow">Unofficial Fan Resource</span>
-            <h1>Mortal Shell 2 Guide – Walkthrough, Maps, Bosses, Builds &amp; Weapons</h1>
+            <h1>Mortal Shell 2 Wiki – Walkthrough, Maps, Bosses, Builds &amp; Weapons</h1>
             <span className="title-rule" />
 
             <p className="lede">

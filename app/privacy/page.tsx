@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
-const TITLE = "Privacy Policy – Mortal Shell 2 Guide";
+const TITLE = "Privacy Policy – Mortal Shell 2 Wiki";
 const PAGE_PATH = "/privacy";
 const DESCRIPTION =
-  "How we handle your data on Mortal Shell 2 Guide: analytics, cookies, affiliate links, and your rights under GDPR and CCPA.";
+  "How we handle your data on Mortal Shell 2 Wiki: analytics, cookies, affiliate links, and your rights under GDPR and CCPA.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: pageURL(PAGE_PATH),
     type: "website",
-    siteName: "Mortal Shell 2 Guide",
+    siteName: "Mortal Shell 2 Wiki",
     images: [
       {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
         type: "image/jpeg",
       },
     ],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
       },
     ],
   },
@@ -61,7 +61,7 @@ export default function PrivacyPage() {
       <section className="article">
         <h2>1. Information we collect</h2>
         <p>
-          Mortal Shell 2 Guide does not require an account, and we do not ask
+          Mortal Shell 2 Wiki does not require an account, and we do not ask
           for your name, email, or any personal information to use the site.
         </p>
         <ul className="list-disc pl-6">

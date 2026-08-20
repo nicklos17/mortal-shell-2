@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
-const TITLE = "Contact Us – Mortal Shell 2 Guide";
+const TITLE = "Contact Us – Mortal Shell 2 Wiki";
 const PAGE_PATH = "/contact";
 const DESCRIPTION =
   "Report an error, contribute a map location, or reach the team behind the Mortal Shell 2 wiki.";
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: pageURL(PAGE_PATH),
     type: "website",
-    siteName: "Mortal Shell 2 Guide",
+    siteName: "Mortal Shell 2 Wiki",
     images: [
       {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
         type: "image/jpeg",
       },
     ],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
       },
     ],
   },

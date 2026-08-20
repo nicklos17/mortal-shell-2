@@ -81,12 +81,12 @@ export async function GET() {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>Mortal Shell 2 Guide</title>
+  <title>Mortal Shell 2 Wiki</title>
   <link>${SITE}/</link>
-  <description>Complete Mortal Shell 2 guide and wiki.</description>
+  <description>Complete Mortal Shell 2 Wiki and wiki.</description>
   <language>en-us</language>
   <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
-  <generator>Mortal Shell 2 Guide</generator>
+  <generator>Mortal Shell 2 Wiki</generator>
   <atom:link href="${SITE}/rss.xml" rel="self" type="application/rss+xml"/>
 ${body}
 </channel>

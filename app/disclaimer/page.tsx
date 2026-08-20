@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
-const TITLE = "Disclaimer – Mortal Shell 2 Guide";
+const TITLE = "Disclaimer – Mortal Shell 2 Wiki";
 const PAGE_PATH = "/disclaimer";
 const DESCRIPTION =
-  "Mortal Shell 2 Guide is an unofficial fan wiki. We are not affiliated with Cold Symmetry or Playstack. Read our full disclaimer.";
+  "Mortal Shell 2 Wiki is an unofficial fan wiki. We are not affiliated with Cold Symmetry or Playstack. Read our full disclaimer.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: pageURL(PAGE_PATH),
     type: "website",
-    siteName: "Mortal Shell 2 Guide",
+    siteName: "Mortal Shell 2 Wiki",
     images: [
       {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
         type: "image/jpeg",
       },
     ],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
       },
     ],
   },
@@ -60,7 +60,7 @@ export default function DisclaimerPage() {
 
       <section className="article">
         <p>
-          Mortal Shell 2 Guide (
+          Mortal Shell 2 Wiki (
           <Link
             href="/"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"

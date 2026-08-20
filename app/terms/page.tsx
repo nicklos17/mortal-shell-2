@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
-const TITLE = "Terms of Service – Mortal Shell 2 Guide";
+const TITLE = "Terms of Service – Mortal Shell 2 Wiki";
 const PAGE_PATH = "/terms";
 const DESCRIPTION =
   "Terms of Service for using the Mortal Shell 2 wiki. By using this site you agree to these terms.";
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: pageURL(PAGE_PATH),
     type: "website",
-    siteName: "Mortal Shell 2 Guide",
+    siteName: "Mortal Shell 2 Wiki",
     images: [
       {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
         type: "image/jpeg",
       },
     ],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
       },
     ],
   },
@@ -61,7 +61,7 @@ export default function TermsPage() {
       <section className="article">
         <h2>1. Acceptance of Terms</h2>
         <p>
-          By accessing or using Mortal Shell 2 Guide (&ldquo;the Site&rdquo;),
+          By accessing or using Mortal Shell 2 Wiki (&ldquo;the Site&rdquo;),
           you agree to be bound by these Terms of Service. If you do not agree,
           please discontinue use of the Site.
         </p>
@@ -128,7 +128,7 @@ export default function TermsPage() {
       <section className="article">
         <h2>7. Limitation of Liability</h2>
         <p>
-          To the fullest extent permitted by law, Mortal Shell 2 Guide and its
+          To the fullest extent permitted by law, Mortal Shell 2 Wiki and its
           operators shall not be liable for any direct, indirect, incidental,
           or consequential damages arising from your use of the Site or
           reliance on its content.

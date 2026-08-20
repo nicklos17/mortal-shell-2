@@ -4,7 +4,7 @@
 
 ## Core Pages
 
-- [Home](https://mortal-shell2.wiki/): Mortal Shell 2 guide homepage — game overview, key mechanics, and links to every section.
+- [Home](https://mortal-shell2.wiki/): Mortal Shell 2 Wiki homepage — game overview, key mechanics, and links to every section.
 - [Interactive Map](https://mortal-shell2.wiki/map): Full interactive map with all Shell locations, Tarstones, Beacons, boss arenas, and hidden collectibles.
 - [All Shells](https://mortal-shell2.wiki/shells): Every playable Shell with stats, abilities, and exact locations.
 - [Mortal Shell 2 Bosses](https://mortal-shell2.wiki/bosses): All 8 bosses from Open Beta. Attack patterns, weak points, confirmed regions, and strategy cards for each encounter.

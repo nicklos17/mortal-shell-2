@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ============================================================
-   Mortal Shell 2 Guide — 全站样式
+   Mortal Shell 2 Wiki — 全站样式
    设计依据：官方站 mortalshell.com 实拆（黑底 + 金 #b89332
    + Cinzel/Cormorant Garamond 字体 + 金色描边 glow）
    ============================================================ */
@@ -329,11 +329,9 @@ table.data tr:hover td {
   padding: 0.75rem 1rem;
   border: 1px solid color-mix(in srgb, var(--color-gold) 55%, transparent);
   border-radius: 3px;
-  background: linear-gradient(
-    90deg,
-    color-mix(in srgb, var(--color-gold) 12%, transparent),
-    transparent 60%
-  );
+  background: linear-gradient(90deg,
+      color-mix(in srgb, var(--color-gold) 12%, transparent),
+      transparent 60%);
   color: var(--text-secondary);
   font-size: 0.875rem;
   line-height: 1.55;
@@ -412,20 +410,24 @@ table.data tr:hover td {
   z-index: 0;
   outline: none;
 }
+
 .leaflet-container .leaflet-control-attribution {
   background: transparent;
   color: var(--text-secondary);
   display: none;
 }
+
 .leaflet-control-zoom {
   border: 1px solid color-mix(in srgb, var(--color-gold) 33%, transparent) !important;
   background: var(--bg-card);
 }
+
 .leaflet-control-zoom a {
   color: var(--color-gold);
   background: var(--bg-card);
   border-color: color-mix(in srgb, var(--color-gold) 20%, transparent) !important;
 }
+
 .leaflet-control-zoom a:hover {
   background: var(--bg-card-hover);
   color: var(--color-gold-bright);
@@ -445,6 +447,7 @@ table.data tr:hover td {
   border-radius: 6px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, .6);
 }
+
 .leaflet-popup-content {
   margin: 12px;
   font-size: 13px;
@@ -452,12 +455,14 @@ table.data tr:hover td {
   width: 320px;
   color: var(--text-primary);
 }
+
 .leaflet-popup-content-wrapper .leaflet-popup-content {
   overflow: hidden;
   max-height: 60vh;
   overflow-y: auto;
   padding-right: 4px;
 }
+
 .pop-head {
   display: flex;
   align-items: center;
@@ -468,6 +473,7 @@ table.data tr:hover td {
   border-bottom: 1px solid color-mix(in srgb, var(--color-gold) 13%, transparent);
   padding-bottom: 8px;
 }
+
 .pop-title {
   color: var(--color-gold);
   font-size: 15px;
@@ -475,6 +481,7 @@ table.data tr:hover td {
   margin: 0;
   line-height: 1.35;
 }
+
 .pop-tag {
   display: inline-block;
   padding: 2px 8px;
@@ -485,22 +492,26 @@ table.data tr:hover td {
   font-family: sans-serif;
   font-weight: 600;
 }
+
 .pop-desc {
   margin: 8px 0 10px;
   color: var(--text-primary);
   font-size: 13px;
   line-height: 1.6;
 }
+
 .map-marker {
   display: block;
   transition: transform .15s ease-out;
   background: transparent !important;
   border: none !important;
 }
+
 .map-marker:hover {
   transform: scale(1.3);
   z-index: 1000 !important;
 }
+
 .map-marker .mm-title {
   position: absolute;
   top: 100%;
@@ -515,9 +526,10 @@ table.data tr:hover td {
   font-size: 10px;
   letter-spacing: 0.04em;
   pointer-events: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .5);
   z-index: 1000;
 }
+
 .mm-icon {
   display: block;
   width: 12px;
@@ -530,25 +542,93 @@ table.data tr:hover td {
     0 0 14px color-mix(in srgb, var(--color-gold) 80%, transparent),
     0 0 28px color-mix(in srgb, var(--color-gold) 20%, transparent);
 }
+
 /* 13 种分类颜色（与 TYPE_COLORS 精确同步） */
-.mm-icon[data-t="shell"]             { background:#d4af37; box-shadow:0 0 0 1px #d4af37bb,0 0 14px #d4af37cc,0 0 28px #d4af3733; }
-.mm-icon[data-t="boss"]              { background:#8f2a2a; box-shadow:0 0 0 1px #8f2a2abb,0 0 14px #8f2a2acc,0 0 28px #8f2a2a33; }
-.mm-icon[data-t="tarstone"]          { background:#e74c3c; box-shadow:0 0 0 1px #e74c3cbb,0 0 14px #e74c3ccc,0 0 28px #e74c3c33; }
-.mm-icon[data-t="beacon"]            { background:#5a7fb0; box-shadow:0 0 0 1px #5a7fb0bb,0 0 14px #5a7fb0cc,0 0 28px #5a7fb033; }
-.mm-icon[data-t="weapon"]            { background:#9d7ac9; box-shadow:0 0 0 1px #9d7ac9bb,0 0 14px #9d7ac9cc,0 0 28px #9d7ac933; }
-.mm-icon[data-t="sidearm"]           { background:#7a96c9; box-shadow:0 0 0 1px #7a96c9bb,0 0 14px #7a96c9cc,0 0 28px #7a96c933; }
-.mm-icon[data-t="dungeon"]           { background:#a05a2c; box-shadow:0 0 0 1px #a05a2cbb,0 0 14px #a05a2ccc,0 0 28px #a05a2c33; }
-.mm-icon[data-t="gate"]              { background:#70756a; box-shadow:0 0 0 1px #70756abb,0 0 14px #70756acc,0 0 28px #70756a33; }
-.mm-icon[data-t="keyItem"]           { background:#1abc9c; box-shadow:0 0 0 1px #1abc9cbb,0 0 14px #1abc9ccc,0 0 28px #1abc9c33; }
-.mm-icon[data-t="mapFragment"]       { background:#6aa880; box-shadow:0 0 0 1px #6aa880bb,0 0 14px #6aa880cc,0 0 28px #6aa88033; }
-.mm-icon[data-t="corruptedStatue"]   { background:#b05a7a; box-shadow:0 0 0 1px #b05a7abb,0 0 14px #b05a7acc,0 0 28px #b05a7a33; }
-.mm-icon[data-t="enemy"]             { background:#a86a50; box-shadow:0 0 0 1px #a86a50bb,0 0 14px #a86a50cc,0 0 28px #a86a5033; }
-.mm-icon[data-t="collectible"]       { background:#d4af37; box-shadow:0 0 0 1px #d4af37bb,0 0 14px #d4af37cc,0 0 28px #d4af3733; }
-.mm-icon[data-t="boneGate"]          { background:#9e8866; box-shadow:0 0 0 1px #9e8866bb,0 0 14px #9e8866cc,0 0 28px #9e886633; }
+.mm-icon[data-t="shell"] {
+  background: #d4af37;
+  box-shadow: 0 0 0 1px #d4af37bb, 0 0 14px #d4af37cc, 0 0 28px #d4af3733;
+}
+
+.mm-icon[data-t="boss"] {
+  background: #8f2a2a;
+  box-shadow: 0 0 0 1px #8f2a2abb, 0 0 14px #8f2a2acc, 0 0 28px #8f2a2a33;
+}
+
+.mm-icon[data-t="tarstone"] {
+  background: #e74c3c;
+  box-shadow: 0 0 0 1px #e74c3cbb, 0 0 14px #e74c3ccc, 0 0 28px #e74c3c33;
+}
+
+.mm-icon[data-t="beacon"] {
+  background: #5a7fb0;
+  box-shadow: 0 0 0 1px #5a7fb0bb, 0 0 14px #5a7fb0cc, 0 0 28px #5a7fb033;
+}
+
+.mm-icon[data-t="weapon"] {
+  background: #9d7ac9;
+  box-shadow: 0 0 0 1px #9d7ac9bb, 0 0 14px #9d7ac9cc, 0 0 28px #9d7ac933;
+}
+
+.mm-icon[data-t="sidearm"] {
+  background: #7a96c9;
+  box-shadow: 0 0 0 1px #7a96c9bb, 0 0 14px #7a96c9cc, 0 0 28px #7a96c933;
+}
+
+.mm-icon[data-t="dungeon"] {
+  background: #a05a2c;
+  box-shadow: 0 0 0 1px #a05a2cbb, 0 0 14px #a05a2ccc, 0 0 28px #a05a2c33;
+}
+
+.mm-icon[data-t="gate"] {
+  background: #70756a;
+  box-shadow: 0 0 0 1px #70756abb, 0 0 14px #70756acc, 0 0 28px #70756a33;
+}
+
+.mm-icon[data-t="keyItem"] {
+  background: #1abc9c;
+  box-shadow: 0 0 0 1px #1abc9cbb, 0 0 14px #1abc9ccc, 0 0 28px #1abc9c33;
+}
+
+.mm-icon[data-t="mapFragment"] {
+  background: #6aa880;
+  box-shadow: 0 0 0 1px #6aa880bb, 0 0 14px #6aa880cc, 0 0 28px #6aa88033;
+}
+
+.mm-icon[data-t="corruptedStatue"] {
+  background: #b05a7a;
+  box-shadow: 0 0 0 1px #b05a7abb, 0 0 14px #b05a7acc, 0 0 28px #b05a7a33;
+}
+
+.mm-icon[data-t="enemy"] {
+  background: #a86a50;
+  box-shadow: 0 0 0 1px #a86a50bb, 0 0 14px #a86a50cc, 0 0 28px #a86a5033;
+}
+
+.mm-icon[data-t="collectible"] {
+  background: #d4af37;
+  box-shadow: 0 0 0 1px #d4af37bb, 0 0 14px #d4af37cc, 0 0 28px #d4af3733;
+}
+
+.mm-icon[data-t="boneGate"] {
+  background: #9e8866;
+  box-shadow: 0 0 0 1px #9e8866bb, 0 0 14px #9e8866cc, 0 0 28px #9e886633;
+}
+
 /* 尺寸变体：boss/shell/dungeon 18；beacon/weapon/tarstone 14；其他 11 */
-.mm-icon[data-sz="lg"] { width:18px; height:18px; }
-.mm-icon[data-sz="md"] { width:14px; height:14px; }
-.mm-icon[data-sz="sm"] { width:11px; height:11px; }
+.mm-icon[data-sz="lg"] {
+  width: 18px;
+  height: 18px;
+}
+
+.mm-icon[data-sz="md"] {
+  width: 14px;
+  height: 14px;
+}
+
+.mm-icon[data-sz="sm"] {
+  width: 11px;
+  height: 11px;
+}
 
 /* 筛选侧栏布局 */
 .ms2-map-wrap {
@@ -563,9 +643,10 @@ table.data tr:hover td {
   border: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.02) inset;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .5), 0 0 0 1px rgba(255, 255, 255, .02) inset;
   position: relative;
 }
+
 .ms2-side {
   height: 820px;
   max-height: 820px;
@@ -582,11 +663,16 @@ table.data tr:hover td {
   scrollbar-width: thin;
   scrollbar-color: color-mix(in srgb, var(--color-gold) 45%, transparent) transparent;
 }
-.ms2-side::-webkit-scrollbar { width: 6px; }
+
+.ms2-side::-webkit-scrollbar {
+  width: 6px;
+}
+
 .ms2-side::-webkit-scrollbar-thumb {
   background: color-mix(in srgb, var(--color-gold) 35%, transparent);
   border-radius: 3px;
 }
+
 .ms2-title {
   font-family: Cinzel, serif;
   color: var(--color-gold);
@@ -598,6 +684,7 @@ table.data tr:hover td {
   padding-bottom: 8px;
   margin: 0;
 }
+
 .ms2-search {
   background: var(--bg-base);
   border: 1px solid color-mix(in srgb, var(--color-gold) 30%, transparent);
@@ -610,8 +697,14 @@ table.data tr:hover td {
   outline: none;
   transition: border-color .15s;
 }
-.ms2-search::placeholder { color: var(--text-secondary); }
-.ms2-search:focus { border-color: var(--color-gold); }
+
+.ms2-search::placeholder {
+  color: var(--text-secondary);
+}
+
+.ms2-search:focus {
+  border-color: var(--color-gold);
+}
 
 .ms2-toggle-row {
   display: flex;
@@ -622,7 +715,12 @@ table.data tr:hover td {
   color: var(--text-secondary);
   padding: 2px 0;
 }
-.ms2-toggle-row .lbl { cursor: pointer; user-select: none; }
+
+.ms2-toggle-row .lbl {
+  cursor: pointer;
+  user-select: none;
+}
+
 .ms2-toggle {
   position: relative;
   display: inline-flex;
@@ -636,6 +734,7 @@ table.data tr:hover td {
   flex-shrink: 0;
   transition: background .15s, border-color .15s;
 }
+
 .ms2-toggle::after {
   content: "";
   position: absolute;
@@ -647,10 +746,12 @@ table.data tr:hover td {
   border-radius: 50%;
   transition: transform .15s ease-out, background .15s;
 }
+
 .ms2-toggle[aria-checked="true"] {
   background: color-mix(in srgb, var(--color-gold) 22%, transparent);
   border-color: var(--color-gold);
 }
+
 .ms2-toggle[aria-checked="true"]::after {
   transform: translateX(14px);
   background: var(--color-gold);
@@ -661,6 +762,7 @@ table.data tr:hover td {
   gap: 6px;
   flex-wrap: wrap;
 }
+
 .ms2-btn {
   flex: 1 1 auto;
   padding: 6px 8px;
@@ -676,16 +778,24 @@ table.data tr:hover td {
   transition: background .15s, color .15s, border-color .15s;
   white-space: nowrap;
 }
+
 .ms2-btn:hover {
   background: color-mix(in srgb, var(--color-gold) 15%, transparent);
   color: var(--color-gold-bright);
   border-color: var(--color-gold);
 }
+
 .ms2-btn.secondary {
   color: var(--color-gold);
   border-color: color-mix(in srgb, var(--color-gold) 50%, transparent);
 }
-.ms2-group { display: flex; flex-direction: column; gap: 6px; }
+
+.ms2-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .ms2-group-title {
   font-size: 11px;
   color: var(--text-secondary);
@@ -695,6 +805,7 @@ table.data tr:hover td {
   font-family: sans-serif;
   margin: 2px 0;
 }
+
 .ms2-row {
   display: flex;
   align-items: center;
@@ -709,7 +820,11 @@ table.data tr:hover td {
   color: inherit;
   font: inherit;
 }
-.ms2-row:hover { background: color-mix(in srgb, var(--color-gold) 6%, transparent); }
+
+.ms2-row:hover {
+  background: color-mix(in srgb, var(--color-gold) 6%, transparent);
+}
+
 .ms2-glyph {
   width: 28px;
   height: 28px;
@@ -721,16 +836,27 @@ table.data tr:hover td {
   color: var(--bg-card);
   font-weight: 700;
 }
-.ms2-row-label { font-size: 14px; color: var(--text-primary); }
+
+.ms2-row-label {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
 .ms2-row-count {
   margin-left: auto;
   font-size: 12px;
   color: var(--text-secondary);
   font-variant-numeric: tabular-nums;
 }
+
 .ms2-row[data-enabled="false"] .ms2-row-label,
-.ms2-row[data-enabled="false"] .ms2-row-count { opacity: .35; }
-.ms2-row[data-enabled="false"] .ms2-glyph { filter: grayscale(1) brightness(.6); }
+.ms2-row[data-enabled="false"] .ms2-row-count {
+  opacity: .35;
+}
+
+.ms2-row[data-enabled="false"] .ms2-glyph {
+  filter: grayscale(1) brightness(.6);
+}
 
 .ms2-reset {
   margin-top: auto;
@@ -745,7 +871,10 @@ table.data tr:hover td {
   cursor: pointer;
   transition: background .15s;
 }
-.ms2-reset:hover { background: color-mix(in srgb, var(--color-blood) 15%, transparent); }
+
+.ms2-reset:hover {
+  background: color-mix(in srgb, var(--color-blood) 15%, transparent);
+}
 
 /* ---------- Legacy filter panel classes (keep for JSX compatibility) ---------- */
 .ms2-side-select,
@@ -761,17 +890,23 @@ table.data tr:hover td {
   outline: none;
   box-sizing: border-box;
 }
+
 .ms2-side-select {
   font-family: Cinzel, serif;
   font-size: 15px;
   color: var(--text-primary);
   cursor: pointer;
 }
-.ms2-side-search::placeholder { color: var(--text-secondary); }
+
+.ms2-side-search::placeholder {
+  color: var(--text-secondary);
+}
+
 .ms2-side-select:focus,
 .ms2-side-search:focus {
   border-color: var(--color-gold);
 }
+
 .ms2-toggles {
   display: flex;
   flex-direction: column;
@@ -779,6 +914,7 @@ table.data tr:hover td {
   padding-bottom: 10px;
   border-bottom: 1px solid color-mix(in srgb, var(--color-gold) 13%, transparent);
 }
+
 .ms2-toggles .ms2-toggle {
   display: flex;
   align-items: center;
@@ -793,6 +929,7 @@ table.data tr:hover td {
   width: 100%;
   text-align: left;
 }
+
 .ms2-switch {
   position: relative;
   width: 36px;
@@ -803,29 +940,41 @@ table.data tr:hover td {
   flex: 0 0 auto;
   border: 1px solid color-mix(in srgb, var(--color-gold) 30%, transparent);
 }
+
 .ms2-switch::after {
   content: "";
   position: absolute;
-  top: 2px; left: 2px;
-  width: 14px; height: 14px;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: var(--bg-card);
   transition: transform .15s;
 }
+
 .ms2-toggle[aria-checked="true"] .ms2-switch {
   background: color-mix(in srgb, var(--color-gold) 55%, transparent);
   border-color: var(--color-gold);
 }
+
 .ms2-toggle[aria-checked="true"] .ms2-switch::after {
   transform: translateX(18px);
   background: var(--color-gold-bright);
 }
+
 .ms2-btns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
 }
-.ms2-group { display: flex; flex-direction: column; gap: 6px; }
+
+.ms2-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .ms2-group-head {
   display: flex;
   align-items: center;
@@ -839,8 +988,17 @@ table.data tr:hover td {
   letter-spacing: .04em;
   font-weight: 700;
 }
-.ms2-group-head:hover { color: var(--color-gold); }
-.ms2-group-body { display: flex; flex-direction: column; gap: 2px; }
+
+.ms2-group-head:hover {
+  color: var(--color-gold);
+}
+
+.ms2-group-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .ms2-row {
   display: grid;
   grid-template-columns: 28px 1fr auto;
@@ -851,7 +1009,11 @@ table.data tr:hover td {
   cursor: pointer;
   width: 100%;
 }
-.ms2-row:hover { background: color-mix(in srgb, var(--color-gold) 6%, transparent); }
+
+.ms2-row:hover {
+  background: color-mix(in srgb, var(--color-gold) 6%, transparent);
+}
+
 .ms2-map-marker[data-checked="1"] .mm-icon::after,
 .map-marker[data-checked="1"] .mm-icon::after {
   content: "✓";
@@ -865,7 +1027,10 @@ table.data tr:hover td {
   font-weight: 900;
   pointer-events: none;
 }
-.mm-icon { position: relative; }
+
+.mm-icon {
+  position: relative;
+}
 
 .ms2-map-host {
   height: 820px;
@@ -875,6 +1040,7 @@ table.data tr:hover td {
   background: var(--bg-base);
   position: relative;
 }
+
 .ms2-map-host #map {
   height: 820px;
   width: 100%;
@@ -883,14 +1049,37 @@ table.data tr:hover td {
 
 /* 响应式：≤ 860px 单列布局（!important 覆盖 JSX inline style 兜底） */
 @media (max-width: 860px) {
-  .ms2-map-wrap { grid-template-columns: 1fr !important; height: auto !important; max-height: none !important; min-height: 0 !important; }
-  .ms2-side { height: 360px !important; max-height: 360px !important; min-height: 360px !important; border-right: none; border-bottom: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent); }
-  .ms2-map-host { height: 480px !important; max-height: 480px !important; min-height: 480px !important; }
-  .ms2-map-host #map { height: 480px !important; min-height: 480px !important; }
+  .ms2-map-wrap {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+  }
+
+  .ms2-side {
+    height: 360px !important;
+    max-height: 360px !important;
+    min-height: 360px !important;
+    border-right: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-gold) 20%, transparent);
+  }
+
+  .ms2-map-host {
+    height: 480px !important;
+    max-height: 480px !important;
+    min-height: 480px !important;
+  }
+
+  .ms2-map-host #map {
+    height: 480px !important;
+    min-height: 480px !important;
+  }
 }
 
 /* 清除 legacy globals.css 旧的 height 规则以兼容 */
-#map { /* overridden by .ms2-map-host #map specificity 110 above → no-op but keep for bare #map users */ }
+#map {
+  /* overridden by .ms2-map-host #map specificity 110 above → no-op but keep for bare #map users */
+}
 
 /* ---------- 首页 Hero：标题 + 倒计时 ---------- */
 .hero {
@@ -1272,6 +1461,7 @@ table.data tr:hover td {
     opacity: 0;
     transform: translateX(-50%) translateY(-4px);
   }
+
   to {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
@@ -1282,6 +1472,7 @@ table.data tr:hover td {
   .wheel-node-name {
     font-size: 0.62rem;
   }
+
   .wheel-tooltip {
     width: 180px;
   }
@@ -1372,7 +1563,7 @@ table.data tr:hover td {
   color: var(--color-gold);
 }
 
-.tip-list li > span {
+.tip-list li>span {
   color: var(--text-primary);
 }
 
@@ -1722,4 +1913,23 @@ table.data tr:hover td {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+}
+
+.ad-banner {
+  min-height: 90px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 28px 0;
+  overflow: hidden;
+  /* 关键：防止 728px iframe 横向溢出 */
+}
+
+.ad-banner iframe {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  /* 高度跟随比例，移动端自适应 */
+  border: 0;
 }

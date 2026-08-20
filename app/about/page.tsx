@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
-const TITLE = "About Us – Mortal Shell 2 Guide & Wiki";
+const TITLE = "About Us – Mortal Shell 2 Wiki & Wiki";
 const PAGE_PATH = "/about";
 const DESCRIPTION =
   "Learn who runs this Mortal Shell 2 wiki, how we verify every Shell, boss, and map location, and why you can trust our guide.";
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: pageURL(PAGE_PATH),
     type: "website",
-    siteName: "Mortal Shell 2 Guide",
+    siteName: "Mortal Shell 2 Wiki",
     images: [
       {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
         type: "image/jpeg",
       },
     ],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
       },
     ],
   },
@@ -53,11 +53,11 @@ export default function AboutPage() {
       </Link>
 
       <span className="eyebrow">About</span>
-      <h1>About Mortal Shell 2 Guide</h1>
+      <h1>About Mortal Shell 2 Wiki</h1>
       <span className="title-rule" />
 
       <p className="lede">
-        Mortal Shell 2 Guide is a fan-made wiki and strategy resource for
+        Mortal Shell 2 Wiki is a fan-made wiki and strategy resource for
         <strong> Mortal Shell 2</strong>, the soulslike sequel from Cold
         Symmetry and Playstack. We are not affiliated with, endorsed by, or
         sponsored by the developers or publishers. All game names, logos, and

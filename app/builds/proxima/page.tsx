@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: pageURL(PAGE_PATH),
     type: "article",
-    siteName: "Mortal Shell 2 Guide",
+    siteName: "Mortal Shell 2 Wiki",
     images: [
       {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
         type: "image/jpeg",
       },
     ],
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: "Mortal Shell 2 Wiki",
       },
     ],
   },
@@ -58,7 +58,7 @@ const articleJsonLd = {
   },
   publisher: {
     "@type": "Organization",
-    name: "Mortal Shell 2 Guide",
+    name: "Mortal Shell 2 Wiki",
   },
   datePublished: "2026-08-18",
   dateModified: "2026-08-18",
@@ -165,7 +165,7 @@ const BONDING_21: BondingNode[] = [
   },
 ];
 
-function BondingTable({ nodes }: { nodes: BondingNode[] }) {
+function BondingTable({ nodes }: { nodes: BondingNode[]; }) {
   return (
     <div className="overflow-x-auto">
       <table className="data" style={{ width: "100%" }}>
