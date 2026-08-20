@@ -54,7 +54,7 @@ const faqJsonLd = {
       name: "When does Mortal Shell 2 release?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Mortal Shell 2 releases for PC (Steam), PS5, and Xbox.",
+        text: "Mortal Shell 2 is available now for PC (Steam), PS5, and Xbox Series X/S.",
       },
     },
     {
@@ -189,8 +189,8 @@ export default function HomePage() {
             Mortal Shell 2 is the sequel to Cold Symmetry's 2020 action RPG
             Mortal Shell. It continues the harsh combat and dark fantasy
             setting of the original while expanding the world, adding new
-            Shells to inhabit, and refining the core systems. The game
-            releases for PC via Steam, PlayStation 5, and Xbox Series X/S.
+            Shells to inhabit, and refining the core systems. The game is
+            available now for PC via Steam, PlayStation 5, and Xbox Series X/S.
           </p>
           <p>
             You do not play as a fixed character. You control a vessel who can

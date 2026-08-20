@@ -2,6 +2,7 @@ export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import MapCanvasWrapper from "./MapCanvasWrapper";
+import { text } from 'stream/consumers';
 
 const title = "Mortal Shell 2 Map – Interactive Map & All Locations";
 const description = "Mortal Shell 2 Map – interactive map with every Shell, boss, Tarstone, Beacon & collectible location. Plan routes and find hidden items.";
@@ -34,13 +35,6 @@ export const metadata: Metadata = {
   },
 };
 
-const itemListJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: "Mortal Shell 2 Map Locations",
-  itemListElement: [],
-};
-
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -66,7 +60,7 @@ const faqJsonLd = {
       name: "How many locations are in Mortal Shell 2?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Mortal Shell 2 features multiple areas including Shell locations, boss arenas, Tarstone shrines, Beacons, and hidden collectibles. Our map covers all of them.",
+        text: "Mortal Shell 2 spans multiple areas including Marrow Keep, Mushroom Village, and more dungeons, boss arenas, and hidden areas beyond.Our map covers all confirmed locations and is updated continuously.",
       },
     },
     {
@@ -82,7 +76,7 @@ const faqJsonLd = {
       name: "When will the map be fully updated?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The map is being updated continuously. Beta locations are already marked, and the full open world will be mapped within the first week of release.",
+        text: "The map is updated continuously as we play through the full release. Confirmed locations are marked, and new spots are added every day.",
       },
     },
   ],
@@ -106,10 +100,6 @@ export default function MapPage() {
         fetchPriority="high"
       />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -184,8 +174,7 @@ export default function MapPage() {
             underprepared.
           </p>
           <p>
-            Here is the exploration order we recommend based on beta content
-            and pre-release footage:
+            Here is the exploration order we recommend based on our playthrough of the full game:
           </p>
           <ol className="loc-list">
             <li>
@@ -204,10 +193,10 @@ export default function MapPage() {
             <li>
               <strong>Widow&apos;s Overlook to Mushroom Village.</strong>
               Follow the path from Widow&apos;s Overlook down into Mushroom
-              Village. Tiel, the second Shell available in the beta, is
-              located in the northeast of the village near the Ritual
-              Grounds dungeon. Grab Tiel before attempting the Ritual
-              Grounds, because his speed and dodge-focused kit will help
+              Village. Tiel, the second Shell you can pick up, is located in
+              the northeast of the village near the Ritual Grounds dungeon.
+              Grab Tiel before attempting the Ritual Grounds, because his
+              speed and dodge-focused kit will help
               you against the enemies inside.
             </li>
             <li>
@@ -242,10 +231,10 @@ export default function MapPage() {
             adding new locations as they are confirmed.
           </p>
           <p>
-            Currently confirmed locations come from the closed beta and
-            official trailers. We will expand this Mortal Shell 2 location
-            map to cover the full open world, including every dungeon,
-            hidden room, and optional boss.
+            Confirmed locations are marked, and we keep expanding this
+            Mortal Shell 2 location map to cover the full open world,
+            including every dungeon, hidden room, and optional boss, as
+            we verify them in the full release.
           </p>
         </section>
 
@@ -354,10 +343,10 @@ export default function MapPage() {
             <li>
               <a href="/bosses/#first">First Boss Arena</a>{" "}
               <span className="loc-note">
-                : a separate arena location confirmed in beta footage. The
-                nearest Beacon is marked on the interactive map above.
-                Recommended Shell depends on the boss type, which we will
-                document in detail after launch.
+                : a separate arena location confirmed in the full release. The
+                nearest Beacon is marked on the interactive map above. Recommended
+                Shell depends on the boss type — we are documenting each
+                encounter in detail.
               </span>
             </li>
           </ul>
@@ -410,10 +399,9 @@ export default function MapPage() {
             </li>
             <li>
               <span className="loc-note">
-                Beacons: at least three Beacon locations are confirmed in
-                the beta. They are marked in blue on the interactive map.
-                The full Beacon network will be mapped as the open world is
-                documented.
+                Beacons: three Beacon locations are confirmed so far. They are
+                marked in blue on the interactive map. The full Beacon network
+                is being mapped as we explore the open world.
               </span>
             </li>
           </ul>
@@ -501,9 +489,9 @@ export default function MapPage() {
           </p>
           <h3>When will the map be fully updated?</h3>
           <p>
-            The map is being updated continuously. Beta locations are
-            already marked. The full open world will be mapped within the
-            first week of release.
+            The map is updated continuously as we play through the full
+            release. Confirmed locations are marked, and new spots are
+            added every day.
           </p>
 
           <p className="article-back">
