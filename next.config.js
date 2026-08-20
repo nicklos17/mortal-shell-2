@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // ✨ 新增：开启纯静态导出，消除 Serverless 层
   trailingSlash: false,
   reactStrictMode: true,
   async redirects() {
@@ -11,20 +12,6 @@ const nextConfig = {
       },
     ];
   },
-
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, s-maxage=86400, stale-while-revalidate=604800',
-          },
-        ],
-      },
-    ];
-  }
 };
 
 module.exports = nextConfig;
