@@ -206,6 +206,23 @@ export const SHELLS: Shell[] = [
     imageAlt: "Genessa, a playable Shell in Mortal Shell 2",
     imageTitle: "Genessa – Mortal Shell 2 Shell",
   },
+  {
+    id: "dommymommy",
+    name: "Dommy Mommy",
+    role: "Unknown",
+    tagline: "Community-identified Shell — kit and lore pending.",
+    desc: "Community-identified as 'Dommy Mommy', Does not appear in the final release of the game",
+    signature: "Not yet documented.",
+    location: "Not yet revealed.",
+    status: "TBA",
+    playstyle: "Pending official reveal.",
+    lore: "Not yet revealed.",
+    abilities: ["Full kit pending — updating after launch."],
+    tips: [],
+    image: "/assets/images/dommy-mommy-mortal-shell-2.png",
+    imageAlt: "Dommy Mommy, a playable Shell in Mortal Shell 2",
+    imageTitle: "Dommy Mommy – Mortal Shell 2 Shell",
+  },
 ];
 
 export function getShell(slug: string): Shell | undefined {

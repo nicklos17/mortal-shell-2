@@ -3,7 +3,7 @@
  * 每个躯壳一个独特符号，与 lib/shells.ts 的 id 对应。
  * 最后更新：2026-08-19，按新 shell 列表重新设计。
  */
-export function ShellIcon({ id, className }: { id: string; className?: string }) {
+export function ShellIcon({ id, className }: { id: string; className?: string; }) {
   const G = "currentColor";
   const BRIGHT = "#d4af5e";
   const BLOOD = "#a33434";
@@ -85,6 +85,14 @@ export function ShellIcon({ id, className }: { id: string; className?: string })
           <path d="M24,36 L32,22 L40,36" stroke={BRIGHT} strokeWidth={1.6} />
           <circle cx="32" cy="56" r="3" fill={BLOOD} stroke="none" />
           <path d="M22,52 L42,52" />
+        </svg>
+      );
+    case "dommymommy": // 王冠
+      return (
+        <svg viewBox="0 0 64 64" fill="none" stroke={G} strokeWidth={2} strokeLinejoin="round" className={className}>
+          <path d="M14,44 L14,24 L24,34 L32,18 L40,34 L50,24 L50,44 Z" />
+          <path d="M14,44 L50,44" />
+          <circle cx="32" cy="50" r="3" fill={BRIGHT} stroke="none" />
         </svg>
       );
     default:
