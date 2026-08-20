@@ -71,7 +71,7 @@ const faqJsonLd = {
       name: "How many bosses are in Mortal Shell 2?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Mortal Shell 2 has 8 bosses confirmed in the Open Beta roster. Circle of the Grasping Root, Gloombound Ritualist, Great Arbiter of Flesh, Magdalena the Lady of the Woods, Tainted Vestige, Tar Golem, The Wandering Shepherd, and Vrannic the Grand Illusionist. A full release may add optional and late-game bosses, and this page updates within hours of launch with any additional encounters.",
+        text: "Mortal Shell 2 has 8 bosses confirmed in the Open Beta roster. Circle of the Grasping Root, Gloombound Ritualist, Great Arbiter of Flesh, Magdalena the Lady of the Woods, Tainted Vestige, Tar Golem, The Wandering Shepherd, and Vrannic the Grand Illusionist. A full release may add optional and late-game bosses.",
       },
     },
     {
@@ -208,8 +208,7 @@ export default function BossesPage() {
           wheels to illusionists and a dual-axe golem of smoldering tar.
           Each entry below lists confirmed location, weak point, attack
           patterns, and the play-tested strategy from the Beta run. Full
-          phase breakdowns, drop tables, and recommended Shell pairings go
-          live on launch day.
+          phase breakdowns, drop tables, and recommended Shell pairings.
         </p>
 
         {/* 首屏 YouTube 通关视频 + 跳转徽章 */}
@@ -392,11 +391,10 @@ export default function BossesPage() {
               margin: 0,
             }}
           >
-            Boss list verified in Open Beta — full strategies
-            updated after launch.
+            Boss list verified
           </p>
           <p style={{ margin: ".6rem 0 0", fontSize: ".9rem", color: "var(--text-secondary)" }}>
-            On launch day we will add phase-by-phase damage windows, exact
+            we will add phase-by-phase damage windows, exact
             drop tables, parry timings, and video references for each
             encounter. Boss arenas and adjacent Beacons are already marked
             on the{" "}
@@ -437,8 +435,7 @@ export default function BossesPage() {
               illusion clones, and a room-wide beam, forcing the player to
               solve crowd control, positioning, and a burst check all at
               once. Great Arbiter of Flesh and Magdalena sit just below
-              them. Final rankings settle after launch, once we have run
-              each boss on multiple Shells and compared clear times.
+              them.
             </p>
 
             <h3>How do you beat Magdalena, the Lady of the Woods?</h3>
@@ -460,8 +457,7 @@ export default function BossesPage() {
               Mushroom Village. Both bosses sit on the easier end and drop
               seals you want before tackling the mid-tier roster. Working
               the list in difficulty order also gives you Shell Points at a
-              pace that matches the curve of each arena. Our full order and
-              routing notes go live with the launch-day walkthrough.
+              pace that matches the curve of each arena.
             </p>
           </div>
         </section>

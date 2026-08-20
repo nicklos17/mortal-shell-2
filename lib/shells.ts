@@ -35,7 +35,7 @@ export const SHELLS: Shell[] = [
     status: "Confirmed",
     playstyle:
       "A versatile hybrid built around the Biosampler — a hook that drags enemies to you (or pulls you to them) — plus strong passive damage mitigation that can heavily reduce incoming hits and even prevent stagger. Lightning damage and Stasis stacks slow everything down, giving her real crowd control and AoE for mob fights, while Grafted Armor rewards aggressive play right after dodges. She doesn't fit a single archetype: she's an all-rounder with utility and survivability, the easiest Shell to learn, and an excellent early-game pick.",
-    lore: "Lore for Proxima is being added as we complete the full release playthrough — check back after launch.",
+    lore: "Lore for Proxima is being added as we complete the full release playthrough.",
     abilities: [
       "Biosampler — a hook that drags enemies to you or pulls you to them.",
       "Passive damage mitigation that reduces incoming hits and can prevent stagger.",
@@ -57,7 +57,7 @@ export const SHELLS: Shell[] = [
     status: "Confirmed",
     playstyle:
       "One of the fastest Shells in the game. Shadow Strike lets you dip into stealth, phase through attacks, and reappear with a devastating dagger strike, while Shadow Dash keeps you untouchable and staggers pursuers. High crit rate and crit damage, Poison stacks from the Bonding tree, and near-instant charge refunds make him a true hit-and-run assassin: strike, detonate, vanish, repeat. He out-dances enemies rather than out-tanks them — and punishes mistakes hard.",
-    lore: "Lore for Tiel is being added as we complete the full release playthrough — check back after launch.",
+    lore: "Lore for Tiel is being added as we complete the full release playthrough.",
     abilities: [
       "Shadow Strike — dip into stealth, phase through attacks, and reappear with a devastating dagger strike.",
       "Shadow Dash — stay untouchable while staggering pursuing enemies.",
@@ -82,7 +82,7 @@ export const SHELLS: Shell[] = [
     status: "Confirmed",
     playstyle:
       "A berserker who pays with his own blood: Gragu's strongest options spend health for heavy damage, making him high-risk, high-reward. His flame kit burns down groups — AoE fire inflicts Inflamed and can interrupt enemy attack animations — while scaled-up single-target strikes make him one of the safest boss-killers in the roster. The catch is consistency: when cooldowns are down or your HP runs low, his weaknesses show. Best for aggressive players who enjoy resource management.",
-    lore: "Lore for Gragu is being added as we complete the full release playthrough — check back after launch.",
+    lore: "Lore for Gragu is being added as we complete the full release playthrough.",
     abilities: [
       "Blood-cost heavy damage — strongest options spend health for big payoffs.",
       "Flame AoE kit inflicts Inflamed and can interrupt enemy attack animations.",
@@ -104,7 +104,7 @@ export const SHELLS: Shell[] = [
     status: "Confirmed",
     playstyle:
       "The roster's tank. Eredrim trades speed for a massive health pool and hardening durability — he can simply eat hits other Shells must dodge. Shoulder Bash breaks into enemy lines with an area break shockwave, Executioner finishes low-HP enemies, and ripostes stack Slaughterer for fast mob clears. He rewards patience, spacing, and trading: weather the boss, then answer with massive, deliberate strikes. The most forgiving Shell for a first playthrough.",
-    lore: "Lore for Eredrim is being added as we complete the full release playthrough — check back after launch.",
+    lore: "Lore for Eredrim is being added as we complete the full release playthrough.",
     abilities: [
       "Shoulder Bash — break into enemy lines with an area break shockwave.",
       "Executioner — finish low-HP enemies on the spot.",
@@ -129,7 +129,7 @@ export const SHELLS: Shell[] = [
     status: "Confirmed",
     playstyle:
       "A time-bending monk built around Miracle — Smert can stop and manipulate time to create free attack windows no other Shell can replicate. Fight Stance regenerates health from your attacks, giving him outstanding sustain in long boss fights, and unarmed Chaos stacks detonate for huge payoffs you can push even further at the cost of your own health. High reward with built-in recovery: exotic mechanics, but genuinely beginner-friendly.",
-    lore: "Lore for Smert is being added as we complete the full release playthrough — check back after launch.",
+    lore: "Lore for Smert is being added as we complete the full release playthrough.",
     abilities: [
       "Miracle — stop and manipulate time to create free attack windows no other Shell can replicate.",
       "Fight Stance — regenerate health from your own attacks for outstanding long-fight sustain.",
@@ -151,7 +151,7 @@ export const SHELLS: Shell[] = [
     status: "Confirmed",
     playstyle:
       "A cursed thorn-tank. Sariel's Pain mechanic converts damage taken into recoverable grey health, and his parasitic thorns apply Curse — a debuff that can nullify or outright reflect enemy melee damage. Play him well and he feels nearly unkillable, with dodge speed scaling as Pain builds; take a clean hit, though, and built-up Pain is lost for good. The highest skill ceiling on the roster — invincible in the right hands, punishing in the wrong ones.",
-    lore: "Lore for Sariel is being added as we complete the full release playthrough — check back after launch.",
+    lore: "Lore for Sariel is being added as we complete the full release playthrough.",
     abilities: [
       "Pain — convert damage taken into recoverable grey health.",
       "Parasitic thorns apply Curse — nullify or outright reflect enemy melee damage.",
@@ -173,7 +173,7 @@ export const SHELLS: Shell[] = [
     status: "Confirmed",
     playstyle:
       "A heavy-armor Justiciar and the roster's traditional tank — dependable swordplay built on fundamentals rather than gimmicks. Lazlo soaks heavy hits, builds Heat as he fights, and can push it into an overheat damage spike or vent it as a shockwave of flame for AoE clears, finishing low-HP enemies with ease. Straightforward, forgiving melee with real burst — you just have to survive long enough to unlock him.",
-    lore: "Lore for Lazlo is being added as we complete the full release playthrough — check back after launch.",
+    lore: "Lore for Lazlo is being added as we complete the full release playthrough.",
     abilities: [
       "Heat buildup — push into an overheat damage spike for burst.",
       "Vent Heat as a shockwave of flame for AoE clears and finishing low-HP enemies.",
@@ -195,7 +195,7 @@ export const SHELLS: Shell[] = [
     status: "Confirmed",
     playstyle:
       "A summoner who fights through her Faithful Doubles. Genessa spends Resolve to create clones that attack on her behalf and apply status effects such as Stasis, letting her control groups instead of dueling them head-on. Duality gives her a second chance — on death she becomes 'Stray' rather than fully severing — and a solid health pool rounds out one of the most forgiving kits in the game. Excellent for soulslike beginners and CC-focused play.",
-    lore: "Lore for Genessa is being added as we complete the full release playthrough — check back after launch.",
+    lore: "Lore for Genessa is being added as we complete the full release playthrough.",
     abilities: [
       "Faithful Doubles — spend Resolve to create clones that attack on her behalf.",
       "Doubles apply status effects such as Stasis for group control.",

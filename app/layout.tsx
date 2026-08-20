@@ -112,7 +112,7 @@ gtag('config', '${GA_MEASUREMENT_ID}');
         <header className="site-header">
           <div className="container">
             <a href="/" className="brand">
-              Mortal Shell 2 Guide
+              Mortal Shell 2 Wiki
             </a>
             <nav>
               <a href="/map">Map</a>
@@ -130,7 +130,7 @@ gtag('config', '${GA_MEASUREMENT_ID}');
         <footer className="site-footer">
           <div className="container">
             <p>
-              Mortal Shell 2 Guide is a fan-made resource. Mortal Shell is a
+              Mortal Shell 2 Wiki is a fan-made resource. Mortal Shell is a
               trademark of Cold Symmetry and Playstack Ltd. All screenshots
               belong to their respective owners.
             </p>

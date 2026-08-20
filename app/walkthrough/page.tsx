@@ -158,9 +158,7 @@ export default function WalkthroughPage() {
           route out of the gate, including the first two main quests,
           your first Shell, the Axe and Daggers secondary weapon, every
           early Tar Stone, Nail Shot pushed to +3, and the broken 135,000
-          Gloom per hour farming loop. Content is based on the Open Beta;
-          full chapter-by-chapter walkthroughs go live after the August
-          20, 2026 launch.
+          Gloom per hour farming loop.
         </p>
 
         {/* 1. How to Start Mortal Shell 2 — OP Early Route */}
@@ -320,25 +318,13 @@ export default function WalkthroughPage() {
           className="mt-8 rounded-lg border border-white/10 bg-white/[0.03] p-6"
         >
           <p
-            className="text-sm"
-            style={{
-              color: "var(--color-gold)",
-              fontWeight: 500,
-              margin: 0,
-            }}
-          >
-            This opening guide is based on the Mortal Shell 2 Open Beta.
-            Full chapter-by-chapter walkthroughs go live after launch.
-          </p>
-          <p
             style={{
               margin: ".6rem 0 0",
               fontSize: ".9rem",
               color: "var(--text-secondary)",
             }}
           >
-            Check back on launch day for the next five chapters covering
-            Mushroom Village, Disciple's Grotto, Hall of Illusions, Sunken
+            Disciple's Grotto, Hall of Illusions, Sunken
             Village, and the endgame. Follow the{" "}
             <Link
               href="/updates"
@@ -437,17 +423,6 @@ export default function WalkthroughPage() {
         {/* 5. 底部发售标识 */}
         <section className="mt-12 rounded-lg border border-white/10 bg-white/[0.03] p-6">
           <p
-            className="text-sm"
-            style={{
-              color: "var(--color-gold)",
-              fontWeight: 500,
-              margin: 0,
-            }}
-          >
-            Opening walkthrough verified in Mortal Shell 2 Open Beta.
-            Full chapter guides will be updated after launch.
-          </p>
-          <p
             style={{
               margin: ".6rem 0 0",
               fontSize: ".9rem",
@@ -462,7 +437,6 @@ export default function WalkthroughPage() {
             >
               Mortal Shell 2 map
             </a>{" "}
-            so you can plot your next run well before launch.
           </p>
         </section>
 

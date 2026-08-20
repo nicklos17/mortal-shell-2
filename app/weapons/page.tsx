@@ -8,7 +8,7 @@ import { WEAPONS } from "@/lib/weapons-data";
 const TITLE = "Mortal Shell 2 Weapons";
 const PAGE_PATH = "/weapons";
 const DESCRIPTION =
-  "Complete Mortal Shell 2 weapons list — stats, scaling, special abilities, locations, sidearms, and playstyle breakdowns verified in the Open Beta. Updated for launch.";
+  "Complete Mortal Shell 2 weapons list — stats, scaling, special abilities, locations, sidearms, and playstyle breakdowns verified.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -70,7 +70,7 @@ const faqJsonLd = {
       name: "How many weapons are in Mortal Shell 2?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Seven weapons are confirmed in the Mortal Shell 2 Open Beta roster: Axatana, Axe and Dagger, Hallowed Sword, Hammer and Chisel, The Iconoclast, Martyr's Blade, and Smoldering Mace. The full release is expected to add more one-handed options, heavier two-handers, ranged Hand Cannon variants, and secret late-game drops. The complete list will be populated during the first week after launch.",
+        text: "Seven weapons are confirmed in the Mortal Shell 2 Open Beta roster: Axatana, Axe and Dagger, Hallowed Sword, Hammer and Chisel, The Iconoclast, Martyr's Blade, and Smoldering Mace. The full release is expected to add more one-handed options, heavier two-handers, ranged Hand Cannon variants, and secret late-game drops.",
       },
     },
     {
@@ -86,7 +86,7 @@ const faqJsonLd = {
       name: "Mortal Shell 2 weapons tier list?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A full Mortal Shell 2 weapons tier list goes live after release once every hidden weapon, infusion, and boss drop is in hand. For the current Beta the rough ranking is S: Hallowed Sword. A: The Iconoclast, Smoldering Mace, Martyr's Blade. B: Axatana, Axe and Dagger. C: Hammer and Chisel (strong poise damage but tight parry timing limits it). We will publish complete S/A/B/C tier tables with recommended Shell pairings within the first week of launch, so bookmark this page and check back on the day of release.",
+        text: "A full Mortal Shell 2 weapons tier list goes live after release once every hidden weapon, infusion, and boss drop is in hand. For the current Beta the rough ranking is S: Hallowed Sword. A: The Iconoclast, Smoldering Mace, Martyr's Blade. B: Axatana, Axe and Dagger. C: Hammer and Chisel (strong poise damage but tight parry timing limits it). We will publish complete S/A/B/C tier tables with recommended Shell pairings, so bookmark this page and check back on the day of release.",
       },
     },
     {
@@ -266,8 +266,7 @@ export default function WeaponsPage() {
           dual-wield pairs, heavy two-handers, and an ultra greatsword all
           sit in the current roster. Each weapon card below covers how to
           find it, the special ability attached to it, and which Shells get
-          the most out of the swing patterns. Full content will be verified
-          and expanded after launch.
+          the most out of the swing patterns.
         </p>
 
         {/* 1. 武器总览表格 */}
@@ -380,9 +379,6 @@ export default function WeaponsPage() {
               </tbody>
             </table>
           </div>
-          <p style={{ marginTop: ".75rem", fontSize: ".875rem", color: "var(--text-secondary)" }}>
-            Stats verified in Open Beta — final values may change at launch.
-          </p>
         </section>
 
         {/* 2. Weapon Details — H3 卡片 */}
@@ -422,10 +418,7 @@ export default function WeaponsPage() {
               one-handed blades, heavy two-handers with the Heavy
               Instruments classification, and a Hand Cannon that works as a
               ranged slot rather than a pure melee swing. The full release
-              will almost certainly expand the roster. We will update the
-              list and add every new weapon within 48 hours of the August
-              20 launch, and finish the database within the first week once
-              we have hunted every chest and boss drop.
+              will almost certainly expand the roster.
             </p>
 
             <h3>What is the best weapon in Mortal Shell 2?</h3>
@@ -438,15 +431,12 @@ export default function WeaponsPage() {
               Vrannic first. Smoldering Mace is a close second for anyone
               who prefers a single-handed swing with long reach and burn
               stacks. The Iconoclast takes the top Strength weapon slot
-              once you unlock it after the Wandering Shepherd. A full
-              ranking with boss matchup scores goes live at launch.
+              once you unlock it after the Wandering Shepherd.
             </p>
 
             <h3>Mortal Shell 2 weapons tier list</h3>
             <p>
-              A complete Mortal Shell 2 weapons tier list will be published
-              shortly after launch. For the Open Beta
-              slice, the rough ranking is as follows. S tier: Hallowed
+              the rough ranking is as follows. S tier: Hallowed
               Sword. A tier: The Iconoclast, Smoldering Mace, Martyr's
               Blade. B tier: Axatana for its two-form stance play and Axe
               and Dagger for its poison backstab windows. C tier: Hammer
@@ -536,17 +526,6 @@ export default function WeaponsPage() {
 
         {/* 5. 底部发售标识 */}
         <section className="mt-12 rounded-lg border border-white/10 bg-white/[0.03] p-6">
-          <p
-            className="text-sm"
-            style={{
-              color: "var(--color-gold)",
-              fontWeight: 500,
-              margin: 0,
-            }}
-          >
-            Weapon stats and locations verified in Open Beta. Full details
-            will be updated after launch.
-          </p>
           <p style={{ margin: ".6rem 0 0", fontSize: ".9rem", color: "var(--text-secondary)" }}>
             Infusion tables, precise grade percentiles, and every hidden
             weapon drop go live within the first week of release. Weapon

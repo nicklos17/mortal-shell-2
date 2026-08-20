@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
-const TITLE = "Mortal Shell 2 Tips";
+const TITLE = "Mortal Shell 2 Tips: 18 Beginner Tips for Combat &amp; Bosses";
 const PAGE_PATH = "/tips";
 const DATE_PUBLISHED = "2026-08-16";
 const DATE_MODIFIED = "2026-08-16";
@@ -15,7 +15,7 @@ const PUBLISHER = {
   url: "https://mortal-shell2.wiki/",
 };
 const DESCRIPTION =
-  "Mortal Shell 2 beginner tips for combat, Shells, weapons, exploration, bosses, and farming. Verified in the Open Beta and revised for launch.";
+  "18 tested Mortal Shell 2 beginner tips: no-stamina combat, Shell swapping, the 135k Gloom farm loop, best early weapons, and every first-boss strategy.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -324,9 +324,7 @@ export default function TipsPage() {
           which Shells and builds perform in the opening hours, which weapons
           to chase first, how to explore and avoid backtracking, how to
           survive your first pass through each boss arena, and how to farm
-          without grinding forever. Everything below was tested in the Open
-          Beta. A note at the bottom marks where the launch build is likely
-          to adjust balance numbers.
+          without grinding forever.
         </p>
 
         {SECTIONS.map((section) => (
@@ -516,8 +514,6 @@ export default function TipsPage() {
         </section>
 
         <p className="note">
-          These tips were tested in the Mortal Shell 2 Open Beta. Full
-          mechanic deep dives and additional tips will land after launch.
           For zone-by-zone routing and precise
           chest markers, open the{" "}
           <a

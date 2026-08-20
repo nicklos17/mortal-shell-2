@@ -97,17 +97,12 @@ export default function AboutPage() {
             guide.
           </li>
         </ul>
-        <p>
-          Anything not yet verified is clearly marked as unconfirmed or
-          &ldquo;coming after launch.&rdquo; We would rather leave a field
-          blank than publish wrong information.
-        </p>
       </section>
 
       <section className="article">
         <h2>Our commitment</h2>
         <p>
-          From launch day, this guide updates daily with confirmed
+          this guide updates daily with confirmed
           locations, boss strategies, and builds. The date on every page
           shows when it was last updated.
         </p>

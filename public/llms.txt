@@ -11,7 +11,7 @@
 - [Best Builds](https://mortal-shell2.wiki/builds): Proxima and Tiel starter builds. Shell picks, weapons, Tarstone combos, Shell Bonding trees, and FAQ.
 - [Mortal Shell 2 Weapons](https://mortal-shell2.wiki/weapons): All 7 weapons confirmed in Open Beta. Stats, damage scaling letters, special abilities, exact locations, and Shell pairings.
 - [Mortal Shell 2 Walkthrough](https://mortal-shell2.wiki/walkthrough): Start and get OP early. First two quests, first Shell, Axe and Daggers, early Tar Stones, Nail Shot +3, and the 135k Gloom per hour farming loop.
-- [Mortal Shell 2 Tips](https://mortal-shell2.wiki/tips): 18 beginner tips across combat, Shells, weapons, exploration, bosses, and farming. Verified in the Open Beta.
+- [Mortal Shell 2 Tips: 18 Beginner Tips for Combat &amp; Bosses<](https://mortal-shell2.wiki/tips): 18 beginner tips across combat, Shells, weapons, exploration, bosses, and farming. Verified in the Open Beta.
 - [Patch Notes & Updates](https://mortal-shell2.wiki/updates): Latest updates, balance changes, bug fixes, and new content.
 
 ## Shells

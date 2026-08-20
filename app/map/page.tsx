@@ -4,8 +4,8 @@ import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import MapCanvasWrapper from "./MapCanvasWrapper";
 import { text } from 'stream/consumers';
 
-const title = "Mortal Shell 2 Map – Interactive Map & All Locations";
-const description = "Mortal Shell 2 Map – interactive map with every Shell, boss, Tarstone, Beacon & collectible location. Plan routes and find hidden items.";
+const title = "Mortal Shell 2 Interactive Map – All Shell, Boss &amp; Item Spots";
+const description = "Interactive map with every Shell, boss, Tarstone &amp; Beacon location in Mortal Shell 2, plus hidden collectibles and a recommended route order.";
 
 export const metadata: Metadata = {
   title,
@@ -158,8 +158,7 @@ export default function MapPage() {
           </p>
           <p>
             We update the Mortal Shell 2 interactive map as new information
-            becomes available. Beta locations are already marked. The full
-            open world will be mapped within the first week of launch.
+            becomes available.
           </p>
         </section>
 
@@ -351,8 +350,6 @@ export default function MapPage() {
             </li>
           </ul>
           <p>
-            More boss locations will be added as they are discovered after
-            launch. The full{" "}
             <a href="/bosses">boss guide</a> covers strategies, recommended
             Shells, and item drops for each boss in the game.
           </p>

@@ -3,27 +3,27 @@ export type Weapon = {
   name: string;
   confirmed: boolean;
   type:
-    | "Katana"
-    | "Dual Wield"
-    | "Axe & Dagger"
-    | "Greatsword"
-    | "Hammer & Chisel"
-    | "Ultra Greatsword"
-    | "Longsword"
-    | "Mace";
+  | "Katana"
+  | "Dual Wield"
+  | "Axe & Dagger"
+  | "Greatsword"
+  | "Hammer & Chisel"
+  | "Ultra Greatsword"
+  | "Longsword"
+  | "Mace";
   damageType:
-    | "Physical"
-    | "Strike"
-    | "Slash"
-    | "Pierce"
-    | "Fire"
-    | "Holy"
-    | "Slash + Pierce"
-    | "Strike + Pierce"
-    | "Holy + Slash"
-    | "Slash + Holy"
-    | "Slash + Strike"
-    | "Strike + Fire";
+  | "Physical"
+  | "Strike"
+  | "Slash"
+  | "Pierce"
+  | "Fire"
+  | "Holy"
+  | "Slash + Pierce"
+  | "Strike + Pierce"
+  | "Holy + Slash"
+  | "Slash + Holy"
+  | "Slash + Strike"
+  | "Strike + Fire";
   scaling: string;
   location: string;
   source: string;
@@ -56,7 +56,7 @@ export const WEAPONS: Weapon[] = [
     playstyle:
       "Pairs best with Tiel and any agile Mortal Shell 2 builds that want a fast, punish-heavy melee option. Strong against low-poise enemies and against bosses with long recovery windows. Avoid trading into tanky golems or flesh brutes.",
     betaNotes:
-      "Extended stance does not always stagger certain shield enemies, even on the first hit. Bleed stacks from the R2 chain break once you swap stances. Expect this to be patched at or after launch.",
+      "Extended stance does not always stagger certain shield enemies, even on the first hit. Bleed stacks from the R2 chain break once you swap stances.",
   },
   {
     id: "axe-and-dagger",
@@ -122,7 +122,7 @@ export const WEAPONS: Weapon[] = [
     playstyle:
       "Strong with hybrid builds and any Shell that still wants pressure without committing to a pure fast weapon. Relentless attack loops melt poise and hand you criticals against Disciple's Grotto enemies. Pair with a health Seal to sustain the aggressive posture.",
     betaNotes:
-      "Chisel critical during stagger sometimes hits twice instead of once against flesh-type enemies. This may be unintended but it makes the weapon extremely strong in the current Beta, so expect the damage number to change on launch day.",
+      "Chisel critical during stagger sometimes hits twice instead of once against flesh-type enemies.",
   },
   {
     id: "the-iconoclast",

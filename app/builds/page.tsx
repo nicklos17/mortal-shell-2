@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
-const TITLE = "Mortal Shell 2 Builds – Best Shell, Weapon & Tarstone Combos";
+const TITLE = "Best Mortal Shell 2 Builds – Shell, Weapon &amp; Tarstone Combos";
 const PAGE_PATH = "/builds";
 const DESCRIPTION =
-  "Mortal Shell 2 builds: Shell picks, best weapons, sidearms, Tarstone combos, and Shell Bonding priorities. Start with the Proxima build at just 14 points.";
+  "Mortal Shell 2 builds for every playstyle: Shell picks, weapons, Tarstone combos &amp; Bonding priorities. Start with the Proxima build at just 14 points.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -177,34 +177,6 @@ export default function BuildsPage() {
           >
             Read the full Tiel Build Guide →
           </Link>
-        </section>
-
-        {/* 3. 更多 builds：纯文字说明，不放空链接 */}
-        <section className="article">
-          <h2>More Builds Coming After Launch</h2>
-          <p>
-            We&apos;re testing additional Shell and weapon combinations from
-            the full release. Once we&apos;ve validated each build against
-            end-game content, we&apos;ll publish individual build guides here,
-            one page per build.
-          </p>
-          <p>
-            For Shell mechanics and Bonding trees, see our{" "}
-            <Link
-              href="/shells"
-              className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-            >
-              Shells guide
-            </Link>
-            . Item and weapon locations are marked on the{" "}
-            <Link
-              href="/map"
-              className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-            >
-              interactive map
-            </Link>
-            .
-          </p>
         </section>
 
         {/* 4. FAQ（与 FAQPage 结构化数据一一对应） */}

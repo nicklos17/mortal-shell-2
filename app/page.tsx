@@ -4,20 +4,21 @@ import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
 const RELEASE_TARGET = Date.UTC(2026, 7, 20, 0, 0, 0);
 
+const title = "Mortal Shell 2 Guide – Interactive Map, Bosses, Builds &amp; Tips";
+const description = "The complete Mortal Shell 2 wiki: interactive map, all Shell &amp; boss locations, best builds, weapons database, beginner tips, and full walkthrough.";
+
 export const metadata: Metadata = {
-  title: "Mortal Shell 2 Guide: Maps, Bosses, Builds & Weapons",
-  description:
-    "Mortal Shell 2 guide - Shell locations, interactive map, boss strategies, best builds, weapons database, and full walkthrough. Master Mortal Shell II.",
+  title,
+  description,
   alternates: {
     canonical: pageURL("/"),
   },
   openGraph: {
-    title: "Mortal Shell 2 Guide: Maps, Bosses, Builds & Weapons",
-    description:
-      "Mortal Shell 2 guide - Shell locations, interactive map, boss strategies, best builds, weapons database, and walkthrough.",
+    title,
+    description,
     url: pageURL("/"),
     type: "website",
-    siteName: "Mortal Shell 2 Guide",
+    siteName: title,
     images: [
       {
         url: OG_IMAGE,
@@ -31,15 +32,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@mortalshell",
-    title: "Mortal Shell 2 Guide: Maps, Bosses, Builds & Weapons",
-    description:
-      "Mortal Shell 2 guide - Shell locations, interactive map, boss strategies, best builds, weapons database, and walkthrough.",
+    title,
+    description,
     images: [
       {
         url: OG_IMAGE,
         width: OG_IMAGE_W,
         height: OG_IMAGE_H,
-        alt: "Mortal Shell 2 Guide",
+        alt: title,
       },
     ],
   },
