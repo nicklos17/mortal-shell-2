@@ -1915,6 +1915,27 @@ table.data tr:hover td {
   }
 }
 
+/* ---------- 12 类型点位区块排版 ---------- */
+#location-types section,
+#location-types {
+  margin: 1.5rem 0 2rem;
+}
+
+#location-types h2 {
+  margin: 2rem 0 .75rem;
+}
+
+#location-types h3 {
+  margin: 1.6rem 0 .5rem;
+  padding-top: .5rem;
+}
+
+#location-types p {
+  margin: 0 0 1.1rem;
+  line-height: 1.75;
+}
+
+
 /* ---------- 广告位 ---------- */
 .ad-banner {
   min-height: 90px;
