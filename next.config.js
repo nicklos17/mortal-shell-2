@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // ✨ 新增：开启纯静态导出，消除 Serverless 层
   trailingSlash: false,
+  reactStrictMode: true,
+  output: 'export', // ← 关键：静态导出
+  images: { unoptimized: true }, // ← 必须：否则 build 报错
   reactStrictMode: true,
   async redirects() {
     return [
@@ -12,6 +14,7 @@ const nextConfig = {
       },
     ];
   },
+
 };
 
 module.exports = nextConfig;

@@ -3,6 +3,9 @@ import { pageURL } from "@/lib/site-config";
 import { updatePosts } from "@/lib/updates-data";
 import { SHELLS } from "@/lib/shells";
 
+export const dynamic = 'force-static';
+
+
 /**
  * Sitemap lastModified 规则：
  *  - 每个页面固定一个「创建日期」（createdAt），首次上线那天写一次就不动了

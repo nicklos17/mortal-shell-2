@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { SITE_BASE_URL } from '@/lib/site-config';
 
+export const dynamic = 'force-static';
+
 export default function manifest(): MetadataRoute.Manifest {
     return {
         name: 'Mortal Shell 2 Guide',
