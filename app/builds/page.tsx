@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
-const TITLE = "Best Mortal Shell 2 Builds – Shell, Weapon &amp; Tarstone Combos";
+const TITLE = "Best Mortal Shell 2 Builds – Shell, Weapon & Tarstone Combos";
 const PAGE_PATH = "/builds";
 const DESCRIPTION =
   "Mortal Shell 2 builds for every playstyle: Shell picks, weapons, Tarstone combos &amp; Bonding priorities. Start with the Proxima build at just 14 points.";

@@ -4,7 +4,7 @@ import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
 const RELEASE_TARGET = Date.UTC(2026, 7, 20, 0, 0, 0);
 
-const title = "Mortal Shell 2 Guide – Interactive Map, Bosses, Builds &amp; Tips";
+const title = "Mortal Shell 2 Guide – Interactive Map, Bosses, Builds & Tips";
 const description = "The complete Mortal Shell 2 wiki: interactive map, all Shell &amp; boss locations, best builds, weapons database, beginner tips, and full walkthrough.";
 
 export const metadata: Metadata = {
