@@ -78,6 +78,38 @@ const faqJsonLd = {
         text: "The map is updated continuously as we play through the full release. Confirmed locations are marked, and new spots are added every day.",
       },
     },
+    {
+      "@type": "Question",
+      "name": "Where are all the Gates in Mortal Shell 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All Gates are marked on our interactive map. Jump to the Gates section for the full list, or enable the Gates category in the map's filter sidebar to see every Gate location highlighted."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are the Key Items in Mortal Shell 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Key Items (Glands, keys, and special relics) are tracked on our map under the Key Items category. Enable it in the filter sidebar to see every Key Item location in one pass."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are all the Weapons and Sidearms in Mortal Shell 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every Weapon and Sidearm location is marked on our interactive map. Use the Weapons and Sidearms anchors, or toggle their categories in the filter sidebar to plan your loadout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I find Map Fragments and Corrupted Statues?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Map Fragments and Corrupted Statues are rare collectibles marked on our map. Enable their categories in the filter sidebar to track down every fragment and statue for completion."
+      }
+    }
   ],
 };
 
@@ -406,6 +438,47 @@ export default function MapPage() {
             it is worth finding every shrine even if you do not plan to use
             the resources immediately.
           </p>
+        </section>
+
+        <section id="location-types">
+          <h2>All location types on the Mortal Shell 2 map</h2>
+          <p>The Mortal Shell 2 map marks <strong>12 confirmed location types</strong>. Use the anchors below to jump straight to the ones you need, or enable each category in the map's filter sidebar to highlight its markers.</p>
+
+          <h3 id="beacons">Beacons</h3>
+          <p>Beacons are fast-travel points scattered across Fallgrim and the deeper areas. Touching a Beacon unlocks it as a quick-travel destination, letting you bounce between regions without trekking back. Light every Beacon you pass — they are the backbone of efficient exploration.</p>
+
+          <h3 id="gates">Gates</h3>
+          <p>Gates are sealed doorways that block progression until you meet a specific condition — usually defeating a boss or using a Gland. Each Gate leads to a new area or a major shortcut. If a path is blocked, the Gate's location type marks exactly where to return once you have the key it needs.</p>
+
+          <h3 id="shells">Shells</h3>
+          <p>Shells are the wearable forms you inhabit in Mortal Shell. Each Shell has its own stats, unique abilities, and a distinct playstyle — from the balanced Tiel to the tanky Eredrim. Collecting a Shell unlocks that body permanently and changes how you approach every fight.</p>
+
+          <h3 id="weapons">Weapons</h3>
+          <p>Weapons (known as weapons in-game) are your primary melee tools. Each weapon in Mortal Shell 2 has a distinct moveset, reach, and weight class. Some are found in the world, others are tied to specific locations or quests. Pick the one that matches your build's focus.</p>
+
+          <h3 id="sidearms">Sidearms</h3>
+          <p>Sidearms are ranged secondary weapons that complement your main melee setup. They give you a way to poke enemies from a safe distance, trigger switches, or stagger foes before you close in. A good sidearm rounds out any build.</p>
+
+          <h3 id="dungeons">Dungeons</h3>
+          <p>Dungeons are the major instanced areas of Mortal Shell 2 — self-contained zones with their own enemies, loot, and usually a boss at the end. Clearing a Dungeon yields powerful rewards and often the Glands needed to open later Gates.</p>
+
+          <h3 id="bone-gates">Bone Gates</h3>
+          <p>Bone Gates are special Gates that open only with specific items or after completing a particular objective, distinct from standard Gates. They guard some of the game's most valuable secrets and are easy to walk past — mark them and come back prepared.</p>
+
+          <h3 id="corrupted-statues">Corrupted Statues</h3>
+          <p>Corrupted Statues are cursed shrines that lock away part of their reward until you cleanse them. Interacting without the right item can trigger a fight or a curse. Cleansing every Corrupted Statue is often tied to trophy and completion objectives.</p>
+
+          <h3 id="map-fragments">Map Fragments</h3>
+          <p>Map Fragments are collectible pieces that, when assembled, reveal hidden locations on your in-game map. Finding them is part of the completionist loop — each fragment fills in a previously blank section of the world.</p>
+
+          <h3 id="tarstones">Tarstones</h3>
+          <p>Tarstones are the game's core resource for building and upgrading. Infusing Tarstone fragments into your Shell, weapon, or sidearm shapes your build's direction. Tarstone shrines are marked on the map and are worth hitting during every run.</p>
+
+          <h3 id="key-items">Key Items</h3>
+          <p>Key Items are quest and progression items you carry in your inventory — items like Glands, keys, and special relics. They unlock Gates, advance side quests, and are required to reach certain endgame areas. Track which Key Items you still need to avoid backtracking.</p>
+
+          <h3 id="enemies">Enemies and collectibles</h3>
+          <p>Beyond fixed points, the map also tracks notable enemy encounters and hidden collectibles. These include lootables, lore items, and rare spawns. Toggle these categories in the filter to plan a clean sweep of an area.</p>
         </section>
 
         <section>
