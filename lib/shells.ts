@@ -1,7 +1,7 @@
 /* ============================================================
    Mortal Shell 2 — Shell（躯壳）共享数据
    站点所有 Shell 页面（列表 + 详情 + 关系轮图）统一从这里读取。
-   最后更新：2026-08-19，按 Open Beta 实测补全 8 个 Shell 的 playstyle 与 abilities。
+   最后更新：2026-08-20，按正式版实测补全 8 个 Shell 的 playstyle 与 abilities。
    ============================================================ */
 
 export type Shell = {
@@ -12,7 +12,7 @@ export type Shell = {
   desc: string;
   signature: string;
   location: string;
-  status: "Confirmed" | "Beta" | "TBA";
+  status: "Confirmed" | "TBA";
   prologueOnly?: boolean;
   playstyle: string;
   lore: string;

@@ -70,7 +70,7 @@ const faqJsonLd = {
       name: "How many weapons are in Mortal Shell 2?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Seven weapons are confirmed in the Mortal Shell 2 Open Beta roster: Axatana, Axe and Dagger, Hallowed Sword, Hammer and Chisel, The Iconoclast, Martyr's Blade, and Smoldering Mace. The full release is expected to add more one-handed options, heavier two-handers, ranged Hand Cannon variants, and secret late-game drops.",
+        text: "Seven weapons are confirmed in the Mortal Shell 2 roster: Axatana, Axe and Dagger, Hallowed Sword, Hammer and Chisel, The Iconoclast, Martyr's Blade, and Smoldering Mace. The full release is expected to add more one-handed options, heavier two-handers, ranged Hand Cannon variants, and secret late-game drops.",
       },
     },
     {
@@ -78,7 +78,7 @@ const faqJsonLd = {
       name: "What is the best weapon in Mortal Shell 2?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For the Open Beta, Hallowed Sword sits at the top of the Mortal Shell 2 weapon rankings for its consistent raw damage, holy shockwave crowd control, and a pickup location that sits in your path before the punishing Great Arbiter of Flesh fight. Smoldering Mace is a strong second for players who want a single-handed option with burn stacks and ground fire AOE, especially for the Hall of Illusions content. Final rankings will settle once we have full release drops to compare.",
+        text: "Hallowed Sword sits at the top of the Mortal Shell 2 weapon rankings for its consistent raw damage, holy shockwave crowd control, and a pickup location that sits in your path before the punishing Great Arbiter of Flesh fight. Smoldering Mace is a strong second for players who want a single-handed option with burn stacks and ground fire AOE, especially for the Hall of Illusions content.",
       },
     },
     {
@@ -86,7 +86,7 @@ const faqJsonLd = {
       name: "Mortal Shell 2 weapons tier list?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A full Mortal Shell 2 weapons tier list goes live after release once every hidden weapon, infusion, and boss drop is in hand. For the current Beta the rough ranking is S: Hallowed Sword. A: The Iconoclast, Smoldering Mace, Martyr's Blade. B: Axatana, Axe and Dagger. C: Hammer and Chisel (strong poise damage but tight parry timing limits it). We will publish complete S/A/B/C tier tables with recommended Shell pairings, so bookmark this page and check back on the day of release.",
+        text: "A full Mortal Shell 2 weapons tier list goes live after release once every hidden weapon, infusion, and boss drop is in hand. The rough ranking is S: Hallowed Sword. A: The Iconoclast, Smoldering Mace, Martyr's Blade. B: Axatana, Axe and Dagger. C: Hammer and Chisel (strong poise damage but tight parry timing limits it). We will publish complete S/A/B/C tier tables with recommended Shell pairings, so bookmark this page and check back on the day of release.",
       },
     },
     {
@@ -169,7 +169,7 @@ function WeaponCard({ weapon }: { weapon: (typeof WEAPONS)[number]; }) {
         </h3>
         <div className="flex flex-wrap gap-2">
           <span className="shrink-0 rounded bg-green-500/15 px-2 py-0.5 text-xs text-green-400">
-            Beta Confirmed
+            Confirmed
           </span>
           <span className="shrink-0 rounded bg-white/10 px-2 py-0.5 text-xs text-white/60">
             {weapon.type}
@@ -224,9 +224,9 @@ function WeaponCard({ weapon }: { weapon: (typeof WEAPONS)[number]; }) {
         </div>
         <div className="sm:col-span-2">
           <dt className="text-xs uppercase tracking-wider text-white/40">
-            Beta Notes
+            Notes
           </dt>
-          <dd className="mt-1 text-white/70">{linkifyShells(weapon.betaNotes)}</dd>
+          <dd className="mt-1 text-white/70">{linkifyShells(weapon.notes)}</dd>
         </div>
       </dl>
 
@@ -261,7 +261,7 @@ export default function WeaponsPage() {
         <span className="title-rule" />
 
         <p className="lede">
-          All weapons confirmed in the Mortal Shell 2 Open Beta — weapon
+          All weapons confirmed in the Mortal Shell 2 — weapon
           types, stats, damage scaling, and known locations. Axatana,
           dual-wield pairs, heavy two-handers, and an ultra greatsword all
           sit in the current roster. Each weapon card below covers how to
@@ -385,7 +385,7 @@ export default function WeaponsPage() {
         <section className="article">
           <h2>Weapon Details</h2>
           <p style={{ color: "var(--text-secondary)", marginTop: "-.5rem" }}>
-            Every weapon confirmed in the Beta gets its own card with stats,
+            Every confirmed weapon gets its own card with stats,
             special mechanics, and a pick order. Match each weapon to its
             ideal Shell on the{" "}
             <Link href="/shells" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
@@ -411,10 +411,10 @@ export default function WeaponsPage() {
           <div className="faq">
             <h3>How many weapons are in Mortal Shell 2?</h3>
             <p>
-              Seven weapons are confirmed from the Mortal Shell 2 Open Beta:
+              Seven weapons are confirmed in Mortal Shell 2:
               Axatana, Axe and Dagger, Hallowed Sword, Hammer and Chisel,
               The Iconoclast, Martyr's Blade, and Smoldering Mace. That is
-              the count for the Beta slice. Cold Symmetry has teased more
+              the current count. Cold Symmetry has teased more
               one-handed blades, heavy two-handers with the Heavy
               Instruments classification, and a Hand Cannon that works as a
               ranged slot rather than a pure melee swing. The full release
@@ -423,7 +423,7 @@ export default function WeaponsPage() {
 
             <h3>What is the best weapon in Mortal Shell 2?</h3>
             <p>
-              For the current Beta, Hallowed Sword is the strongest Mortal
+              Hallowed Sword is the strongest Mortal
               Shell 2 weapon. It sits directly on your path to the Great
               Arbiter of Flesh, its raw two-handed damage punishes nearly
               every enemy type, and the holy shockwave clears the Hall of
@@ -498,7 +498,7 @@ export default function WeaponsPage() {
             one-handed and two-handed categories with relatively uniform
             swing speeds and no weapon-specific mechanics beyond a niche
             special attack. The sequel expands the weapon system in every
-            direction. Each weapon in the Open Beta has its own distinct
+            direction. Each weapon has its own distinct
             swing patterns, stance swaps, or hold-charge abilities that
             change how the weapon fights. Axatana toggles between short and
             extended stances mid-combat. Hammer and Chisel gives you a

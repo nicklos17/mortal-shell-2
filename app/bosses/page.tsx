@@ -8,7 +8,7 @@ import AdBanner from "@/components/AdBanner";
 const TITLE = "Mortal Shell 2 Bosses";
 const PAGE_PATH = "/bosses";
 const DESCRIPTION =
-  "All 8 Mortal Shell 2 bosses confirmed from Open Beta. Attack patterns, weak points, recommended builds, and phase-by-phase strategies for every boss encounter.";
+  "All 8 Mortal Shell 2 bosses confirmed in the full release. Attack patterns, weak points, recommended builds, and phase-by-phase strategies for every boss encounter.";
 const YOUTUBE_WATCH = "https://www.youtube.com/watch?v=YbWMPZxZm2o";
 const YOUTUBE_EMBED_ID = "YbWMPZxZm2o";
 
@@ -72,7 +72,7 @@ const faqJsonLd = {
       name: "How many bosses are in Mortal Shell 2?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Mortal Shell 2 has 8 bosses confirmed in the Open Beta roster. Circle of the Grasping Root, Gloombound Ritualist, Great Arbiter of Flesh, Magdalena the Lady of the Woods, Tainted Vestige, Tar Golem, The Wandering Shepherd, and Vrannic the Grand Illusionist. A full release may add optional and late-game bosses.",
+        text: "Mortal Shell 2 has 8 bosses. Circle of the Grasping Root, Gloombound Ritualist, Great Arbiter of Flesh, Magdalena the Lady of the Woods, Tainted Vestige, Tar Golem, The Wandering Shepherd, and Vrannic the Grand Illusionist. A full release may add optional and late-game bosses.",
       },
     },
     {
@@ -80,7 +80,7 @@ const faqJsonLd = {
       name: "Who is the hardest boss in Mortal Shell 2?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Tar Golem and Vrannic the Grand Illusionist sit at the top of the Open Beta Mortal Shell 2 boss list. Tar Golem chains five-hit axe combos with almost no recovery between swings, punishing any Shell that trades carelessly. Vrannic layers tracking orbs, illusion clones, and a room-wide beam, all at once. Great Arbiter of Flesh and Magdalena round out the upper tier. Final rankings will tighten once the full roster and optional endgame bosses are in hand.",
+        text: "Tar Golem and Vrannic the Grand Illusionist sit at the top of the Mortal Shell 2 boss list. Tar Golem chains five-hit axe combos with almost no recovery between swings, punishing any Shell that trades carelessly. Vrannic layers tracking orbs, illusion clones, and a room-wide beam, all at once. Great Arbiter of Flesh and Magdalena round out the upper tier.",
       },
     },
     {
@@ -96,7 +96,7 @@ const faqJsonLd = {
       name: "What is the best Mortal Shell 2 boss order?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "From the Open Beta areas, fight Tainted Vestige and Circle of the Grasping Root early. Both sit at the low end and reward you with useful seals before the mid-tier trio of Gloombound Ritualist, and Wandering Shepherd. Save Great Arbiter of Flesh for just before you reach Tiel's corpse, then close with Magdalena, Tar Golem, and Vrannic once your Shell trees are deeper. Mark each boss arena on the Mortal Shell 2 interactive map so you can backtrack without losing time.",
+        text: "Fight Tainted Vestige and Circle of the Grasping Root early. Both sit at the low end and reward you with useful seals before the mid-tier trio of Gloombound Ritualist, and Wandering Shepherd. Save Great Arbiter of Flesh for just before you reach Tiel's corpse, then close with Magdalena, Tar Golem, and Vrannic once your Shell trees are deeper. Mark each boss arena on the Mortal Shell 2 interactive map so you can backtrack without losing time.",
       },
     },
   ],
@@ -117,7 +117,7 @@ function BossCard({ boss }: { boss: (typeof BOSSES)[number]; }) {
         </h3>
         <div className="flex flex-wrap gap-2">
           <span className="shrink-0 rounded bg-green-500/15 px-2 py-0.5 text-xs text-green-400">
-            Beta Confirmed
+            Confirmed
           </span>
           <span
             className={`shrink-0 rounded px-2 py-0.5 text-xs ${boss.difficulty === "Easy"
@@ -204,11 +204,11 @@ export default function BossesPage() {
         <span className="title-rule" />
 
         <p className="lede">
-          The full Mortal Shell 2 boss roster confirmed from the Open Beta
+          The full Mortal Shell 2 boss roster confirmed in the full
           playtest. Eight encounters range from living trees and flaming
           wheels to illusionists and a dual-axe golem of smoldering tar.
           Each entry below lists confirmed location, weak point, attack
-          patterns, and the play-tested strategy from the Beta run. Full
+          patterns, and the play-tested strategy from our playthrough. Full
           phase breakdowns, drop tables, and recommended Shell pairings.
         </p>
 
@@ -359,7 +359,7 @@ export default function BossesPage() {
         <section className="article">
           <h2>Boss Strategies</h2>
           <p style={{ color: "var(--text-secondary)", marginTop: "-.5rem" }}>
-            Every boss confirmed in the Beta has its own card with attacks,
+            Every confirmed boss has its own card with attacks,
             weak points, and a tested strategy. Tune your loadout ahead of
             the fight with the{" "}
             <Link href="/builds" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
@@ -415,7 +415,7 @@ export default function BossesPage() {
           <div className="faq">
             <h3>How many bosses are in Mortal Shell 2?</h3>
             <p>
-              Mortal Shell 2 has 8 bosses confirmed from the Open Beta run.
+              Mortal Shell 2 has 8 bosses confirmed in the full release.
               Circle of the Grasping Root, Gloombound Ritualist, Great
               Arbiter of Flesh, Magdalena the Lady of the Woods, Tainted
               Vestige, Tar Golem, The Wandering Shepherd, and Vrannic the
@@ -431,7 +431,7 @@ export default function BossesPage() {
 
             <h3>Who is the hardest boss in Mortal Shell 2?</h3>
             <p>
-              Tar Golem and Vrannic the Grand Illusionist top the Open Beta
+              Tar Golem and Vrannic the Grand Illusionist top the
               Mortal Shell 2 hardest boss ranking. Tar Golem chains five-hit
               axe combos with almost no recovery, so any Shell that trades
               poorly gets stunlocked. Vrannic layers tracking orbs,

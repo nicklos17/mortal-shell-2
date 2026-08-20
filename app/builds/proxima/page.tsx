@@ -214,8 +214,16 @@ export default function ProximaBuildPage() {
 
         <span className="eyebrow">Starter Build</span>
         <h1>Mortal Shell 2 Proxima Build Guide</h1>
-        <span className="title-rule" />
 
+        <p className="intro-link">
+          <strong>New to Proxima?</strong> Start with our
+          <a href="/shells/proxima" className="text-amber-300 hover:text-amber-200 underline underline-offset-2">
+            Proxima Shell Overview
+          </a>
+          — location, abilities, playstyle &amp; lore.
+        </p>
+
+        <span className="title-rule" />
         <p className="lede">
           This Proxima build will carry you through your first playthrough
           with ease. By pairing easy-to-acquire weapons with powerful

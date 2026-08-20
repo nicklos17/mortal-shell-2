@@ -79,7 +79,7 @@ export default function DisclaimerPage() {
         </p>
         <p>
           The information on this website is provided in good faith and based on
-          publicly available sources, including the Mortal Shell 2 Open Beta.
+          publicly available sources.
           Game content may change upon full release or through
           subsequent patches. We make no guarantees about the completeness,
           accuracy, or reliability of any guide, map location, build

@@ -66,6 +66,17 @@ export default async function ShellDetailPage({
         <h1>{shell.name}</h1>
         <span className="title-rule" />
 
+        <figure className="shell-portrait-wrap">
+          <Image
+            src={shell.image}
+            alt={shell.imageAlt}
+            title={shell.imageTitle}
+            width={800}
+            height={400}
+            className="shell-portrait"
+          />
+        </figure>
+
         <div className="shell-hero">
           <span className="shell-emblem">
             <ShellIcon id={shell.id} />
@@ -82,17 +93,6 @@ export default async function ShellDetailPage({
         </div>
 
         <p className="lede">{shell.tagline}</p>
-
-        <figure>
-          <Image
-            src={shell.image}
-            alt={shell.imageAlt}
-            title={shell.imageTitle}
-            width={800}
-            height={800}
-            className="shell-portrait"
-          />
-        </figure>
 
         <section className="article">
           <h2>Overview</h2>
@@ -129,6 +129,14 @@ export default async function ShellDetailPage({
 
           <h2>Where to Find {shell.name}</h2>
           <p>{shell.location}</p>
+
+          {(shell.id === "proxima" || shell.id === "tiel") && (
+            <div className="shell-build-guide-cta">
+              <Link href={`/builds/${shell.id}`}>
+                {shell.name} Build Guide →
+              </Link>
+            </div>
+          )}
 
           <p className="article-back">
             <Link href="/shells">← Back to all Mortal Shell 2 Shells</Link>

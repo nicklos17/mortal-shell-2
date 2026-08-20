@@ -147,7 +147,7 @@ export default function BuildsPage() {
             and scales into a 21-point late-game version.
           </p>
           <p>
-            This is the strongest build we&apos;ve tested in the Open Beta.
+            This is the strongest build we&apos;ve tested.
             Read our full breakdown for the skill tree allocation, item
             locations, and how the Resolve loop works.
           </p>

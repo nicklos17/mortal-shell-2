@@ -19,7 +19,7 @@ export const BOSSES: Boss[] = [
     confirmed: true,
     region: "Seeping Mire Beacon — clearing past Mushroom Village",
     weakness: "Fire damage, focus the frog first before the adds",
-    source: "Open Beta gameplay",
+    source: "Full Release gameplay",
     description:
       "A boss made up of a humanoid frog and three melee attackers. The frog sits at the center of the arena while its three allies flank and pressure the player from melee range.",
     attacks: [
@@ -41,7 +41,7 @@ export const BOSSES: Boss[] = [
     confirmed: true,
     region: "Sunken area past Village Outskirts beacon",
     weakness: "Quick interrupts, rush down before skeletons spawn",
-    source: "Open Beta gameplay",
+    source: "Full Release gameplay",
     description:
       "A boss with a bloody carcass appearance that uses its staff to conjure explosive projectiles and awaken exploding skeletons around the arena.",
     attacks: [
@@ -63,7 +63,7 @@ export const BOSSES: Boss[] = [
     confirmed: true,
     region: "Open area past Widow's Overlook beacon — before Tiel's corpse",
     weakness: "Backstep punishes, ranged chip during slow windups",
-    source: "Open Beta gameplay",
+    source: "Full Release gameplay",
     description:
       "A tall boss that towers over the Harbinger, wielding a two-handed greatsword. This is the gatekeeper fight right before the player reaches Tiel's corpse.",
     attacks: [
@@ -83,9 +83,9 @@ export const BOSSES: Boss[] = [
     id: "magdalena-lady-woods",
     name: "Magdalena, the Lady of the Woods",
     confirmed: true,
-    region: "Sunken Village — end of Beta campaign",
+    region: "Sunken Village — end of the campaign",
     weakness: "Stagger during charge windup, poison DOT stacks",
-    source: "Open Beta gameplay",
+    source: "Full Release gameplay",
     description:
       "A boss on a fiery wheelchair that uses high-speed charge and 360-degree flame attacks. Small windows for counterattacks, and the fight punishes players who back off predictably.",
     attacks: [
@@ -107,7 +107,7 @@ export const BOSSES: Boss[] = [
     confirmed: true,
     region: "Hidden cave near Disciple's Grotto",
     weakness: "Chop attacks, target the roots before the trunk",
-    source: "Open Beta gameplay",
+    source: "Full Release gameplay",
     description:
       "A living tree boss with roots growing from its body. Primarily uses its limbs to attack and inflicts burning effects on anyone standing in the wrong patch of floor.",
     attacks: [
@@ -129,9 +129,9 @@ export const BOSSES: Boss[] = [
     confirmed: true,
     region: "Disciple's Grotto",
     weakness: "Freeze damage, dodge sideways through combos",
-    source: "Open Beta gameplay",
+    source: "Full Release gameplay",
     description:
-      "Tar Golem wields two large flaming axes for attacking and is relentless with combos that give little opening. This is the tightest melee test in the Beta content.",
+      "Tar Golem wields two large flaming axes for attacking and is relentless with combos that give little opening. This is the tightest melee test in the game.",
     attacks: [
       "Alternating axe swings, four to five hits in a row with almost no gap between them.",
       "Leaps into the air and slams both axes down, creating a burning radius on impact.",
@@ -151,7 +151,7 @@ export const BOSSES: Boss[] = [
     confirmed: true,
     region: "Sunken Village — farm section",
     weakness: "Clear sheep first, interrupt the hex cast",
-    source: "Open Beta gameplay",
+    source: "Full Release gameplay",
     description:
       "A boss that attacks by controlling a herd of sheep, manipulating a floating sword, and casting a hex that turns the player into a bipedal sheep.",
     attacks: [
@@ -173,7 +173,7 @@ export const BOSSES: Boss[] = [
     confirmed: true,
     region: "End of Hall of Illusions",
     weakness: "Single-target burst, ignore illusions and find the real Vrannic",
-    source: "Open Beta gameplay",
+    source: "Full Release gameplay",
     description:
       "A spell-casting boss that conjures projectiles tracking the player's movements and creates illusions of himself to overwhelm the room.",
     attacks: [

@@ -16,7 +16,7 @@ const items: {
             title: "Mortal Shell 2 Release Date Confirmed: August 20, 2026",
             link: `${SITE}/updates/mortal-shell-2-release-date`,
             pubDateISO: "2026-08-14T09:00:00Z",
-            desc: `<p>Mortal Shell 2 launches <strong>August 20, 2026</strong> on PC, PS5, and Xbox Series X|S. Eight playable Shells, no stamina bar, and the new Hand Cannon weapon. Open Beta live now.</p>`,
+            desc: `<p>Mortal Shell 2 launches <strong>August 20, 2026</strong> on PC, PS5, and Xbox Series X|S. Eight playable Shells, no stamina bar, and the new Hand Cannon weapon. Now available.</p>`,
         },
         {
             title: "Interactive Map Now Live: All Shells, Bosses & Collectibles",
@@ -28,7 +28,7 @@ const items: {
             title: "All 8 Shells Explained: Playstyles, Abilities & Locations",
             link: `${SITE}/shells`,
             pubDateISO: "2026-08-13T15:00:00Z",
-            desc: `<p>The complete Shell roster: Proxima, Tiel, Gragu, Eredrim, Smert, Sariel, Lazlo, Genessa — playstyle, signature ability, and beta-confirmed locations.</p>`,
+            desc: `<p>The complete Shell roster: Proxima, Tiel, Gragu, Eredrim, Smert, Sariel, Lazlo, Genessa — playstyle, signature ability, and confirmed locations.</p>`,
         },
         {
             title: "Builds Guide: 8 Shells, Comparison Table & Playstyle Picks",

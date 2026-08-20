@@ -1670,13 +1670,63 @@ table.data tr:hover td {
   background: rgba(192, 57, 43, .1);
 }
 
+.shell-portrait-wrap {
+  float: right;
+  width: 40%;
+  max-width: 380px;
+  margin: 0 0 1rem 1.5rem;
+}
+
 .shell-portrait {
   width: 100%;
   height: auto;
   display: block;
   border: var(--border-gold);
   border-radius: 2px;
-  margin: 1rem 0 1.5rem;
+}
+
+.shell-portrait-wrap figcaption {
+  margin-top: .5rem;
+  text-align: center;
+  font-size: .85rem;
+}
+
+.shell-portrait-wrap figcaption a {
+  color: var(--color-gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(184, 147, 50, .4);
+}
+
+.shell-portrait-wrap figcaption a:hover {
+  color: #e0c050;
+  border-bottom-color: var(--color-gold);
+}
+
+.shell-build-guide-cta {
+  clear: both;
+  margin: 1.5rem 0 1.75rem;
+}
+
+.shell-build-guide-cta a {
+  display: inline-block;
+  padding: .65rem 1.25rem;
+  border: 1px solid rgba(184, 147, 50, .5);
+  border-radius: 2px;
+  background: rgba(184, 147, 50, .08);
+  color: var(--color-gold);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: .82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  transition: background .2s, color .2s, border-color .2s, box-shadow .2s;
+}
+
+.shell-build-guide-cta a:hover {
+  background: rgba(184, 147, 50, .18);
+  color: var(--color-gold-bright);
+  border-color: var(--color-gold);
+  box-shadow: var(--glow-gold);
 }
 
 .shell-callout {

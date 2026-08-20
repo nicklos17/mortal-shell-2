@@ -10,7 +10,7 @@ type Shell = {
   desc: string;
   signature: string;
   location: string;
-  status: "Confirmed" | "Beta" | "TBA";
+  status: "Confirmed" | "TBA";
   image: string;
   imageAlt: string;
   imageTitle: string;

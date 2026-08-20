@@ -265,7 +265,7 @@ const SECTIONS: { heading: string; tips: Tip[]; }[] = [
       {
         title: "Sit through one full attack cycle before you swing",
         body:
-          "Every boss in the Beta has one long combo that hides a tiny safe window at the end. Walk into the arena without attacking, roll through the longest combo the boss can produce, and memorize the exact moment of recovery. Only then start your damage sequence. Trying to punish the first small opening almost always runs you into the start of a longer chain you did not know existed. Detailed recovery windows and phase splits live on the Mortal Shell 2 bosses page for every confirmed encounter.",
+          "Every boss has one long combo that hides a tiny safe window at the end. Walk into the arena without attacking, roll through the longest combo the boss can produce, and memorize the exact moment of recovery. Only then start your damage sequence. Trying to punish the first small opening almost always runs you into the start of a longer chain you did not know existed. Detailed recovery windows and phase splits live on the Mortal Shell 2 bosses page for every confirmed encounter.",
       },
       {
         title: "Swap Shells immediately as a new phase starts",

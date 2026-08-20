@@ -546,7 +546,7 @@ export default function MapPage() {
           </p>
           <h3>How many locations are in Mortal Shell 2?</h3>
           <p>
-            The beta contains a handful of locations across two areas:
+            The map currently covers a handful of locations across two areas:
             Marrow Keep and Mushroom Village. The full game is expected to
             have many more, including additional dungeons, boss arenas, and
             hidden areas. Our map will cover all of them.

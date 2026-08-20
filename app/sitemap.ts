@@ -33,8 +33,8 @@ const CHANGED_TODAY: ReadonlySet<string> = new Set([
   "",         // 首页：新增 3 个 H2 内容区块 + 倒计时 SSG 重构
   "/map",     // /map：1000+ 词正文扩充 + 点位 schema 占位 + tips 提示
   "/shells",  // /shells：ShellWheel 外圈图片渲染 + 8 子页联动调整
-  "/bosses",  // /bosses：8 Boss 完整攻略上线（Beta 实测数据 + FAQ + ItemList JSON-LD）
-  "/weapons", // /weapons：7 Beta 武器完整攻略 + scaling 机制说明 + FAQ
+  "/bosses",  // /bosses：8 Boss 完整攻略上线（实测数据 + FAQ + ItemList JSON-LD）
+  "/weapons", // /weapons：7 武器完整攻略 + scaling 机制说明 + FAQ
   "/walkthrough", // /walkthrough：开篇 OP 早期路线 + YouTube 视频 + FAQ + Article/VideoObject JSON-LD
   "/tips",    // /tips：6 分类 18 条新手技巧 + FAQ + Article/FAQPage JSON-LD
   "/builds",  // /builds：Proxima + Tiel 双卡片导流页 + FAQ
@@ -48,7 +48,7 @@ const CHANGED_TODAY: ReadonlySet<string> = new Set([
 ]);
 
 // Shell 详情页：今天改了内容的 slug 专属 changed set。
-// 2026-08-19：按 Open Beta 实测补全 8 个 Shell 的 playstyle。
+// 2026-08-20：按正式版实测补全 8 个 Shell 的 playstyle。
 const CHANGED_TODAY_SHELLS: ReadonlySet<string> = new Set([
   "proxima",
   "tiel",
