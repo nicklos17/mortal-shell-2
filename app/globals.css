@@ -1915,6 +1915,7 @@ table.data tr:hover td {
   }
 }
 
+/* ---------- 广告位 ---------- */
 .ad-banner {
   min-height: 90px;
   max-width: 100%;
@@ -1923,13 +1924,11 @@ table.data tr:hover td {
   align-items: center;
   margin: 28px 0;
   overflow: hidden;
-  /* 关键：防止 728px iframe 横向溢出 */
 }
 
 .ad-banner iframe {
   max-width: 100%;
   width: 100%;
   height: auto;
-  /* 高度跟随比例，移动端自适应 */
   border: 0;
 }
