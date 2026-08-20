@@ -440,10 +440,8 @@ export default function MapPage() {
             </li>
             <li>
               <span className="loc-note">
-                Temple side passage: an optional path in the Temple of the
-                Iron Path that leads to a small reward chest. The passage
-                is behind a locked door that opens with a specific item
-                found later in the game.
+                Temple side passage: an optional path behind the temple that
+                leads to a small reward chest.
               </span>
             </li>
             <li>
