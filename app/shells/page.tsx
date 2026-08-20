@@ -6,6 +6,7 @@ import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import ShellWheel from "./ShellWheel";
 import { SHELLS } from "@/lib/shells";
 import { ShellIcon } from "@/lib/shell-icon";
+import AdBanner from "@/components/AdBanner";
 
 const TITLE = "Mortal Shell 2 Shells";
 const PAGE_PATH = "/shells";
@@ -226,6 +227,8 @@ export default function ShellsPage() {
             ))}
           </div>
         </section>
+
+        <AdBanner />
 
         {/* 收尾 */}
         <section className="article">

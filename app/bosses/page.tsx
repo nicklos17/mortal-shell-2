@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import { BOSSES } from "@/lib/bosses-data";
+import AdBanner from "@/components/AdBanner";
 
 const TITLE = "Mortal Shell 2 Bosses";
 const PAGE_PATH = "/bosses";
@@ -404,6 +405,8 @@ export default function BossesPage() {
             so you can plan a route.
           </p>
         </section>
+
+        <AdBanner />
 
         {/* 4. FAQ */}
         <section className="article">

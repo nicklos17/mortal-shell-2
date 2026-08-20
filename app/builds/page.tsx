@@ -1,6 +1,7 @@
 export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdBanner from "@/components/AdBanner";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
 const TITLE = "Best Mortal Shell 2 Builds &amp; Tarstone Combos";
@@ -178,6 +179,8 @@ export default function BuildsPage() {
             Read the full Tiel Build Guide →
           </Link>
         </section>
+
+        <AdBanner />
 
         {/* 4. FAQ（与 FAQPage 结构化数据一一对应） */}
         <section className="article">

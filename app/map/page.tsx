@@ -2,6 +2,7 @@ export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import MapCanvasWrapper from "./MapCanvasWrapper";
+import AdBanner from "@/components/AdBanner";
 
 const title = "Mortal Shell 2 Interactive Map – All Locations";
 const description = "Interactive map with every Shell, boss, Tarstone &amp; Beacon location in Mortal Shell 2, plus hidden collectibles and a recommended route order.";
@@ -523,6 +524,8 @@ export default function MapPage() {
             </li>
           </ul>
         </section>
+
+        <AdBanner />
 
         <section>
           <h2>Frequently asked questions</h2>
