@@ -9,7 +9,7 @@ import BuildNav from "@/components/BuildNav";
 const TITLE = "Mortal Shell 2 Smert Build – Time-Stop Chaos Build";
 const PAGE_PATH = "/builds/smert";
 const DESCRIPTION =
-  "Best Mortal Shell 2 Smert build: stop time with Miracle, stack Chaos for massive detonations, and chain it infinitely. Black Needle, best Tarstones & full skill tree.";
+  "Best Mortal Shell 2 Smert build: stop time with Miracle, stack Chaos for huge detonations, chain it infinitely. Black Needle & best Tarstones.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -193,7 +193,7 @@ const SKILL_TREE: SkillNode[] = [
   },
 ];
 
-function SkillTreeTable({ nodes }: { nodes: SkillNode[] }) {
+function SkillTreeTable({ nodes }: { nodes: SkillNode[]; }) {
   return (
     <div className="overflow-x-auto">
       <table className="data" style={{ width: "100%" }}>
@@ -304,7 +304,7 @@ export default function SmertBuildPage() {
             deal damage to the target. You can sacrifice more health to stay in
             Miracle longer, though you normally don&apos;t need to. Think of it
             as: <em>freeze time by spending health, then beat the crap out of
-            things.</em>
+              things.</em>
           </p>
 
           <h3>Deadly Revelation</h3>
@@ -334,7 +334,7 @@ export default function SmertBuildPage() {
             The weapon isn&apos;t super important — you spend most of your time
             unarmed inside Miracle. But the <strong>Black Needle</strong> is
             the pick because it&apos;s the <strong>only weapon in the game
-            that can be infused with Phantom</strong>: a delayed detonation
+              that can be infused with Phantom</strong>: a delayed detonation
             that deals area and stagger damage. Combined with the splash
             damage from your constant healing (Welt Cap + Blessing) and your
             passives, you stack a lot of explosion damage around you that adds

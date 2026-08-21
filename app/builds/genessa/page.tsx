@@ -185,7 +185,7 @@ const SKILL_TREE: SkillNode[] = [
   },
 ];
 
-function SkillTreeTable({ nodes }: { nodes: SkillNode[] }) {
+function SkillTreeTable({ nodes }: { nodes: SkillNode[]; }) {
   return (
     <div className="overflow-x-auto">
       <table className="data" style={{ width: "100%" }}>
@@ -342,7 +342,7 @@ export default function GenessaBuildPage() {
 
         {/* 5. Tarstones */}
         <section id="tarstones" className="article">
-          <h2>Recommended Tarstones</h2>
+          <h2>Recommended Tarstones For Genessa</h2>
 
           <h3>Weapon Stone</h3>
           <ul className="list-disc pl-6">
@@ -381,7 +381,7 @@ export default function GenessaBuildPage() {
 
         {/* 6. Final Tips */}
         <section id="tips" className="article">
-          <h2>Final Tips</h2>
+          <h2>Final Tips For Genessa</h2>
           <ul className="list-disc pl-6">
             <li>
               Dump summons onto a boss and keep stacking Phantom with your own

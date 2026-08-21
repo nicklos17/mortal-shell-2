@@ -9,7 +9,7 @@ import BuildNav from "@/components/BuildNav";
 const TITLE = "Mortal Shell 2 Lazlo Build Guide – Heat Tank Build";
 const PAGE_PATH = "/builds/lazlo";
 const DESCRIPTION =
-  "Best Mortal Shell 2 Lazlo build guide: max Heat for overheat spikes, flame shockwave AoE, burn stacks with Veteran's Battle Axe. Best Tarstones, abilities & final tips.";
+  "Best Mortal Shell 2 Lazlo build: max Heat for overheat spikes, flame shockwave AoE & burn stacks with Veteran's Battle Axe. Best Tarstones.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -193,7 +193,7 @@ const SKILL_TREE: SkillNode[] = [
   },
 ];
 
-function SkillTreeTable({ nodes }: { nodes: SkillNode[] }) {
+function SkillTreeTable({ nodes }: { nodes: SkillNode[]; }) {
   return (
     <div className="overflow-x-auto">
       <table className="data" style={{ width: "100%" }}>
@@ -331,7 +331,7 @@ export default function LazloBuildPage() {
             The top pick for this build. Its cleaving R2 moveset (especially
             the running R2) is clean, and it&apos;s the{" "}
             <strong>only weapon in the game that can be infused with the burn
-            status effect</strong>. That matters: burn stacks from your axe
+              status effect</strong>. That matters: burn stacks from your axe
             pile right on top of the burn stacks your Retribution shockwave
             already applies, dealing substantial damage over time. The pairing
             is a core reason this build works.
@@ -362,7 +362,7 @@ export default function LazloBuildPage() {
               <strong>Inflamed Claw Stone</strong> — puts burn infusion on the
               Veteran&apos;s Battle Axe (the only weapon that can take it).{" "}
               <strong>Upgrade to permanent infusion as fast as you can — this
-              is your #1 tar core priority.</strong>
+                is your #1 tar core priority.</strong>
             </li>
             <li>
               <strong>Lost Clot Stone</strong> — throw your melee weapon at
