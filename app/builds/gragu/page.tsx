@@ -4,7 +4,7 @@ import Link from "next/link";
 import AdBanner from "@/components/AdBanner";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
-const TITLE = "Mortal Shell 2 Gragu Build – Best Guide (Staggering Blow & Revered Heart)";
+const TITLE = "Mortal Shell 2 Gragu Build Gudie";
 const PAGE_PATH = "/builds/gragu";
 const DESCRIPTION =
   "Best Mortal Shell 2 Gragu build: Staggering Blow carry, Revered Heart sustain, Veteran's Battle Axe + burn, and the best melee Tarstones with final tips.";
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Mortal Shell 2 Gragu Build – Best Guide (Staggering Blow & Revered Heart)",
+  headline: "Mortal Shell 2 Gragu Build – Best Guide",
   description: DESCRIPTION,
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -230,8 +230,7 @@ export default function GraguBuildPage() {
 
         <span className="eyebrow">Brawler Build</span>
         <h1>
-          Mortal Shell 2 Gragu Build – Best Guide (Staggering Blow &amp;
-          Revered Heart)
+          Mortal Shell 2 Gragu Build Guide
         </h1>
 
         <p className="intro-link">
