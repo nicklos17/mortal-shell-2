@@ -35,6 +35,10 @@
 - [Proxima Starter Build](https://mortal-shell2.wiki/builds/proxima): Duality Stone plus Arbiter's Prize. 14-point and 21-point Shell Bonding trees. Blood Curse boss melting.
 - [Tiel Starter Build](https://mortal-shell2.wiki/builds/tiel): Shadow Strike loop with Escalation, Death Mark, and Poison Burst. 14, 23, and 40-point versions.
 
+## Русская версия
+
+- [Интерактивная карта Mortal Shell 2 (RU)](https://mortal-shell2.wiki/ru/map): Полная интерактивная карта на русском языке — все оболочки, боссы, тарстоуны, маяки быстрого перемещения и скрытые предметы, а также рекомендуемый порядок исследования.
+
 ## Updates
 
 - [Mortal Shell 2 Release Date](https://mortal-shell2.wiki/updates/mortal-shell-2-release-date): Confirmed release date, platforms, editions, and pre-order details.

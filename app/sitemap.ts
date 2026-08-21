@@ -75,6 +75,7 @@ type StaticRoute = {
 const STATIC_ROUTES: StaticRoute[] = [
   { path: "", createdAt: "2026-08-14", priority: 1.0, changeFrequency: "weekly" },
   { path: "/map", createdAt: "2026-08-14", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/ru/map", createdAt: "2026-08-22", priority: 0.8, changeFrequency: "weekly" },
   { path: "/updates", createdAt: "2026-08-14", priority: 0.9, changeFrequency: "weekly" },
   { path: "/shells", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "weekly" },
   { path: "/bosses", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
