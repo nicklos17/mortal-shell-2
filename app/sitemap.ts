@@ -40,6 +40,8 @@ const CHANGED_TODAY: ReadonlySet<string> = new Set([
   "/builds",  // /builds：Proxima + Tiel 双卡片导流页 + FAQ
   "/builds/proxima", // /builds/proxima：Proxima Starter Build 完整攻略上线
   "/builds/tiel", // /builds/tiel：Tiel Starter Build 完整攻略上线（14/23/40 点三阶段）
+  "/builds/eredrim", // /builds/eredrim：Eredrim Frost Breaker Build 完整攻略上线
+  "/builds/gragu", // /builds/gragu：Gragu Brawler Build 完整攻略上线
   "/about",   // /about：About Us 信任页上线
   "/privacy", // /privacy：Privacy Policy 合规页上线
   "/terms",   // /terms：Terms of Service 合规页上线
@@ -76,6 +78,8 @@ const STATIC_ROUTES: StaticRoute[] = [
   { path: "/builds", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/builds/proxima", createdAt: "2026-08-18", priority: 0.8, changeFrequency: "monthly" },
   { path: "/builds/tiel", createdAt: "2026-08-19", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/builds/eredrim", createdAt: "2026-08-21", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/builds/gragu", createdAt: "2026-08-21", priority: 0.8, changeFrequency: "monthly" },
   { path: "/weapons", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/walkthrough", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/tips", createdAt: "2026-08-14", priority: 0.7, changeFrequency: "yearly" },

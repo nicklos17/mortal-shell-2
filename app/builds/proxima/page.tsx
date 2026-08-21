@@ -1,6 +1,7 @@
 export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import Link from "next/link";
+import AdBanner from "@/components/AdBanner";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
 const TITLE = "Mortal Shell 2 Proxima Build – Best Starter Guide (14 & 21 Points)";
@@ -426,6 +427,8 @@ export default function ProximaBuildPage() {
         </section>
         */}
 
+        <AdBanner />
+
         {/* 7. FAQ（与 FAQPage 结构化数据一一对应） */}
         <section id="faq" className="article">
           <h2>Proxima Build FAQ</h2>
@@ -465,6 +468,29 @@ export default function ProximaBuildPage() {
         </section>
 
         <p className="mt-10">
+          <Link
+            href="/builds/tiel"
+            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
+          >
+            Tiel Build
+          </Link>{" "}
+          ·{" "}
+          <Link
+            href="/builds/eredrim"
+            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
+          >
+            Eredrim Build
+          </Link>{" "}
+          ·{" "}
+          <Link
+            href="/builds/gragu"
+            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
+          >
+            Gragu Build
+          </Link>
+        </p>
+
+        <p>
           <Link
             href="/builds"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"

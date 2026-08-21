@@ -8,10 +8,10 @@
 - [Interactive Map](https://mortal-shell2.wiki/map): Full interactive map with all Shell locations, Tarstones, Beacons, boss arenas, and hidden collectibles.
 - [All Shells](https://mortal-shell2.wiki/shells): Every playable Shell with stats, abilities, and exact locations.
 - [Mortal Shell 2 Bosses](https://mortal-shell2.wiki/bosses): All 8 bosses. Attack patterns, weak points, confirmed regions, and strategy cards for each encounter.
-- [Best Builds](https://mortal-shell2.wiki/builds): Proxima and Tiel starter builds. Shell picks, weapons, Tarstone combos, Shell Bonding trees, and FAQ.
+- [Best Builds](https://mortal-shell2.wiki/builds): Proxima, Tiel, Eredrim, and Gragu builds. Shell picks, weapons, Tarstone combos, skill trees, and FAQ.
 - [Mortal Shell 2 Weapons](https://mortal-shell2.wiki/weapons): All 7 weapons confirmed. Stats, damage scaling letters, special abilities, exact locations, and Shell pairings.
 - [Mortal Shell 2 Walkthrough](https://mortal-shell2.wiki/walkthrough): Start and get OP early. First two quests, first Shell, Axe and Daggers, early Tar Stones, Nail Shot +3, and the 135k Gloom per hour farming loop.
-- [Mortal Shell 2 Tips: 18 Beginner Tips for Combat &amp; Bosses<](https://mortal-shell2.wiki/tips): 18 beginner tips across combat, Shells, weapons, exploration, bosses, and farming.
+- [Mortal Shell 2 Tips: 18 Beginner Tips for Combat &amp; Bosses](https://mortal-shell2.wiki/tips): 18 beginner tips across combat, Shells, weapons, exploration, bosses, and farming.
 - [Patch Notes & Updates](https://mortal-shell2.wiki/updates): Latest updates, balance changes, bug fixes, and new content.
 
 ## Shells
@@ -27,6 +27,8 @@
 
 ## Builds
 
+- [Eredrim Frost Breaker Build](https://mortal-shell2.wiki/builds/eredrim): Ethereal Diapason plus Slaughter stacking, Great Martyr's Blade frost infusion, and 200% damage to frozen enemies.
+- [Gragu Brawler Build](https://mortal-shell2.wiki/builds/gragu): Staggering Blow carry with Revered Heart sustain, Veteran's Battle Axe plus burn, and all-in melee Tarstones.
 - [Proxima Starter Build](https://mortal-shell2.wiki/builds/proxima): Duality Stone plus Arbiter's Prize. 14-point and 21-point Shell Bonding trees. Blood Curse boss melting.
 - [Tiel Starter Build](https://mortal-shell2.wiki/builds/tiel): Shadow Strike loop with Escalation, Death Mark, and Poison Burst. 14, 23, and 40-point versions.
 

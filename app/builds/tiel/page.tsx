@@ -2,6 +2,7 @@ export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
+import AdBanner from "@/components/AdBanner";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
 const TITLE =
@@ -628,6 +629,8 @@ export default function TielBuildPage() {
           <LocationTable items={ITEM_LOCATIONS} />
         </section>
 
+        <AdBanner />
+
         {/* 8. FAQ（与 FAQPage 结构化数据一一对应） */}
         <section id="faq" className="article">
           <h2>Mortal Shell 2 Tiel Build FAQ</h2>
@@ -661,21 +664,26 @@ export default function TielBuildPage() {
         </section>
 
         <p className="mt-10">
-          Looking for a slower, tankier alternative? See our{" "}
           <Link
             href="/builds/proxima"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
           >
             Proxima Build
-          </Link>
-          . For the full breakdown of every shell, check the{" "}
+          </Link>{" "}
+          ·{" "}
           <Link
-            href="/shells"
+            href="/builds/eredrim"
             className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
           >
-            Shells guide
+            Eredrim Build
+          </Link>{" "}
+          ·{" "}
+          <Link
+            href="/builds/gragu"
+            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
+          >
+            Gragu Build
           </Link>
-          .
         </p>
 
         <p>

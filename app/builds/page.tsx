@@ -52,7 +52,7 @@ const itemListJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Mortal Shell 2 Builds",
-  numberOfItems: 2,
+  numberOfItems: 4,
   itemListElement: [
     {
       "@type": "ListItem",
@@ -65,6 +65,18 @@ const itemListJsonLd = {
       position: 2,
       name: "Tiel Starter Build",
       url: pageURL("/builds/tiel"),
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Eredrim Frost Breaker Build",
+      url: pageURL("/builds/eredrim"),
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Gragu Brawler Build",
+      url: pageURL("/builds/gragu"),
     },
   ],
 };
@@ -177,6 +189,47 @@ export default function BuildsPage() {
             className="cta"
           >
             Read the full Tiel Build Guide →
+          </Link>
+        </section>
+
+        {/* 3. Eredrim Build 卡片 */}
+        <section id="eredrim" className="article">
+          <h2>Eredrim Frost Breaker Build</h2>
+          <p>
+            Eredrim&apos;s loop runs on <strong>Ethereal Diapason</strong>{" "}
+            and <strong>Slaughter</strong> stacking: break entire groups with
+            a 360° shockwave, finish with ripostes for 10 Slaughter stacks
+            each, and melt frozen targets for <strong>200% damage</strong>{" "}
+            using the frost-infused <strong>Great Martyr&apos;s Blade</strong>{" "}
+            — the only melee weapon that can carry a frost infusion.
+          </p>
+          <Link
+            href="/builds/eredrim"
+            className="cta"
+          >
+            Read the full Eredrim Build Guide →
+          </Link>
+        </section>
+
+        {/* 4. Gragu Build 卡片 */}
+        <section id="gragu" className="article">
+          <h2>Gragu Brawler Build</h2>
+          <p>
+            Gragu is the tankiest shell in the game, carried by the{" "}
+            <strong>Staggering Blow</strong> fist ability and endless{" "}
+            <strong>Revered Heart</strong> sustain. Escalation and Attunement
+            let you spam the charged punch, <strong>Heartless</strong>{" "}
+            instantly kills regular enemies and heals you, and{" "}
+            <strong>Devour</strong> keeps the buffs rolling at max hearts.
+            Pair it with the burn-infused{" "}
+            <strong>Veteran&apos;s Battle Axe</strong> for near-unkillable
+            brawling.
+          </p>
+          <Link
+            href="/builds/gragu"
+            className="cta"
+          >
+            Read the full Gragu Build Guide →
           </Link>
         </section>
 
