@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import AdBanner from "@/components/AdBanner";
+import BuildNav from "@/components/BuildNav";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
 const TITLE =
@@ -663,51 +664,7 @@ export default function TielBuildPage() {
           </div>
         </section>
 
-        <p className="mt-10">
-          <Link
-            href="/builds/proxima"
-            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-          >
-            Proxima Build
-          </Link>{" "}
-          ·{" "}
-          <Link
-            href="/builds/eredrim"
-            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-          >
-            Eredrim Build
-          </Link>{" "}
-          ·{" "}
-          <Link
-            href="/builds/gragu"
-            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-          >
-            Gragu Build
-          </Link>
-        </p>
-
-        <p>
-          <Link
-            href="/builds"
-            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-          >
-            All Mortal Shell 2 Builds
-          </Link>{" "}
-          ·{" "}
-          <Link
-            href="/map"
-            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-          >
-            Interactive Map
-          </Link>{" "}
-          ·{" "}
-          <Link
-            href="/shells"
-            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-          >
-            Shells Guide
-          </Link>
-        </p>
+        <BuildNav current="tiel" />
 
         <a href="/" className="article-back">
           &larr; Back to Home

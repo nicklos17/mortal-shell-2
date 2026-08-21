@@ -1299,6 +1299,66 @@ table.data tr:hover td {
   box-shadow: var(--glow-gold);
 }
 
+/* ---------- Build 互链导航（build 详情页底部） ---------- */
+.build-nav {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(184, 147, 50, 0.25);
+}
+
+.build-nav h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 1.25rem;
+}
+
+.build-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: .75rem;
+}
+
+.build-nav-tile {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  padding: .8rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid rgba(184, 147, 50, 0.25);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background .2s, border-color .2s, box-shadow .2s, transform .15s;
+}
+
+.build-nav-tile:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--color-gold);
+  box-shadow: var(--glow-gold);
+  transform: translateY(-2px);
+}
+
+.build-nav-name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-gold-bright);
+  letter-spacing: .04em;
+}
+
+.build-nav-tagline {
+  font-size: .78rem;
+  color: var(--text-secondary);
+  letter-spacing: .02em;
+}
+
+.build-nav-utility {
+  margin-top: 1.25rem;
+  font-size: .85rem;
+  color: var(--text-secondary);
+}
+
 /* ---------- Shells 页面 ---------- */
 .shells-wheel-shells {
   position: relative;

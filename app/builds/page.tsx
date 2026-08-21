@@ -52,7 +52,7 @@ const itemListJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Mortal Shell 2 Builds",
-  numberOfItems: 4,
+  numberOfItems: 7,
   itemListElement: [
     {
       "@type": "ListItem",
@@ -77,6 +77,24 @@ const itemListJsonLd = {
       position: 4,
       name: "Gragu Brawler Build",
       url: pageURL("/builds/gragu"),
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      name: "Genessa Phantom Summoner Build",
+      url: pageURL("/builds/genessa"),
+    },
+    {
+      "@type": "ListItem",
+      position: 6,
+      name: "Lazlo Heat Tank Build",
+      url: pageURL("/builds/lazlo"),
+    },
+    {
+      "@type": "ListItem",
+      position: 7,
+      name: "Smert Time-Stop Chaos Build",
+      url: pageURL("/builds/smert"),
     },
   ],
 };
@@ -230,6 +248,74 @@ export default function BuildsPage() {
             className="cta"
           >
             Read the full Gragu Build Guide →
+          </Link>
+        </section>
+
+        {/* 5. Genessa Build 卡片 */}
+        <section id="genessa" className="article">
+          <h2>Genessa Phantom Summoner Build</h2>
+          <p>
+            Genessa&apos;s loop runs on <strong>Faithful Doubles</strong> and{" "}
+            <strong>Phantom</strong> stacking: summon phantoms that attack with
+            your equipped weapon, stack Phantom marks on enemies, and detonate
+            for <strong>huge AoE explosions</strong> at 12 stacks. Carried by
+            the Phantom-infused <strong>Black Needle</strong>, with{" "}
+            <strong>Augmentation</strong> for resolve-free spamming and{" "}
+            <strong>Distraction</strong> turning summons into mini-tanks. She&apos;s
+            the squishiest shell in the game, so this build keeps her safe behind
+            an army of phantoms.
+          </p>
+          <Link
+            href="/builds/genessa"
+            className="cta"
+          >
+            Read the full Genessa Build Guide →
+          </Link>
+        </section>
+
+        {/* 6. Lazlo Build 卡片 */}
+        <section id="lazlo" className="article">
+          <h2>Lazlo Heat Tank Build</h2>
+          <p>
+            Lazlo&apos;s loop runs on his <strong>Heat meter</strong> and{" "}
+            <strong>Retribution</strong> shockwave: spam the AoE burn attack to
+            build Heat, fire an <strong>overheat shockwave</strong> for massive
+            damage and burn stacks, then go ham with melee while his armor is
+            on cooldown — <strong>Rush</strong> hands you 20 Warp stacks and
+            15% crit to punish everything nearby. Carried by the burn-infused{" "}
+            <strong>Veteran&apos;s Battle Axe</strong> and stacking up to{" "}
+            <strong>30% damage reduction</strong> at full Heat. Lazlo has the
+            highest health pool in the game — the ultimate unkillable tank.
+          </p>
+          <Link
+            href="/builds/lazlo"
+            className="cta"
+          >
+            Read the full Lazlo Build Guide →
+          </Link>
+        </section>
+
+        {/* 7. Smert Build 卡片 */}
+        <section id="smert" className="article">
+          <h2>Smert Time-Stop Chaos Build</h2>
+          <p>
+            Smert&apos;s loop runs on <strong>Miracle</strong>: sacrifice half
+            your health to halt time, stack <strong>Chaos</strong> on frozen
+            enemies with your fists, and detonate the stacks for massive damage.
+            <strong> Fervor</strong> raises the faith threshold to 35% so
+            you&apos;re almost always faithful, <strong>Devotion</strong> has a
+            20% chance to fully refill your resolve on every gain — so by the
+            time Miracle ends, you can go right back in. Carried by the
+            Phantom-infused <strong>Black Needle</strong> and the{" "}
+            <strong>Welt Cap</strong> passive that triggers{" "}
+            <strong>Blessing</strong> splash damage on every heal tick. Arguably
+            one of the strongest shells in the game.
+          </p>
+          <Link
+            href="/builds/smert"
+            className="cta"
+          >
+            Read the full Smert Build Guide →
           </Link>
         </section>
 

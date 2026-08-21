@@ -2,6 +2,7 @@ export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import Link from "next/link";
 import AdBanner from "@/components/AdBanner";
+import BuildNav from "@/components/BuildNav";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
 const TITLE = "Mortal Shell 2 Proxima Build – Best Starter Guide (14 & 21 Points)";
@@ -467,51 +468,7 @@ export default function ProximaBuildPage() {
           </div>
         </section>
 
-        <p className="mt-10">
-          <Link
-            href="/builds/tiel"
-            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-          >
-            Tiel Build
-          </Link>{" "}
-          ·{" "}
-          <Link
-            href="/builds/eredrim"
-            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-          >
-            Eredrim Build
-          </Link>{" "}
-          ·{" "}
-          <Link
-            href="/builds/gragu"
-            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-          >
-            Gragu Build
-          </Link>
-        </p>
-
-        <p>
-          <Link
-            href="/builds"
-            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-          >
-            All Mortal Shell 2 Builds
-          </Link>{" "}
-          ·{" "}
-          <Link
-            href="/map"
-            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-          >
-            Interactive Map
-          </Link>{" "}
-          ·{" "}
-          <Link
-            href="/shells"
-            className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
-          >
-            Shells Guide
-          </Link>
-        </p>
+        <BuildNav current="proxima" />
 
         <a href="/" className="article-back">
           &larr; Back to Home
