@@ -4,7 +4,7 @@ import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import MapCanvasWrapperRu from "./MapCanvasWrapperRu";
 import AdBanner from "@/components/AdBanner";
 
-const title = "Интерактивная карта Mortal Shell 2 — все маяки, оболочки, боссы";
+const title = "Интерактивная карта Mortal Shell 2 — маяки, оболочки, боссы";
 const description =
   "Полная интерактивная карта Mortal Shell 2 на русском: все маяки, оболочки, боссы, подземелья, тарстоуны, ключевые предметы и скрытые предметы на одной карте.";
 
