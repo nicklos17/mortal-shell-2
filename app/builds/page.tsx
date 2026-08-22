@@ -52,7 +52,7 @@ const itemListJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Mortal Shell 2 Builds",
-  numberOfItems: 7,
+  numberOfItems: 8,
   itemListElement: [
     {
       "@type": "ListItem",
@@ -95,6 +95,12 @@ const itemListJsonLd = {
       position: 7,
       name: "Smert Time-Stop Chaos Build",
       url: pageURL("/builds/smert"),
+    },
+    {
+      "@type": "ListItem",
+      position: 8,
+      name: "Sariel Thorn Tank Build",
+      url: pageURL("/builds/sariel"),
     },
   ],
 };
@@ -316,6 +322,31 @@ export default function BuildsPage() {
             className="cta"
           >
             Read the full Smert Build Guide →
+          </Link>
+        </section>
+
+        {/* 8. Sariel Build 卡片 */}
+        <section id="sariel" className="article">
+          <h2>Sariel Thorn Tank Build</h2>
+          <p>
+            Sariel&apos;s loop runs on <strong>Curse</strong>: tag enemies
+            with <strong>Exodus of Thorns</strong> at range so their next
+            attack is completely negated, then swing freely through their
+            combos. His <strong>Pain</strong> mechanic converts incoming
+            damage into a recoverable white bar that melee hits regenerate,
+            making him far tankier than his middling HP suggests. Two paths:
+            the <strong>Thornfall damage build</strong> turns Exodus into a
+            ranged nuke, while the <strong>Entitlement break build</strong>
+            triggers 10 Trauma stacks by clearing Pain point-blank — pick
+            one and commit. Carried by the Curse-infused{" "}
+            <strong>Iconoclast</strong> greatsword and the{" "}
+            <strong>Zealot Stone</strong> to fuel endless Exodus casts.
+          </p>
+          <Link
+            href="/builds/sariel"
+            className="cta"
+          >
+            Read the full Sariel Build Guide →
           </Link>
         </section>
 

@@ -14,9 +14,10 @@ const BUILDS: readonly BuildEntry[] = [
   { slug: "genessa", name: "Genessa", tagline: "Phantom Summoner" },
   { slug: "lazlo", name: "Lazlo", tagline: "Heat Tank" },
   { slug: "smert", name: "Smert", tagline: "Time-Stop Chaos" },
+  { slug: "sariel", name: "Sariel", tagline: "Curse, Break" },
 ];
 
-export default function BuildNav({ current }: { current: string }) {
+export default function BuildNav({ current }: { current: string; }) {
   return (
     <nav className="build-nav" aria-label="Other Mortal Shell 2 Builds">
       <h3>Other Mortal Shell 2 Builds</h3>

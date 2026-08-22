@@ -34,6 +34,7 @@
 - [Smert Time-Stop Chaos Build](https://mortal-shell2.wiki/builds/smert): Miracle time-stop with Chaos stacking and detonations, Devotion resolve refill for infinite chaining, Black Needle plus Phantom, and Welt Cap passive.
 - [Proxima Starter Build](https://mortal-shell2.wiki/builds/proxima): Duality Stone plus Arbiter's Prize. 14-point and 21-point Shell Bonding trees. Blood Curse boss melting.
 - [Tiel Starter Build](https://mortal-shell2.wiki/builds/tiel): Shadow Strike loop with Escalation, Death Mark, and Poison Burst. 14, 23, and 40-point versions.
+- [Sariel Curse, Break Build](https://mortal-shell2.wiki/builds/sariel): two builds — Thornfall damage spam or Entitlement break explosion. The Iconoclast + Zealot Stone, full Tarstone loadout, and final tips
 
 ## Русская версия
 

@@ -87,6 +87,7 @@ const STATIC_ROUTES: StaticRoute[] = [
   { path: "/builds/genessa", createdAt: "2026-08-21", priority: 0.8, changeFrequency: "monthly" },
   { path: "/builds/lazlo", createdAt: "2026-08-21", priority: 0.8, changeFrequency: "monthly" },
   { path: "/builds/smert", createdAt: "2026-08-21", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/builds/sariel", createdAt: "2026-08-22", priority: 0.8, changeFrequency: "monthly" },
   { path: "/weapons", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/walkthrough", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/tips", createdAt: "2026-08-14", priority: 0.7, changeFrequency: "yearly" },
