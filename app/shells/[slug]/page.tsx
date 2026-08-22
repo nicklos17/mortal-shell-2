@@ -7,6 +7,18 @@ import { pageURL } from "@/lib/site-config";
 import { SHELLS, getShell, shellSlugs } from "@/lib/shells";
 import { ShellIcon } from "@/lib/shell-icon";
 
+/* 已上线对应 /builds/<slug> 构建页的 Shell */
+const BUILD_GUIDE_SLUGS = new Set([
+  "proxima",
+  "tiel",
+  "gragu",
+  "eredrim",
+  "smert",
+  "sariel",
+  "lazlo",
+  "genessa",
+]);
+
 export function generateStaticParams() {
   return shellSlugs.map((slug) => ({ slug }));
 }
@@ -130,7 +142,7 @@ export default async function ShellDetailPage({
           <h2>Where to Find {shell.name}</h2>
           <p>{shell.location}</p>
 
-          {(shell.id === "proxima" || shell.id === "tiel") && (
+          {BUILD_GUIDE_SLUGS.has(shell.id) && (
             <div className="shell-build-guide-cta">
               <Link href={`/builds/${shell.id}`}>
                 {shell.name} Build Guide →
