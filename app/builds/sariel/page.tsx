@@ -9,7 +9,7 @@ import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 const TITLE = "Mortal Shell 2 Sariel Build Guide – Best Curse & Break Setup";
 const PAGE_PATH = "/builds/sariel";
 const DESCRIPTION =
-  "Best Mortal Shell 2 Sariel build: curse-based tank, Thornfall damage or Entitlement break. Iconoclast + Zealot Stone, full Tarstone loadout.";
+  "Mortal Shell 2 Sariel build: two distinct paths — Thornfall damage spam or Entitlement break DPS. Iconoclast, Zealot Stone, full Tarstone loadout.";
 
 export const metadata: Metadata = {
   title: TITLE,
