@@ -44,6 +44,7 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   other: {
     "google-adsense-account": "ca-pub-1682851839434735",
+    "yandex-verification": "b04aef314edee774"
   },
   openGraph: {
     type: "website",
