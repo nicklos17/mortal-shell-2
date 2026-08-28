@@ -118,9 +118,15 @@ export default function AboutPage() {
         </p>
       </section>
 
+      <section className="article">
+        <h2>Community Spotlight</h2>
+        <p>Also read our community spotlight: <a href="https://becklee017.blogspot.com/2026/08/mortal-shell-2-is-brutal-this.html">Mortal Shell 2 Is Brutal — This Interactive Map & Fan Wiki Made It Manageable</a></p>
+      </section>
+
       <Link href="/" className="article-back">
         &larr; Back to Home
       </Link>
+
     </main>
   );
 }
