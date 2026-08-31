@@ -1,6 +1,7 @@
 export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { Fragment } from "react";
 import AdBanner from "@/components/AdBanner";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
@@ -328,18 +329,21 @@ export default function TipsPage() {
           without grinding forever.
         </p>
 
-        {SECTIONS.map((section) => (
-          <section key={section.heading} className="article">
-            <h2>{section.heading}</h2>
-            <ul className="tip-list">
-              {section.tips.map((tip) => (
-                <li key={tip.title}>
-                  <strong>{tip.title}</strong>
-                  <span>{linkifyShells(tip.body)}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
+        {SECTIONS.map((section, i) => (
+          <Fragment key={section.heading}>
+            <section className="article">
+              <h2>{section.heading}</h2>
+              <ul className="tip-list">
+                {section.tips.map((tip) => (
+                  <li key={tip.title}>
+                    <strong>{tip.title}</strong>
+                    <span>{linkifyShells(tip.body)}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+            {i === 0 && <AdBanner />}
+          </Fragment>
         ))}
 
         {/* 关联页内链 */}
@@ -392,8 +396,6 @@ export default function TipsPage() {
             .
           </p>
         </section>
-
-        <AdBanner />
 
         {/* FAQ，与 FAQPage JSON-LD 严格同步 */}
         <section className="article">

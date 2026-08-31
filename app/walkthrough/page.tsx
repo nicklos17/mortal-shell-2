@@ -2,6 +2,7 @@ export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
+import AdBanner from "@/components/AdBanner";
 
 const TITLE = "Mortal Shell 2 Walkthrough";
 const PAGE_PATH = "/walkthrough";
@@ -241,6 +242,8 @@ export default function WalkthroughPage() {
             </li>
           </ol>
         </section>
+
+        <AdBanner />
 
         {/* 2. Opening Video Walkthrough + YouTube 跳转徽章 */}
         <section className="article">

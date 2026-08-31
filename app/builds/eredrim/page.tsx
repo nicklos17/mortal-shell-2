@@ -248,6 +248,8 @@ export default function EredrimBuildPage() {
           </p>
         </section>
 
+        <AdBanner />
+
         {/* 2. Abilities */}
         <section id="abilities" className="article">
           <h2>Eredrim Abilities</h2>
@@ -418,8 +420,6 @@ export default function EredrimBuildPage() {
             </li>
           </ul>
         </section>
-
-        <AdBanner />
 
         {/* 7. FAQ（与 FAQPage 结构化数据一一对应） */}
         <section id="faq" className="article">

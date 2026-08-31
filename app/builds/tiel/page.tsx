@@ -415,6 +415,8 @@ export default function TielBuildPage() {
           </p>
         </section>
 
+        <AdBanner />
+
         {/* 2. How It Works */}
         <section id="how-it-works" className="article">
           <h2>How the Tiel Build Works: Poison, Fragile &amp; Crits</h2>
@@ -629,8 +631,6 @@ export default function TielBuildPage() {
 
           <LocationTable items={ITEM_LOCATIONS} />
         </section>
-
-        <AdBanner />
 
         {/* 8. FAQ（与 FAQPage 结构化数据一一对应） */}
         <section id="faq" className="article">

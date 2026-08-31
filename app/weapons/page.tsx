@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import { WEAPONS } from "@/lib/weapons-data";
+import AdBanner from "@/components/AdBanner";
 
 const TITLE = "Mortal Shell 2 Weapons";
 const PAGE_PATH = "/weapons";
@@ -380,6 +381,8 @@ export default function WeaponsPage() {
             </table>
           </div>
         </section>
+
+        <AdBanner />
 
         {/* 2. Weapon Details — H3 卡片 */}
         <section className="article">

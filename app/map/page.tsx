@@ -194,6 +194,8 @@ export default function MapPage() {
           </p>
         </section>
 
+        <AdBanner />
+
         <section>
           <h2>Mortal Shell 2 route map: best exploration order</h2>
           <p>
@@ -524,8 +526,6 @@ export default function MapPage() {
             </li>
           </ul>
         </section>
-
-        <AdBanner />
 
         <section>
           <h2>Frequently asked questions</h2>

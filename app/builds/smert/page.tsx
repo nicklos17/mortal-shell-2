@@ -290,6 +290,8 @@ export default function SmertBuildPage() {
           </p>
         </section>
 
+        <AdBanner />
+
         {/* 2. Abilities */}
         <section id="abilities" className="article">
           <h2>Smert Abilities: Miracle &amp; Deadly Revelation</h2>
@@ -446,8 +448,6 @@ export default function SmertBuildPage() {
             </li>
           </ul>
         </section>
-
-        <AdBanner />
 
         {/* 7. FAQ（与 FAQPage 结构化数据一一对应） */}
         <section id="faq" className="article">

@@ -138,6 +138,8 @@ export default function ShellsPage() {
           </div>
         </section>
 
+        <AdBanner />
+
         {/* 概括表 */}
         <section className="article">
           <h2>The Shell Roster at a Glance</h2>
@@ -227,8 +229,6 @@ export default function ShellsPage() {
             ))}
           </div>
         </section>
-
-        <AdBanner />
 
         {/* 收尾 */}
         <section className="article">

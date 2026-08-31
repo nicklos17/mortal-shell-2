@@ -355,6 +355,8 @@ export default function BossesPage() {
           </div>
         </section>
 
+        <AdBanner />
+
         {/* 2. Boss Strategies — 每个 boss 一个卡片 */}
         <section className="article">
           <h2>Boss Strategies</h2>
@@ -405,8 +407,6 @@ export default function BossesPage() {
             so you can plan a route.
           </p>
         </section>
-
-        <AdBanner />
 
         {/* 4. FAQ */}
         <section className="article">

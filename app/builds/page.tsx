@@ -195,6 +195,8 @@ export default function BuildsPage() {
           </Link>
         </section>
 
+        <AdBanner />
+
         {/* 2. Tiel Build 卡片 */}
         <section id="tiel" className="article">
           <h2>Tiel Starter Build</h2>
@@ -349,8 +351,6 @@ export default function BuildsPage() {
             Read the full Sariel Build Guide →
           </Link>
         </section>
-
-        <AdBanner />
 
         {/* 4. FAQ（与 FAQPage 结构化数据一一对应） */}
         <section className="article">

@@ -1,6 +1,7 @@
 export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
+import AdBanner from "@/components/AdBanner";
 
 const RELEASE_TARGET = Date.UTC(2026, 7, 20, 0, 0, 0);
 
@@ -239,6 +240,8 @@ export default function HomePage() {
             update as we play through the game.
           </p>
         </section>
+
+        <AdBanner />
 
         <div className="card-grid">
           {cards.map((card) => (

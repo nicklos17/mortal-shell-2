@@ -172,6 +172,8 @@ export default function RuMapPage() {
           </p>
         </section>
 
+        <AdBanner />
+
         <section>
           <h2>Маршрут Mortal Shell 2: лучший порядок исследования</h2>
           <p>
@@ -531,8 +533,6 @@ export default function RuMapPage() {
             </li>
           </ul>
         </section>
-
-        <AdBanner />
 
         <section>
           <h2>Часто задаваемые вопросы</h2>

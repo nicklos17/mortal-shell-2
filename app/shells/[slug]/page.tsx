@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { pageURL } from "@/lib/site-config";
 import { SHELLS, getShell, shellSlugs } from "@/lib/shells";
 import { ShellIcon } from "@/lib/shell-icon";
+import AdBanner from "@/components/AdBanner";
 
 /* 已上线对应 /builds/<slug> 构建页的 Shell */
 const BUILD_GUIDE_SLUGS = new Set([
@@ -154,6 +155,8 @@ export default async function ShellDetailPage({
             <Link href="/shells">← Back to all Mortal Shell 2 Shells</Link>
           </p>
         </section>
+
+        <AdBanner />
 
         <section className="article">
           <h2>Other Shells</h2>

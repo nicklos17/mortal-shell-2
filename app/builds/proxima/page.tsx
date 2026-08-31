@@ -254,6 +254,8 @@ export default function ProximaBuildPage() {
           </p>
         </section>
 
+        <AdBanner />
+
         {/* 2. Core Items */}
         <section id="core-items" className="article">
           <h2>The Four Core Items &amp; How They Synergize</h2>
@@ -427,8 +429,6 @@ export default function ProximaBuildPage() {
           </p>
         </section>
         */}
-
-        <AdBanner />
 
         {/* 7. FAQ（与 FAQPage 结构化数据一一对应） */}
         <section id="faq" className="article">
