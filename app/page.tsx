@@ -2,6 +2,7 @@ export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import AdBanner from "@/components/AdBanner";
+import BannerAd from "@/components/BannerAd";
 
 const RELEASE_TARGET = Date.UTC(2026, 7, 20, 0, 0, 0);
 
@@ -183,6 +184,8 @@ export default function HomePage() {
           </div>
 
         </section>
+
+        <BannerAd />
 
         <section className="article">
           <h2>What Is Mortal Shell 2?</h2>

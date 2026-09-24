@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import { updatePosts } from "@/lib/updates-data";
 import AdBanner from "@/components/AdBanner";
+import BannerAd from "@/components/BannerAd";
 
 const PAGE_PATH = "/updates";
 
@@ -90,6 +91,8 @@ export default function UpdatesIndexPage() {
           balance changes, hotfixes, and new content. We update this page the
           moment Cold Symmetry ships a new build.
         </p>
+
+        <BannerAd />
 
         <div className="card-grid" style={{ gridTemplateColumns: "1fr" }}>
           {updatePosts.map((post) => (

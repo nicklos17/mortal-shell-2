@@ -2,6 +2,7 @@ export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import Link from "next/link";
 import AdBanner from "@/components/AdBanner";
+import BannerAd from "@/components/BannerAd";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
 const TITLE = "Best Mortal Shell 2 Builds &amp; Tarstone Combos";
@@ -169,6 +170,8 @@ export default function BuildsPage() {
           <strong>Shell Bonding</strong> tree. The goal is finding a synergy
           loop where each piece feeds the next.
         </p>
+
+        <BannerAd />
 
         {/* 1. Proxima Build 卡片（唯一真内容） */}
         <section id="proxima" className="article mt-12">

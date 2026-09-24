@@ -7,6 +7,7 @@ import { pageURL } from "@/lib/site-config";
 import { SHELLS, getShell, shellSlugs } from "@/lib/shells";
 import { ShellIcon } from "@/lib/shell-icon";
 import AdBanner from "@/components/AdBanner";
+import BannerAd from "@/components/BannerAd";
 
 /* 已上线对应 /builds/<slug> 构建页的 Shell */
 const BUILD_GUIDE_SLUGS = new Set([
@@ -116,6 +117,8 @@ export default async function ShellDetailPage({
             <p>{shell.signature}</p>
           </div>
 
+          <BannerAd />
+
           <h2>Playstyle</h2>
           <p>{shell.playstyle}</p>
 
@@ -139,6 +142,8 @@ export default async function ShellDetailPage({
               </ul>
             </>
           )}
+
+          <BannerAd />
 
           <h2>Where to Find {shell.name}</h2>
           <p>{shell.location}</p>

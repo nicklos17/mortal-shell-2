@@ -5,6 +5,7 @@ import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import { WEAPONS } from "@/lib/weapons-data";
 import AdBanner from "@/components/AdBanner";
+import BannerAd from "@/components/BannerAd";
 
 const TITLE = "Mortal Shell 2 Weapons";
 const PAGE_PATH = "/weapons";
@@ -270,6 +271,8 @@ export default function WeaponsPage() {
           the most out of the swing patterns.
         </p>
 
+        <BannerAd />
+
         {/* 1. 武器总览表格 */}
         <section className="article mt-12">
           <h2>Mortal Shell 2 Weapon List</h2>
@@ -526,6 +529,8 @@ export default function WeaponsPage() {
             Shell and a matching Tarstone socket.
           </p>
         </section>
+
+        <BannerAd />
 
         {/* 5. 底部发售标识 */}
         <section className="mt-12 rounded-lg border border-white/10 bg-white/[0.03] p-6">

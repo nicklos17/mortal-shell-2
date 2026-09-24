@@ -7,6 +7,7 @@ import ShellWheel from "./ShellWheel";
 import { SHELLS } from "@/lib/shells";
 import { ShellIcon } from "@/lib/shell-icon";
 import AdBanner from "@/components/AdBanner";
+import BannerAd from "@/components/BannerAd";
 
 const TITLE = "Mortal Shell 2 Shells";
 const PAGE_PATH = "/shells";
@@ -84,6 +85,8 @@ export default function ShellsPage() {
           &ldquo;class&rdquo; with its own stats, combat identity, and signature
           abilities you can swap between at will.
         </p>
+
+        <BannerAd />
 
         {/* 总览：宿主 ↔ 躯壳 关系图 */}
         <section className="article">

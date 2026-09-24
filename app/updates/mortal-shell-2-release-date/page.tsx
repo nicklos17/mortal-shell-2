@@ -1,6 +1,7 @@
 export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
+import BannerAd from "@/components/BannerAd";
 
 const SLUG = "mortal-shell-2-release-date";
 const PAGE_PATH = `/updates/${SLUG}`;
@@ -174,6 +175,8 @@ export default function ReleaseDateArticlePage() {
             <cite>— Anton Gonzalez, Creative Director, Cold Symmetry</cite>
           </blockquote>
 
+          <BannerAd />
+
           <h2>Confirmed Platforms</h2>
           <p>Mortal Shell 2 will be available at launch on:</p>
           <ul>
@@ -269,6 +272,8 @@ export default function ReleaseDateArticlePage() {
             feed — we will publish every patch note, balance pass, and DLC
             announcement the instant they go live.
           </p>
+
+          <BannerAd />
 
           <p className="article-back">
             <a href="/updates">← Back to all Mortal Shell 2 updates</a>

@@ -2,6 +2,7 @@ export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import Link from "next/link";
 import AdBanner from "@/components/AdBanner";
+import BannerAd from "@/components/BannerAd";
 import BuildNav from "@/components/BuildNav";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
@@ -234,6 +235,8 @@ export default function ProximaBuildPage() {
           starter build in Mortal Shell 2.
         </p>
 
+        <BannerAd />
+
         {/* 1. Why Proxima */}
         <section id="why-proxima" className="article mt-12">
           <h2>Why Proxima Is the Perfect Starter Shell</h2>
@@ -429,6 +432,8 @@ export default function ProximaBuildPage() {
           </p>
         </section>
         */}
+
+        <BannerAd />
 
         {/* 7. FAQ（与 FAQPage 结构化数据一一对应） */}
         <section id="faq" className="article">

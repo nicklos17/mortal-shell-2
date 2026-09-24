@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import AdBanner from "@/components/AdBanner";
+import BannerAd from "@/components/BannerAd";
 import BuildNav from "@/components/BuildNav";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
@@ -262,6 +263,8 @@ export default function SarielBuildPage() {
           nothing — they whiff and hurt themselves instead. Master this and he
           takes far less damage than shells with twice his health bar.
         </p>
+
+        <BannerAd />
 
         {/* 1. Overview */}
         <section id="overview" className="article mt-12">
@@ -542,6 +545,8 @@ export default function SarielBuildPage() {
             future patches, I&apos;ll revisit them.
           </p>
         </section>
+
+        <BannerAd />
 
         {/* 7. FAQ（与 FAQPage 结构化数据一一对应） */}
         <section id="faq" className="article">

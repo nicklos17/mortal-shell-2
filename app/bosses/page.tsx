@@ -4,6 +4,7 @@ import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import { BOSSES } from "@/lib/bosses-data";
 import AdBanner from "@/components/AdBanner";
+import BannerAd from "@/components/BannerAd";
 
 const TITLE = "Mortal Shell 2 Bosses";
 const PAGE_PATH = "/bosses";
@@ -268,6 +269,8 @@ export default function BossesPage() {
           </p>
         </div>
 
+        <BannerAd />
+
         {/* 1. Boss 表格总览 */}
         <section className="article mt-12">
           <h2>All Mortal Shell 2 Bosses</h2>
@@ -407,6 +410,8 @@ export default function BossesPage() {
             so you can plan a route.
           </p>
         </section>
+
+        <BannerAd />
 
         {/* 4. FAQ */}
         <section className="article">

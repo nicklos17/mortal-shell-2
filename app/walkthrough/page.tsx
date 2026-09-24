@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import AdBanner from "@/components/AdBanner";
+import BannerAd from "@/components/BannerAd";
 
 const TITLE = "Mortal Shell 2 Walkthrough";
 const PAGE_PATH = "/walkthrough";
@@ -161,6 +162,8 @@ export default function WalkthroughPage() {
           early Tar Stone, Nail Shot pushed to +3, and the broken 135,000
           Gloom per hour farming loop.
         </p>
+
+        <BannerAd />
 
         {/* 1. How to Start Mortal Shell 2 — OP Early Route */}
         <section className="article mt-12">
@@ -347,6 +350,8 @@ export default function WalkthroughPage() {
             before your first play session.
           </p>
         </section>
+
+        <BannerAd />
 
         {/* 4. FAQ */}
         <section className="article">

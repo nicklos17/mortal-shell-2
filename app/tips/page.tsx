@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Fragment } from "react";
 import AdBanner from "@/components/AdBanner";
+import BannerAd from "@/components/BannerAd";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 
@@ -329,6 +330,8 @@ export default function TipsPage() {
           without grinding forever.
         </p>
 
+        <BannerAd />
+
         {SECTIONS.map((section, i) => (
           <Fragment key={section.heading}>
             <section className="article">
@@ -345,6 +348,8 @@ export default function TipsPage() {
             {i === 0 && <AdBanner />}
           </Fragment>
         ))}
+
+        <BannerAd />
 
         {/* 关联页内链 */}
         <section className="article">

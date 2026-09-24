@@ -2098,8 +2098,9 @@ table.data tr:hover td {
 }
 
 /* ---------- 左右对联广告（160×600，fixed 悬浮） ---------- */
-/* 默认隐藏：视口必须装下 1120px 正文 + 两侧各 172px（广告 160 + 间距 12）
-   还留有余量时才展示，避免遮挡内容。z-index 低于 header(50)。 */
+/* ≥1224px 显示；正文 container 用 min() 自动避让两侧广告位
+   （1120px 正文 + 两侧各 172px = 1464px 起恢复满宽），互不遮挡。
+   z-index 低于 header(50)。 */
 .side-ad {
   position: fixed;
   top: 50%;
@@ -2116,8 +2117,34 @@ table.data tr:hover td {
   right: 12px;
 }
 
-@media (min-width: 1560px) {
+@media (min-width: 1224px) {
   .side-ad {
     display: block;
+  }
+
+  .container {
+    max-width: min(1120px, calc(100vw - 354px));
+  }
+}
+
+/* ---------- 手机端横屏 banner 广告（in-content） ---------- */
+/* 与对联互补：窄屏显示、宽屏隐藏（宽屏用对联），保证单页广告总数 ≤3 */
+.banner-ad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.banner-ad iframe {
+  border: 0;
+  max-width: 100%;
+}
+
+@media (min-width: 1224px) {
+  .banner-ad {
+    display: none;
   }
 }

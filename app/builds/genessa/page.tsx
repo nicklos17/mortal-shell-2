@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import AdBanner from "@/components/AdBanner";
+import BannerAd from "@/components/BannerAd";
 import BuildNav from "@/components/BuildNav";
 
 const TITLE = "Mortal Shell 2 Genessa Build – Faithful Doubles & Phantom";
@@ -265,6 +266,8 @@ export default function GenessaBuildPage() {
           in the game, so this build leans hard on letting her summons tank.
         </p>
 
+        <BannerAd />
+
         {/* 1. Overview */}
         <section id="overview" className="article mt-12">
           <h2>Overview</h2>
@@ -406,6 +409,8 @@ export default function GenessaBuildPage() {
             </li>
           </ul>
         </section>
+
+        <BannerAd />
 
         {/* 7. FAQ（与 FAQPage 结构化数据一一对应） */}
         <section id="faq" className="article">
