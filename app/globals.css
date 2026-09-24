@@ -1047,6 +1047,39 @@ table.data tr:hover td {
   min-height: 820px;
 }
 
+/* 服务端直出的预初始化状态：Leaflet 挂载前，#map 先以 CSS 背景显示底图
+   并给出 Loading 占位（复用已 preload 的 base.webp，零额外请求）。
+   Leaflet 初始化时会给容器加上 .leaflet-container 类，以下规则自动失效。 */
+.ms2-map-host #map:not(.leaflet-container) {
+  background-image: url("/assets/images/map/base.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ms2-map-host #map:not(.leaflet-container)::after {
+  content: "Loading map…";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg-base) 82%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-gold) 30%, transparent);
+  color: var(--text-secondary);
+  font-family: Cinzel, serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* 俄语页（<html lang="ru">）占位文案 */
+:lang(ru) .ms2-map-host #map:not(.leaflet-container)::after {
+  content: "Загрузка карты…";
+}
+
 /* 响应式：≤ 860px 单列布局（!important 覆盖 JSX inline style 兜底） */
 @media (max-width: 860px) {
   .ms2-map-wrap {

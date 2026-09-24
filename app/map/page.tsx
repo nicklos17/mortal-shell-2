@@ -1,11 +1,11 @@
 export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
-import MapCanvasWrapper from "./MapCanvasWrapper";
+import MapCanvas from "./MapCanvas";
 import AdBanner from "@/components/AdBanner";
 
-const title = "Mortal Shell 2 Interactive Map – All Locations";
-const description = "Interactive map with every Shell, boss, Tarstone &amp; Beacon location in Mortal Shell 2, plus hidden collectibles and a recommended route order.";
+const title = "Mortal Shell 2 Full Map – All 224 Locations & Collectibles";
+const description = "Interactive Mortal Shell 2 map with all 41 Beacons, 75 Tarstones, 36 Dungeons, 8 Shells and every collectible — plus a recommended route order.";
 
 export const metadata: Metadata = {
   title,
@@ -151,7 +151,7 @@ export default function MapPage() {
 
         {/* 交互地图（CSR，用户用） */}
         <div className="map-frame">
-          <MapCanvasWrapper />
+          <MapCanvas />
           <noscript>
             <img
               src="/assets/images/map/base.webp"

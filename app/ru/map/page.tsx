@@ -1,7 +1,7 @@
 export const dynamic = 'force-static';
 import type { Metadata } from "next";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
-import MapCanvasWrapperRu from "./MapCanvasWrapperRu";
+import MapCanvasRu from "./MapCanvasRu";
 import AdBanner from "@/components/AdBanner";
 
 const title = "Интерактивная карта Mortal Shell 2 — маяки, оболочки, боссы";
@@ -131,7 +131,7 @@ export default function RuMapPage() {
 
         {/* 交互地图（CSR，用户用） */}
         <div className="map-frame">
-          <MapCanvasWrapperRu />
+          <MapCanvasRu />
           <noscript>
             <img
               src="/assets/images/map/base.webp"

@@ -1,9 +1,26 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import L from "leaflet";
+import type {
+  Map as LeafletMap,
+  Marker as LeafletMarker,
+  LeafletMouseEvent,
+} from "leaflet";
 import { MapMarker, MarkerType } from "@/lib/map-markers";
 import { ruMapMarkers } from "@/lib/ru/map-markers";
+
+/*
+ * Leaflet 模块内部引用了 window，模块级 import 会在服务端渲染时直接崩溃。
+ * 为了让地图区块的 JSX（侧栏 + 地图容器）在 SSR/SSG HTML 中直出，这里改为
+ * 客户端 useEffect 里动态加载 Leaflet。组件初始渲染输出是纯静态 HTML，
+ * 服务端与客户端首帧完全一致，可以安全水合。（与英文版 MapCanvas 一致）
+ */
+type LeafletModule = typeof import("leaflet");
+let leafletPromise: Promise<LeafletModule> | null = null;
+function loadLeaflet(): Promise<LeafletModule> {
+  leafletPromise ??= import("leaflet");
+  return leafletPromise;
+}
 
 const BASE_URL = "/assets/images/map/base.webp";
 const MAP_W = 3891;
@@ -145,9 +162,9 @@ function popupContent(m: MapMarker): string {
 export default function MapCanvasRu() {
   const rootRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<HTMLDivElement>(null);
-  const mapInstance = useRef<L.Map | null>(null);
-  const markersByKeyRef = useRef<Map<string, L.Marker[]>>(new Map());
-  const allMarkersRef = useRef<Map<string, L.Marker>>(new Map());
+  const mapInstance = useRef<LeafletMap | null>(null);
+  const markersByKeyRef = useRef<Map<string, LeafletMarker[]>>(new Map());
+  const allMarkersRef = useRef<Map<string, LeafletMarker>>(new Map());
 
   const totals = useMemo(() => {
     const t: Partial<Record<FilterKey, number>> = {};
@@ -237,7 +254,13 @@ export default function MapCanvasRu() {
         "</div>";
     };
 
-    try {
+    let disposed = false;
+    let cleanupFn: (() => void) | undefined;
+
+    loadLeaflet()
+      .then((L) => {
+        if (disposed) return;
+        try {
       const map = L.map(mapEl, {
         crs: L.CRS.Simple,
         minZoom: -3,
@@ -366,7 +389,7 @@ export default function MapCanvasRu() {
 
       const byKey = markersByKeyRef.current;
       const all = allMarkersRef.current;
-      const created: L.Marker[] = [];
+      const created: LeafletMarker[] = [];
       let skippedMarkers = 0;
 
       for (const m of ruMapMarkers) {
@@ -408,7 +431,7 @@ export default function MapCanvasRu() {
             autoPanPadding: [20, 20],
           });
 
-          marker.on("click", (ev: L.LeafletMouseEvent) => {
+          marker.on("click", (ev: LeafletMouseEvent) => {
             if (!alive()) return;
             const original = ev.originalEvent as MouseEvent | undefined;
             if (original && (original.ctrlKey || original.metaKey)) {
@@ -432,7 +455,7 @@ export default function MapCanvasRu() {
         grp.addTo(map);
       }
 
-      return () => {
+      cleanupFn = () => {
         window.clearTimeout(tSafety);
         io?.disconnect();
         ro?.disconnect();
@@ -441,14 +464,23 @@ export default function MapCanvasRu() {
         markersByKeyRef.current = new Map();
         allMarkersRef.current = new Map();
       };
-    } catch (err) {
-      const msg =
-        err instanceof Error
-          ? err.message + "\\nStack:\\n" + (err.stack || "(no stack)")
-          : String(err);
-      failMap(msg);
-      return () => { };
-    }
+        } catch (err) {
+          const msg =
+            err instanceof Error
+              ? err.message + "\\nStack:\\n" + (err.stack || "(no stack)")
+              : String(err);
+          failMap(msg);
+        }
+      })
+      .catch((err) => {
+        if (disposed) return;
+        failMap(err instanceof Error ? err.message : String(err));
+      });
+
+    return () => {
+      disposed = true;
+      cleanupFn?.();
+    };
   }, []);
 
   const allKeys = allFilterKeys;
