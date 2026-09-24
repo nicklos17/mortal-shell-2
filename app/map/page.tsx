@@ -3,6 +3,59 @@ import type { Metadata } from "next";
 import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import MapCanvas from "./MapCanvas";
 import AdBanner from "@/components/AdBanner";
+import { mapMarkers, type MapMarker } from "@/lib/map-markers";
+
+/*
+ * 点位清单区块（服务端直出）：与地图交互组件共用 lib/map-markers 一份数据。
+ * 链接红线：只链向真实存在的指南页（Shell → /shells/[slug]，
+ * Weapon/Sidearm → /weapons，精确命中的武器带锚点），其余分类只出文字，
+ * 绝不链向 404。
+ */
+const LOCATION_SECTIONS = [
+  "Beacon",
+  "Tarstone",
+  "Dungeon",
+  "Bone Gate",
+  "Key Item",
+  "Shell",
+  "Weapon",
+  "Sidearm",
+  "Corrupted Statue",
+  "Map Fragment",
+  "Gate",
+] as const;
+
+const SHELL_SLUGS = new Set([
+  "tiel",
+  "genessa",
+  "proxima",
+  "eredrim",
+  "gragu",
+  "lazlo",
+  "sariel",
+  "smert",
+]);
+
+// 标题与 lib/weapons-data.ts 的 id 精确对应（注意数据里的全角＆与弯引号）
+const WEAPON_ANCHORS: Record<string, string> = {
+  "Axe＆Dagger": "axe-and-dagger",
+  Axatana: "axatana",
+  "The Iconoclast": "the-iconoclast",
+  "Great Martyr’s Blade": "martyrs-blade",
+};
+
+function markerHref(m: MapMarker): string | null {
+  if (m.classification === "Shell") {
+    const slug = m.title.split(",")[0].trim().toLowerCase();
+    return SHELL_SLUGS.has(slug) ? `/shells/${slug}` : "/shells";
+  }
+  if (m.classification === "Weapon") {
+    const anchor = WEAPON_ANCHORS[m.title];
+    return anchor ? `/weapons#${anchor}` : "/weapons";
+  }
+  if (m.classification === "Sidearm") return "/weapons";
+  return null;
+}
 
 const title = "Mortal Shell 2 Full Map – All 224 Locations";
 const description = "Interactive Mortal Shell 2 map with all 41 Beacons, 75 Tarstones, 36 Dungeons, 8 Shells and every collectible — plus a recommended route order.";
@@ -417,7 +470,7 @@ export default function MapPage() {
               <span className="loc-note">
                 Ritual Grounds Tarstone: located just inside the dungeon
                 entrance. Activate it before proceeding deeper into the
-                dungeon, because dying without a active Tarstone means
+                dungeon, because dying without an active Tarstone means
                 restarting from the last Beacon.
               </span>
             </li>
@@ -482,6 +535,45 @@ export default function MapPage() {
 
           <h3 id="enemies">Enemies and collectibles</h3>
           <p>Beyond fixed points, the map also tracks notable enemy encounters and hidden collectibles. These include lootables, lore items, and rare spawns. Toggle these categories in the filter to plan a clean sweep of an area.</p>
+        </section>
+
+        <section>
+          <h2>Full Mortal Shell 2 map location list</h2>
+          <p>
+            Every point marked on the Mortal Shell 2 map, grouped by category
+            with a count for each. The list mirrors the interactive map above,
+            so you can scan all {mapMarkers.length} locations even on a slow
+            connection or with scripts blocked. Entries that link out lead to
+            the matching guide page, and the rest give you the location details
+            right in the list.
+          </p>
+          {LOCATION_SECTIONS.map((classification) => {
+            const items = mapMarkers.filter(
+              (m) => m.classification === classification
+            );
+            if (items.length === 0) return null;
+            return (
+              <div key={classification}>
+                <h3>
+                  {classification} ({items.length})
+                </h3>
+                <ul className="loc-list">
+                  {items.map((m) => {
+                    const href = markerHref(m);
+                    return (
+                      <li key={m.id}>
+                        {href ? <a href={href}>{m.title}</a> : m.title}
+                        <span className="loc-note">
+                          {" — "}
+                          {m.description.trim()}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })}
         </section>
 
         <section>

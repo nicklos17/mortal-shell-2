@@ -30,40 +30,12 @@ const TODAY = (() => {
  * 第二天可以清空，保持列表清爽。
  */
 const CHANGED_TODAY: ReadonlySet<string> = new Set([
-  "",         // 首页：新增 3 个 H2 内容区块 + 倒计时 SSG 重构
-  "/map",     // /map：1000+ 词正文扩充 + 点位 schema 占位 + tips 提示
-  "/shells",  // /shells：ShellWheel 外圈图片渲染 + 8 子页联动调整
-  "/bosses",  // /bosses：8 Boss 完整攻略上线（实测数据 + FAQ + ItemList JSON-LD）
-  "/weapons", // /weapons：7 武器完整攻略 + scaling 机制说明 + FAQ
-  "/walkthrough", // /walkthrough：开篇 OP 早期路线 + YouTube 视频 + FAQ + Article/VideoObject JSON-LD
-  "/tips",    // /tips：6 分类 18 条新手技巧 + FAQ + Article/FAQPage JSON-LD
-  "/builds",  // /builds：Proxima + Tiel + Gragu + Genessa + Lazlo + Smert 多卡片导流页 + FAQ
-  "/builds/proxima", // /builds/proxima：Proxima Starter Build 完整攻略上线
-  "/builds/tiel", // /builds/tiel：Tiel Starter Build 完整攻略上线（14/23/40 点三阶段）
-  "/builds/eredrim", // /builds/eredrim：Eredrim Frost Breaker Build 完整攻略上线
-  "/builds/gragu", // /builds/gragu：Gragu Brawler Build 完整攻略上线
-  "/builds/genessa", // /builds/genessa：Genessa Phantom Summoner Build 完整攻略上线
-  "/builds/lazlo", // /builds/lazlo：Lazlo Heat Tank Build 完整攻略上线
-  "/builds/smert", // /builds/smert：Smert Time-Stop Chaos Build 完整攻略上线
-  "/about",   // /about：About Us 信任页上线
-  "/privacy", // /privacy：Privacy Policy 合规页上线
-  "/terms",   // /terms：Terms of Service 合规页上线
-  "/disclaimer", // /disclaimer：Disclaimer 免责声明页上线
-  "/contact", // /contact：Contact Us 联系页上线
+  "/map",     // /map：新增 224 个点位按 11 分类分组的完整点位清单区块（服务端直出）
 ]);
 
 // Shell 详情页：今天改了内容的 slug 专属 changed set。
-// 2026-08-20：按正式版实测补全 8 个 Shell 的 playstyle。
-const CHANGED_TODAY_SHELLS: ReadonlySet<string> = new Set([
-  "proxima",
-  "tiel",
-  "gragu",
-  "eredrim",
-  "smert",
-  "sariel",
-  "lazlo",
-  "genessa",
-]);
+// 没有改动就保持空 Set，不要留着旧批次的 slug。
+const CHANGED_TODAY_SHELLS: ReadonlySet<string> = new Set([]);
 
 type StaticRoute = {
   path: string;
