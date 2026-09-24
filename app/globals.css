@@ -2096,3 +2096,28 @@ table.data tr:hover td {
   height: auto;
   border: 0;
 }
+
+/* ---------- 左右对联广告（160×600，fixed 悬浮） ---------- */
+/* 默认隐藏：视口必须装下 1120px 正文 + 两侧各 172px（广告 160 + 间距 12）
+   还留有余量时才展示，避免遮挡内容。z-index 低于 header(50)。 */
+.side-ad {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  display: none;
+}
+
+.side-ad-left {
+  left: 12px;
+}
+
+.side-ad-right {
+  right: 12px;
+}
+
+@media (min-width: 1560px) {
+  .side-ad {
+    display: block;
+  }
+}

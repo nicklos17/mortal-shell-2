@@ -9,6 +9,7 @@ import { SITE_BASE_URL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-conf
 // 到达浏览器 HTML 第一字节时，Leaflet CSS 已经和 globals.css 合并好。
 import "leaflet/dist/leaflet.css";
 import "./globals.css";
+import SideAds from "./SideAds";
 
 // Cinzel 700/800/900 自托管（加粗字重覆盖所有“粗体-标题”使用场景）
 const cinzel = Cinzel({
@@ -145,6 +146,7 @@ gtag('config', '${GA_MEASUREMENT_ID}');
             </nav>
           </div>
         </footer>
+        <SideAds />
       </body>
     </html>
   );
