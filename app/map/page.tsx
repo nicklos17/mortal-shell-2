@@ -4,7 +4,7 @@ import { pageURL, OG_IMAGE, OG_IMAGE_W, OG_IMAGE_H } from "@/lib/site-config";
 import MapCanvas from "./MapCanvas";
 import AdBanner from "@/components/AdBanner";
 
-const title = "Mortal Shell 2 Full Map – All 224 Locations & Collectibles";
+const title = "Mortal Shell 2 Full Map – All 224 Locations";
 const description = "Interactive Mortal Shell 2 map with all 41 Beacons, 75 Tarstones, 36 Dungeons, 8 Shells and every collectible — plus a recommended route order.";
 
 export const metadata: Metadata = {
@@ -430,7 +430,7 @@ export default function MapPage() {
             </li>
             <li>
               <span className="loc-note">
-                Beacons: three Beacon locations are confirmed so far. They are
+                Beacons: 41 Beacon locations are confirmed so far. They are
                 marked in blue on the interactive map. The full Beacon network
                 is being mapped as we explore the open world.
               </span>
@@ -546,7 +546,7 @@ export default function MapPage() {
           </p>
           <h3>How many locations are in Mortal Shell 2?</h3>
           <p>
-            The map currently covers a handful of locations across two areas:
+            The map currently covers all 224 locations across all areas:
             Marrow Keep and Mushroom Village. The full game is expected to
             have many more, including additional dungeons, boss arenas, and
             hidden areas. Our map will cover all of them.
