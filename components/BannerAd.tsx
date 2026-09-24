@@ -28,7 +28,6 @@ export default function BannerAd() {
         width={BANNER_WIDTH}
         height={BANNER_HEIGHT}
         scrolling="no"
-        loading="lazy"
         sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms"
         style={{ border: 0, display: "block" }}
         title="Advertisement"

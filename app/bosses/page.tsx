@@ -236,7 +236,6 @@ export default function BossesPage() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               referrerPolicy="strict-origin-when-cross-origin"
-              loading="lazy"
             />
           </div>
 
@@ -256,7 +255,6 @@ export default function BossesPage() {
               <svg
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                aria-hidden="true"
                 style={{ width: "20px", height: "20px" }}
               >
                 <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2C0 8 0 12 0 12s0 4 .5 5.8a3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 16 24 12 24 12s0-4-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z" />

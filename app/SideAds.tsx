@@ -40,7 +40,6 @@ function AdSlot() {
       width={160}
       height={600}
       scrolling="no"
-      loading="lazy"
       sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms"
       style={{ border: 0, display: "block" }}
       title="Advertisement"
@@ -60,10 +59,10 @@ export default function SideAds() {
 
   return (
     <>
-      <div className="side-ad side-ad-left" aria-hidden="true">
+      <div className="side-ad side-ad-left">
         <AdSlot />
       </div>
-      <div className="side-ad side-ad-right" aria-hidden="true">
+      <div className="side-ad side-ad-right">
         <AdSlot />
       </div>
     </>
