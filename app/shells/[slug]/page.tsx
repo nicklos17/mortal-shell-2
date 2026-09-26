@@ -21,6 +21,50 @@ const BUILD_GUIDE_SLUGS = new Set([
   "genessa",
 ]);
 
+/* 各 Shell 指向 best Shell tier list 的个性化回链（锚文本各不相同，按 tier 事实撰写） */
+const TIER_NOTE: Record<string, { pre: string; link: string; post: string }> = {
+  proxima: {
+    pre: "Proxima tops our ",
+    link: "Shell tier list",
+    post: " — see how the other seven rank →",
+  },
+  smert: {
+    pre: "Smert is the other ",
+    link: "S tier Shell in our tier list",
+    post: " — see the full ranking →",
+  },
+  tiel: {
+    pre: "Tiel just misses ",
+    link: "S tier in our Shell tier list",
+    post: " — see which two Shells outrank him →",
+  },
+  gragu: {
+    pre: "Gragu earns ",
+    link: "A tier in our Shell tier list",
+    post: " — see what sits above him →",
+  },
+  eredrim: {
+    pre: "Eredrim is the most forgiving pick in ",
+    link: "our Shell tier list",
+    post: " — see how the S tier kits compare →",
+  },
+  genessa: {
+    pre: "Genessa holds ",
+    link: "B tier in our Shell tier list",
+    post: " — see which Shells rank higher →",
+  },
+  lazlo: {
+    pre: "Lazlo ranks ",
+    link: "B tier in the full Shell tier list",
+    post: " — see who sits above him →",
+  },
+  sariel: {
+    pre: "Sariel sits at ",
+    link: "the bottom of our tier list",
+    post: " — see why experts still rate her →",
+  },
+};
+
 export function generateStaticParams() {
   return shellSlugs.map((slug) => ({ slug }));
 }
@@ -56,6 +100,7 @@ export default async function ShellDetailPage({
   if (!shell) notFound();
 
   const others = SHELLS.filter((s) => s.id !== shell.id);
+  const tierNote = TIER_NOTE[shell.id];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -157,12 +202,6 @@ export default async function ShellDetailPage({
           )}
 
           <p className="article-back">
-            <Link href="/shells/best-shell">
-              Where does {shell.name} rank? See the best Shell tier list →
-            </Link>
-          </p>
-
-          <p className="article-back">
             <Link href="/shells">← Back to all Mortal Shell 2 Shells</Link>
           </p>
         </section>
@@ -171,6 +210,13 @@ export default async function ShellDetailPage({
 
         <section className="article">
           <h2>Other Shells</h2>
+          {tierNote && (
+            <p>
+              {tierNote.pre}
+              <Link href="/shells/best-shell">{tierNote.link}</Link>
+              {tierNote.post}
+            </p>
+          )}
           <div className="shell-nav">
             {others.map((o) => (
               <Link key={o.id} href={`/shells/${o.id}`}>

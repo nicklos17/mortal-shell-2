@@ -106,7 +106,13 @@ const cards = [
     eyebrow: "Discover",
     title: "All Shells & Locations",
     href: "/shells",
-    desc: "Every playable Shell in Mortal Shell 2 — stats, abilities, and exact locations. Learn which Shell fits your playstyle.",
+    desc: (
+      <>
+        Every playable Shell in Mortal Shell 2 — stats, abilities, and exact
+        locations. Learn which Shell fits your playstyle. Includes our{" "}
+        <a href="/shells/best-shell">best Shell tier ranking</a> from S to C.
+      </>
+    ),
     link: "View All Shells →",
   },
   {

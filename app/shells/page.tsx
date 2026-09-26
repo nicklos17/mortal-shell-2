@@ -86,6 +86,12 @@ export default function ShellsPage() {
           abilities you can swap between at will.
         </p>
 
+        <div className="note">
+          <strong>Not sure who to pick?</strong> See our{" "}
+          <Link href="/shells/best-shell">Mortal Shell 2 best Shell tier list</Link>{" "}
+          →
+        </div>
+
         <BannerAd />
 
         {/* 总览：宿主 ↔ 躯壳 关系图 */}
