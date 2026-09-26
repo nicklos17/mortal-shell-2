@@ -157,6 +157,12 @@ export default async function ShellDetailPage({
           )}
 
           <p className="article-back">
+            <Link href="/shells/best-shell">
+              Where does {shell.name} rank? See the best Shell tier list →
+            </Link>
+          </p>
+
+          <p className="article-back">
             <Link href="/shells">← Back to all Mortal Shell 2 Shells</Link>
           </p>
         </section>

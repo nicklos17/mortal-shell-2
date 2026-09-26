@@ -376,7 +376,15 @@ export default function TipsPage() {
             >
               Builds page
             </Link>{" "}
-            pairs each Shell with a working weapon setup. Step-by-step
+            pairs each Shell with a working weapon setup. Still choosing a
+            Shell? The{" "}
+            <Link
+              href="/shells/best-shell"
+              className="text-amber-300 hover:text-amber-200 underline underline-offset-2"
+            >
+              Mortal Shell 2 best Shell tier list
+            </Link>{" "}
+            ranks all eight from S to C. Step-by-step
             routing lives in the{" "}
             <Link
               href="/walkthrough"

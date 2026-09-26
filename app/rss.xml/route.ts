@@ -13,6 +13,12 @@ const items: {
     desc: string; // HTML 字符串，已包含 <p> 标签
 }[] = [
         {
+            title: "Mortal Shell 2 Best Shell: All 8 Shells Ranked S to C",
+            link: `${SITE}/shells/best-shell`,
+            pubDateISO: "2026-09-26T09:00:00Z",
+            desc: `<p>Our full <strong>Mortal Shell 2 best Shell</strong> tier list: Proxima and Smert take S tier, Tiel and Gragu headline A tier, and Sariel stays an expert-only pick. Best picks by situation for beginners, bosses, and tanks.</p>`,
+        },
+        {
             title: "Mortal Shell 2 Release Date Confirmed: August 20, 2026",
             link: `${SITE}/updates/mortal-shell-2-release-date`,
             pubDateISO: "2026-08-14T09:00:00Z",

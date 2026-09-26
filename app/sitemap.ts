@@ -30,12 +30,26 @@ const TODAY = (() => {
  * 第二天可以清空，保持列表清爽。
  */
 const CHANGED_TODAY: ReadonlySet<string> = new Set([
-  "/map",     // /map：新增 224 个点位按 11 分类分组的完整点位清单区块（服务端直出）
+  "",        // /：正文加入 best Shell tier list 内链（2026-09-26）
+  "/shells", // /shells：正文加入 best Shell tier list 内链（2026-09-26）
+  "/builds", // /builds：lede 加入 best Shell tier list 内链（2026-09-26）
+  "/tips",   // /tips：Need more detail 段加入 best Shell tier list 内链（2026-09-26）
+  "/updates", // /updates：best Shell tier list 迁出 updates 列表（2026-09-26）
 ]);
 
 // Shell 详情页：今天改了内容的 slug 专属 changed set。
 // 没有改动就保持空 Set，不要留着旧批次的 slug。
-const CHANGED_TODAY_SHELLS: ReadonlySet<string> = new Set([]);
+const CHANGED_TODAY_SHELLS: ReadonlySet<string> = new Set([
+  // 全部 8 个详情页加入 tier list 内链（2026-09-26），次日清空
+  "proxima",
+  "tiel",
+  "gragu",
+  "eredrim",
+  "smert",
+  "sariel",
+  "lazlo",
+  "genessa",
+]);
 
 type StaticRoute = {
   path: string;
@@ -50,6 +64,7 @@ const STATIC_ROUTES: StaticRoute[] = [
   { path: "/ru/map", createdAt: "2026-08-22", priority: 0.8, changeFrequency: "weekly" },
   { path: "/updates", createdAt: "2026-08-14", priority: 0.9, changeFrequency: "weekly" },
   { path: "/shells", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/shells/best-shell", createdAt: "2026-09-26", priority: 0.8, changeFrequency: "monthly" },
   { path: "/bosses", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/builds", createdAt: "2026-08-14", priority: 0.8, changeFrequency: "monthly" },
   { path: "/builds/proxima", createdAt: "2026-08-18", priority: 0.8, changeFrequency: "monthly" },

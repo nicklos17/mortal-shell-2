@@ -168,7 +168,12 @@ export default function BuildsPage() {
           <strong>Shell</strong>, your <strong>primary weapon</strong>, your{" "}
           <strong>sidearm</strong>, your <strong>Tarstones</strong>, and your{" "}
           <strong>Shell Bonding</strong> tree. The goal is finding a synergy
-          loop where each piece feeds the next.
+          loop where each piece feeds the next. Not sure which Shell to build
+          around? Our{" "}
+          <Link href="/shells/best-shell">
+            best Shell in Mortal Shell 2
+          </Link>{" "}
+          tier list ranks all eight from S to C.
         </p>
 
         <BannerAd />

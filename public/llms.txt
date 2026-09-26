@@ -24,6 +24,7 @@
 - [Sariel](https://mortal-shell2.wiki/shells/sariel): Shell page — stats, abilities, and location.
 - [Lazlo](https://mortal-shell2.wiki/shells/lazlo): Shell page — stats, abilities, and location.
 - [Genessa](https://mortal-shell2.wiki/shells/genessa): Shell page — stats, abilities, and location.
+- [Mortal Shell 2 Best Shell](https://mortal-shell2.wiki/shells/best-shell): All eight Shells ranked S to C. Proxima and Smert in S tier, best picks by situation, and tier-list FAQ.
 
 ## Builds
 

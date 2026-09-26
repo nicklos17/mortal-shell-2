@@ -239,8 +239,13 @@ export default function HomePage() {
             <a href="/shells">Shells guide</a>. Study{' '}
             <a href="/bosses">boss strategies</a> before heading into a
             fight. Browse weapon stats to find the right tool for your build.
-            The eight sections below cover the full scope of what we track and
-            update as we play through the game.
+            Not sure which Shell to pick? Our{" "}
+            <a href="/shells/best-shell">
+              Mortal Shell 2 best Shell tier list
+            </a>{" "}
+            ranks all eight from S to C. The eight sections below cover the
+            full scope of what we track and update as we play through the
+            game.
           </p>
         </section>
 

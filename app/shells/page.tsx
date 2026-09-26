@@ -182,7 +182,11 @@ export default function ShellsPage() {
           <h2>Every Shell, Explained</h2>
           <p style={{ color: "var(--text-secondary)", marginTop: "-.5rem" }}>
             Select a Shell to open its full profile — playstyle, signature
-            ability, lore, and where to find it.
+            ability, lore, and where to find it. Not sure where to start? Our{" "}
+            <Link href="/shells/best-shell">
+              best Shell tier list
+            </Link>{" "}
+            ranks all eight from S to C.
           </p>
           <div className="shell-detail">
             {SHELLS.map((s) => (
