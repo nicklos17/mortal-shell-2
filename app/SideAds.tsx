@@ -17,6 +17,13 @@ import { usePathname } from "next/navigation";
  * 广告脚本（Adsterra 式 atOptions + invoke.js）在加载后用 document.write
  * 输出 iframe。直接插进主文档会清空整个页面，因此包进 srcDoc iframe 里
  * 隔离执行：document.write 只作用于 iframe 自身，主文档与 React 水合不受影响。
+ *
+ * sandbox 必须带 allow-same-origin：广告脚本要写 document.cookie，
+ * 沙箱文档缺该标志时 cookie 访问直接抛 SecurityError，脚本中断、
+ * 广告 iframe 永远不会被创建（2026-09 实测复现）。srcdoc + allow-same-origin
+ * 下 iframe 获得与站点相同的源，广告脚本可访问页面 DOM——这与把脚本
+ * 直接贴进页面等价（广告网络本来的接入方式）；sandbox 仍保留
+ * 禁止 top 导航等约束。
  */
 
 // 不展示对联的页面：地图页（含俄语版，宽幅交互地图）+ 隐私政策/免责声明/服务条款/关于/联系/RSS
@@ -40,7 +47,7 @@ function AdSlot() {
       width={160}
       height={600}
       scrolling="no"
-      sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms"
+      sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
       style={{ border: 0, display: "block" }}
       title="Advertisement"
     />

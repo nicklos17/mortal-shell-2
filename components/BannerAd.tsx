@@ -10,6 +10,9 @@
  * 把拿到的 atOptions + invoke.js 代码原样填进 BANNER_HTML，并同步核对
  * BANNER_WIDTH / BANNER_HEIGHT。BANNER_HTML 为空字符串时本组件不渲染
  * 任何内容、不发起任何请求。
+ *
+ * sandbox 必须带 allow-same-origin：广告脚本要写 document.cookie，
+ * 缺该标志会抛 SecurityError 导致广告永远不渲染（详见 app/SideAds.tsx 注释）。
  */
 
 const BANNER_WIDTH = 320;
@@ -28,7 +31,7 @@ export default function BannerAd() {
         width={BANNER_WIDTH}
         height={BANNER_HEIGHT}
         scrolling="no"
-        sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms"
+        sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
         style={{ border: 0, display: "block" }}
         title="Advertisement"
       />
