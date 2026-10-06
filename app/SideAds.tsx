@@ -38,7 +38,7 @@ const AD_HTML = `<script>
     'params' : {}
   };
 </script>
-<script src="https://www.highrevenueformat.com/ae47b885e9914ca8fc98d5558e1c0834/invoke.js"></script>`;
+<script src="https://bauval.org/22/ae47b885e9914ca8fc98d5558e1c0834"></script>`;
 
 function AdSlot() {
   return (
